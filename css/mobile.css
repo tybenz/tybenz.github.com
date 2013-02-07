@@ -45,7 +45,7 @@ h5 {
   font-size: 2em; }
 
 h1.hero {
-  font-size: 5.5em;
+  font-size: 4.5em;
   margin: 0.3em 0 0.1em; }
 
 p {
@@ -186,6 +186,7 @@ ul {
   margin-top: 40px; }
 
 .project {
+  display: block;
   border: 1px solid #cccccc;
   margin-bottom: 2.35765%;
   padding: 2.35765%;
@@ -193,6 +194,9 @@ ul {
   .project:hover {
     border-color: #5ea5ff;
     text-decoration: none; }
+
+.project h2 {
+  font-size: 3em; }
 
 .project:nth-child(2n) {
   margin-right: 0; }
@@ -265,7 +269,10 @@ pre {
     margin-right: 2.35765%;
     width: 23.23176%; }
     .pagination a:last-child {
-      margin-right: 0; } }
-@media only screen and (min-width: 40em) {
+      margin-right: 0; }
+
+  .project h2 {
+    font-size: 3.5em; }
+
   header .avatar {
     display: block; } }
