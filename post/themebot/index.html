@@ -12,30 +12,43 @@
 <link rel="stylesheet" href="/css/desktop.css" media="(min-width: 50em)">
 <link rel="stylesheet" href="/css/pygments.css">
 <link rel="stylesheet" href="/css/font.css">
-<script type="text/javascript" charset="utf-8" src="http://code.jquery.com/jquery.min.js"></script>
+<script type="text/javascript" charset="utf-8" src="/js/matchmedia.js"></script>
+<script type="text/javascript" charset="utf-8" src="/js/picturefill.js"></script>
 </head>
 
 <body>
 <div class="wrapper">
     <header>
         <div class="container">
-            <img src="/img/tybenz.png" alt="" />
+            <div class="profile">
+                <div class="social">
+                    <a href="http://twitter.com/tybenz">
+                        <div data-picture data-alt="Twitter">
+                            <div data-src="/img/twitter16.png"></div>
+                            <div data-src="/img/twitter32.png"     data-media="(-webkit-min-device-pixel-ratio: 2)"></div>
+                            <noscript><img src="/img/twitter16.png" alt="Twitter"></noscript>
+                        </div>
+                    </a>
+                    <a href="http://github.com/tybenz">
+                        <div data-picture data-alt="Github">
+                            <div data-src="/img/octocat16.png"></div>
+                            <div data-src="/img/octocat32.png"     data-media="(-webkit-min-device-pixel-ratio: 2)"></div>
+                            <noscript><img src="/img/octocat16.png" alt="Github"></noscript>
+                        </div>
+                    </a>
+                </div>
+                <img src="/img/tybenz.png" alt="" class="avatar" />
+            </div>
             <h5 class="logo"><a href="/">Tyler Benziger</a></h5>
             <nav>
                 <ul>
-                    <li>
-                        <a href="/">About</a>
-                    </li>
-                    <li>
-                        <a href="/blog">Blog</a>
-                    </li>
-                    <li>
-                        <a href="/projects">Projects</a>
-                    </li>
+                    <li><a href="/">Blog</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/projects">Projects</a></li>
                 </ul>
             </nav>
             <div class="nav-slider">
-                <div class="nav-selection "></div>
+                <div class="nav-selection blog"></div>
             </div>
         </div>
     </header>
@@ -108,15 +121,7 @@ updates. It will be soon.</p>
     <footer>
         <nav class="container">
             <ul>
-                <li>
-                <a href="#">Github</a>
-                </li>
-                <li>
-                <a href="#">Twitter</a>
-                </li>
-                <li>
-                <a href="#">Email</a>
-                </li>
+                <li>&copy; Tyler Benziger 2013</li>
             </ul>
         </nav>
     </footer>
