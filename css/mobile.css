@@ -69,6 +69,8 @@ p {
 
 header a {
   color: inherit; }
+  header a:hover {
+    text-decoration: none; }
 
 header nav ul {
   font-size: 16px;
@@ -86,8 +88,9 @@ header .logo {
   font-style: italic; }
 
 header nav ul li {
-  float: left;
-  margin-right: 20px; }
+  float: left; }
+  header nav ul li a {
+    padding-right: 20px; }
 
 header .nav-slider {
   height: 10px;
@@ -127,7 +130,7 @@ header .social img {
 
 header .avatar {
   height: 58px;
-  border: 5px solid #111111;
+  border: 2px solid #111111;
   float: left;
   margin-left: 10px;
   display: none; }
@@ -172,7 +175,8 @@ ul {
   list-style: square; }
 
 .post {
-  border-top: 1px solid #222222; }
+  border-top: 1px solid #222222;
+  margin-bottom: 5em; }
 
 .post:first-child {
   border-top: none; }
