@@ -29,6 +29,11 @@ h1, h2, h3, h4, h5 {
   h1 a:hover, h2 a:hover, h3 a:hover, h4 a:hover, h5 a:hover {
     text-decoration: none; }
 
+iframe.morph {
+  width: 100%;
+  height: 366px;
+  overflow: hidden; }
+
 h1 {
   font-size: 4em; }
 
