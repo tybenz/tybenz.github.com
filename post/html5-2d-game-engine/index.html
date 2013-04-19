@@ -100,22 +100,31 @@ The fun of the game will be choosing the right character for the right
 task. On top of that I&#8217;m really interested in making the game an
 open-world RPG.</p>
 
-<h5 id="toc_4">Rendering</h5>
+<h5 id="toc_4">Rendering: Sprites</h5>
 
 <p>Each sprite of the game is drawn within a 9x9 grid. We actually wrote a
 little canvas-based <a href="http://blacktunnel.github.io/morph/draw.html">drawing app</a>
 to quickly create the sprites. The output of the drawing app is not a
-PNG. It spits out an 2D array of colors for each sprite that is
+PNG. It spits out a 2D array of colors for each sprite that is
 used to initialize the graphics in the game.</p>
 
 <p>Why not use PNGs from the start you ask? We wanted to be able to change
 the size of game&#8217;s sprites down the road. That way, when the time comes,
 we could write different versions for different screen sizes.</p>
 
-<p>So the first step of loading the game is to draw each sprite and cache them
-into an image object for quick rendering later.</p>
+<p>Here&#39;s an example of the game with <strong>very</strong> large sprites:</p>
 
-<div class="highlight"><pre><code class="javascript"><span class="k">for</span> <span class="p">(</span> <span class="nx">i</span> <span class="k">in</span> <span class="k">this</span><span class="p">.</span><span class="nx">bitmaps</span> <span class="p">)</span> <span class="p">{</span>
+<iframe src="http://blacktunnel.github.io/morph/preview/embed/?level=mini" height="420"></iframe>
+
+<p>So the bulk of each entity&#39;s constructor is devoted to drawing each
+sprite and caching them into image objects for quick rendering later.</p>
+
+<div class="highlight"><pre><code class="javascript"><span class="kd">var</span> <span class="nx">i</span><span class="p">,</span> <span class="nx">j</span><span class="p">,</span> <span class="nx">k</span><span class="p">,</span>
+    <span class="nx">tempCanvas</span><span class="p">,</span> <span class="nx">tempContext</span><span class="p">,</span>
+    <span class="nx">dataURL</span><span class="p">,</span> <span class="nx">currentSprite</span><span class="p">,</span>
+    <span class="nx">rectSize</span> <span class="o">=</span> <span class="nx">Game</span><span class="p">.</span><span class="nx">unit</span> <span class="o">/</span> <span class="mi">9</span><span class="p">;</span>
+
+<span class="k">for</span> <span class="p">(</span> <span class="nx">i</span> <span class="k">in</span> <span class="k">this</span><span class="p">.</span><span class="nx">bitmaps</span> <span class="p">)</span> <span class="p">{</span>
     <span class="nx">currentSprite</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">bitmaps</span><span class="p">[</span> <span class="nx">i</span> <span class="p">];</span>
     <span class="nx">tempCanvas</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span> <span class="s1">&#39;canvas&#39;</span> <span class="p">);</span>
     <span class="nx">tempCanvas</span><span class="p">.</span><span class="nx">width</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">width</span><span class="p">;</span>
@@ -132,6 +141,11 @@ into an image object for quick rendering later.</p>
 <span class="p">}</span>
 </code></pre></div>
 
+<p>As you can see, I can easily change the size of my sprites by alter a
+single variable: <code>Game.unit</code>.</p>
+
+<h5 id="toc_5">Rendering: invalidateRect</h5>
+
 <p>The next step was putting the pixels on the screen. We started by simply
 redrawing every entity on every iteration of the game&#8217;s loop. That had
 some performance implications. Mountain Lion&#8217;s Activity Monitor was
@@ -139,6 +153,12 @@ reporting 98% CPU usage while the game was running (more than half on
 the rendering side). So it was time to profile and refactor. We
 implemented a good-ol&#39; invalidateRect algorithm and now we only redraw
 entities that have changed or moved.</p>
+
+<p>Play the video below to see how it works:</p>
+
+<p><video src="/video/morph-invalidate-rect.mov" preload="auto" controls></video></p>
+
+<h5 id="toc_6">Rendering: Animation</h5>
 
 <p>Finally, we needed a way to animate a sprite. Each entity has a list of
 sprites and a variable called activeSprite which is used to put the
@@ -163,11 +183,15 @@ up with this:</p>
 
 <p>Animation states are defined with in the entity&#8217;s constructor and are
 used by the base entity to iterate/cycle through the array of sprites.
-<code>WINGS_UP</code> and <code>WINGS_DOWN</code> are merely globals for the index into the
+<code>WINGS_UP</code> and <code>WINGS_DOWN</code> are merely constants for the index into the
 sprites array. The base entity&#8217;s animation logic cycles through the
 sequence according to the state the entity is in.</p>
 
-<h5 id="toc_5">Collision Detection</h5>
+<p>If you&#39;d like to see how the animationStates dictionaries are put to
+use, take a look at the
+<a href="http://github.com/blacktunnel/morph/tree/game/entity.js#line-48">source</a>.</p>
+
+<h5 id="toc_7">Collision Detection</h5>
 
 <p>Our implementation is rather run-of-the-mill at the moment, and I&#8217;m sure
 its complexity will increase as we continue on. For now we&#8217;re using a sort
@@ -202,7 +226,7 @@ collision handlers. Here&#8217;s the base entity&#8217;s default collision handl
 <span class="p">}</span>
 </code></pre></div>
 
-<h5 id="toc_6">Fun stuff</h5>
+<h5 id="toc_8">Fun stuff</h5>
 
 <p>After that stuff was in place it was time to start having fun. We bound
 keys to the hero&#8217;s movement, defined physics for jumping (gravity),
@@ -217,8 +241,7 @@ but using the machine allows him to turn into a human-like
 character who can pickup and throw rocks. Trust me, that alone is
 entertaining. Try it for yourself:</p>
 
-<iframe src="http://blacktunnel.github.io/morph/preview/iframe.html"
-class="morph"></iframe>
+<iframe src="http://blacktunnel.github.io/morph/preview/embed" height="366"></iframe>
 
 <p>Thanks for reading. If you have experience with game development and you
 noticed that I&#39;m doing things absolutely wrong, please
