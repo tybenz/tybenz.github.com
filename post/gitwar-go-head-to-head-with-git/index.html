@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-  <title>Blog | Tyler Benziger</title>
+  <title>Gitwar: A Git-based Gaming Platform | Tyler Benziger</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
 
   <link rel="shortcut icon" href="http://gravatar.com/avatar/9f5734a7063a4c48139f4999f3100167
@@ -46,7 +46,7 @@
         <nav>
             <ul>
                 
-                    <li><a href="http://tybenz.com" class="active">Blog</a></li>
+                    <li><a href="http://tybenz.com">Blog</a></li>
                 
                 
                 <li><a href="http://tybenz.com/about">About</a></li>
@@ -57,101 +57,62 @@
             </ul>
         </nav>
         <div class="nav-slider">
-            <div class="nav-selection blog"></div>
+            <div class="nav-selection "></div>
         </div>
     </div>
 </header>
 
-
+    
     <section id="main">
         <article class="container">
-          
-          
-  
+            <article class="post">
+                <div class="post-header">
+                    <p class="date">May 10, 2013</p>
+                    <h1>Gitwar: A Git-based Gaming Platform</h1>
+                </div>
+                <div class="post-body">
+                    <p>I recently came across a <a href="https://github.com/blog/1499-the-revolution-will-be-forked">blog
+post</a> that talked about non-developers using Git and GitHub to
+do some pretty cool things. It got me thinking about other cool and unsual
+things possible with GitHub.</p>
 
-  
+<p>Then I started thinking about games and wondered what it would look like
+to have a game with Git at the center. Not something so lame as &quot;who can
+create the most branches with the most inappropriate names in the
+shortest amount of time?&quot; More like... a family of two-player,
+head-to-head, text-based, turn-based games with Git as the transfer
+protocol in between.</p>
 
-  
-      <article class="post">
-          <div class="post-header">
-                <p class="date">Mar 27, 2013</p>
-                <h1><a href="/post/lainlee3design">Lain Lee 3 Design</a></h1>
-          </div>
-          <div class="post-body">
-            <p>Recently I was looking for a designer to collaborate with on a project
-called <a href="/post/codearmory">Code Armory</a>. I started looking for online resources to meet some
-talented designers. I discovered a site called
-<a href="http://collabfinder.com">CollabFinder</a> and immediately realized I had
-discovered something of extraordinary value.</p>
+<p>So I made one, and I did it all in <strong>BASH</strong>.</p>
 
-<p>CollabFinder allows you to search for designers, developers, artists,
-writers, and scientists by physical location, skills, and interests. You
-can pitch them a project you&#39;d like to &quot;collaborate&quot; on (collaboration
-in this context, means non-monetary help). </p>
+<p>The games are built using a &quot;platform&quot; called
+<a href="http://github.com/gitwar/gitwar">Gitwar</a>. It&#39;s a shared
+utility that takes care of adding, committing, pushing, and pulling
+to/from the shared repo.</p>
 
-<p>So I started looking for designers in the San Francisco area, found some
-really talented people, sent them a note about the project I needed help
-on, and within an hour I had my replies. I quickly started emailing back
-and forth with a designer named <a href="http://twitter.com/lainlee3design">Lain Lee</a>.
-He told me he needed some help coding his new design site, and asked if
-I&#39;d be interested in trading services. We actually met at Starbucks down
-the road from my office that same day, and started talking about our ideas
-and life in general. We just clicked. Our interests and passions line up so well.
-It&#39;s been a great partnership. Today, I&#39;m happy to say we launched
-Lain&#39;s <a href="http://lainlee3design.com">new site</a>.
-The site was put together with KirbyCMS, a few jQuery plugins, and
-some good ol&#39; fashioned elbow grease.</p>
+<p>The first game is called
+<a href="http://github.com/gitwar/gitwar/tree/master/gitfight">Gitfight</a> and it&#39;s an incredibly simple/corny game where
+you tell the game what kind of punch you&#39;d like to throw at your
+opponent and basically roll a virtual die to see how much damage you
+deal. After you submit your punch, Gitwar takes over and commits that
+action to your repo and your opponent can have a chance to punch back.</p>
 
-<p>Quick word about Lain as a designer/illustrator: this guy is one heck of
-an artist. Since we&#39;ve started working together I&#39;ve started to follow
-his work, and honestly, every thing the guy
-creates is pure gold. Check out this
-<a href="http://lainlee3design.com/blog/avengers-assemble-timelapse">timelapse</a> of his mad 
-illustration skills! The stuff he&#39;s designed for Code Armory is
-absolutely perfect. Excellent illustration, web design, and it totally
-lines up with my vision for this new project. I&#39;ll be sure to write more
-as I move further along with it.</p>
+<p>The second game was an obvious choice. It&#39;s called
+<a href="http://github.com/gitwar/gitwar/tree/master/gitchess">Gitchess</a>. This is
+where I had the most fun. Creating a more complex game in BASH proved to
+be a difficult but insanely satisfying challenge.</p>
 
-<p>Make sure you head over and check out his new site
-(<a href="http://lainlee3design.com">http://lainlee3design.com</a>). Check out his
-portfolio and see what you think. I&#39;d highly recommend him for any of your
-design needs.</p>
+<p>Obviously this is incredibly weird but it was <em>really</em> fun to make, and
+I&#39;m curious and eager to find out what other types of command-line
+games can be built on top of such a pattern. Be sure to check out the
+Gitwar repo <a href="http://github.com/gitwar/gitwar">here</a>. And give me a shoutout on
+Twitter if you have comments.</p>
 
-          </div>
-      </article>
-  
-
-  
-      <article class="post">
-          <div class="post-header">
-                <p class="date">Mar 08, 2013</p>
-                <h1><a href="/post/walkie-pt-2">Walkie Pt. 2</a></h1>
-          </div>
-          <div class="post-body">
-            <p>I ported walkie to run as a hubot* script! What does that mean? It means basecamp notifications in your chat room!</p>
-
-<p>Go to walkie&#39;s hubot page for more info: <a href="http://walkie.tybenz.com/hubot">http://walkie.tybenz.com/hubot</a></p>
-
-<p><img src="/img/walkie/irc.png" alt=""></p>
-
-<p>* <a href="http://hubot.github.com">http://hubot.github.com</a></p>
-
-          </div>
-      </article>
-  
-
-
-<!-- Pagination links -->
-<div class="pagination">
-  
-  
-    <a href="/page2" class="next button"><span>Older</span></a>
-  
-</div>
-
+                </div>
+            </article>
         </article>
     </section>
-
+    
     <footer>
     <nav class="container">
         <ul>
@@ -160,6 +121,7 @@ design needs.</p>
     </nav>
 </footer>
 
+</div>
 </body>
 <script type="text/javascript">
 
@@ -197,3 +159,4 @@ design needs.</p>
 </script>
 
 </html>
+
