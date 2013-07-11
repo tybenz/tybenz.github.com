@@ -46,7 +46,7 @@
         <nav>
             <ul>
                 
-                    <li><a href="http://tybenz.com">Blog</a></li>
+                    <li><a href="http://tybenz.com" class="active">Blog</a></li>
                 
                 
                 <li><a href="http://tybenz.com/about">About</a></li>
@@ -57,7 +57,7 @@
             </ul>
         </nav>
         <div class="nav-slider">
-            <div class="nav-selection "></div>
+            <div class="nav-selection blog"></div>
         </div>
     </div>
 </header>
@@ -96,7 +96,7 @@ a treasure chest of well-written reusable components might as well be equivalent
 <li>The holy grail</li>
 </ol>
 
-<h5 id="toc_9">Black box</h5>
+<h5 id="toc_4">Black box</h5>
 
 <p>The black box approach is one that <em>every</em> web developer is familiar with.
 What I&#39;m referring to is a UI-based plugin that might solve a problem, but requires specific
@@ -113,7 +113,7 @@ fully-customizable?</p>
 <p>The limited nature of these black box components outweighs their ease of
 use.</p>
 
-<h5 id="toc_10">Framework-based</h5>
+<h5 id="toc_5">Framework-based</h5>
 
 <p>I love MVC frameworks. On the back-end, on the front-end &mdash; if
 there&#39;s a model, view, and controller, I&#39;m doing a happy dance. When it
@@ -129,7 +129,7 @@ couple hours of refactoring and you slowly elbow out Backbone and try to
 write a more &quot;universal&quot; widget, all along, asking yourself, &quot;Why on
 earth didn&#39;t I just do it this way from the start?&quot;</p>
 
-<h5 id="toc_11">The Holy Grail</h5>
+<h5 id="toc_6">The Holy Grail</h5>
 
 <p>That&#39;s where option #3 comes in. The compromise between isolated,
 they-just-work plugins and event-driven MVC-friendly components.</p>
@@ -137,7 +137,7 @@ they-just-work plugins and event-driven MVC-friendly components.</p>
 <p>We&#39;re going to find a way to write UI components in a way that they can
 work well in any context.</p>
 
-<h5 id="toc_12">What does it look like?</h5>
+<h5 id="toc_7">What does it look like?</h5>
 
 <p>A solid reusable widget should have the following criteria:</p>
 
@@ -157,7 +157,7 @@ application to hook into and modify the widget&#39;s behavior.</p>
 <p>External events are key to allowing extensibility when writing UI
 widgets.</p>
 
-<h5 id="toc_13">Example</h5>
+<h5 id="toc_8">Example</h5>
 
 <p>Let&#39;s say we have a simple widget like Bootstrap&#39;s dropdown. Before we
 dive into writing such a widget, we try to identify any higher-level UI
@@ -191,7 +191,7 @@ criteria, and provide a variety of options, as well as events for when
 things are hidden/shown and whatever else the markup within the panel
 should handle.</p>
 
-<h5 id="toc_14">Wrap up</h5>
+<h5 id="toc_9">Wrap up</h5>
 
 <p>In my experience amassing an arsenal of these small pattern-based
 reusable bits of code can really make working on any application so much
