@@ -72,28 +72,23 @@
                 </div>
                 <div class="post-body">
                     <p><strong>Reduce, reuse, refactor.</strong> That&#39;s what we do as developers <em>all day</em>.
-If you&#39;re a front-end JS dev and that&#39;s not what you spend 80% of your time
-doing, you&#39;re not doing it right.</p>
+The <strong>reduce</strong> and <strong>refactor</strong> are obvious necessities, and admittedly some of the most fun and/or
+most painful parts of the job. In my experience, the <strong>reuse</strong> goal is often the easiest to 
+acheive. Yet, somehow, it is often the one most ignored, in the name of
+&quot;iterative development&quot;. Trust me, nothing helps you iterate more
+quickly than
+writing things in a generic and reusable way the <em>first</em> time.</p>
 
-<p>The <strong>reduce</strong> and <strong>refactor</strong> are obvious necessities, and admittedly some of the most fun and/or
-most painful parts of the job. In my experience, the <strong>reuse</strong> goal is often the easiest to acheive.
-Yet, somehow, it is often the one most ignored.</p>
-
-<p>Writing code that is purposefully structured to be reusable has immeasurable value. It&#39;s not that hard,
-it&#39;s a lot of fun, and it just makes life better.</p>
-
-<p>I&#39;ve seen recently a trend in the world of web development of this topic surfacing
-more and more, and this is my two-cents. In the world of front-end development stock-piling
-a treasure chest of well-written reusable components might as well be equivalent to hoarding pure gold.</p>
-
-<p>Let me break it down for you.</p>
+<p>In my experience writing code to be purposefully reusable is fun,
+challenging, and incredibly useful. I want to outline what writing
+solid, reusable front-end web components should look like.</p>
 
 <p>There are 3 different approaches when it comes to solving a UI problem or implementing a common UI pattern.</p>
 
 <ol>
 <li>Black box</li>
 <li>Framework-based</li>
-<li>The holy grail</li>
+<li>The sweet spot</li>
 </ol>
 
 <h5 id="toc_4">Black box</h5>
@@ -110,26 +105,94 @@ interaction with the plugin itself. Sure, you got a slideshow widget by
 downloading a couple of files, but what good is it if it&#39;s not
 fully-customizable?</p>
 
-<p>The limited nature of these black box components outweighs their ease of
-use.</p>
+<h5 id="toc_5">Enter the example</h5>
 
-<h5 id="toc_5">Framework-based</h5>
+<p>The example I&#39;ll be using throughout this post is what I call a toggle
+widget. Think of it like a dropdown menu tied to a single link/button.
+Click a button, a panel is shown. Click it again and it goes away.</p>
 
-<p>I love MVC frameworks. On the back-end, on the front-end &mdash; if
-there&#39;s a model, view, and controller, I&#39;m doing a happy dance. When it
-comes to writing reusable code, however, there&#39;s one thing I can get
-annoyed with pretty easily when dealing with UI components in a large-scale
-applications. If you do it the &quot;framework&quot; way, it&#39;s less reusable by
+<p>Let&#39;s take a look at the blackbox approach to this widget:</p>
+
+<div class="highlight"><pre><code class="javascript"><span class="nx">$</span><span class="p">.</span><span class="nx">fn</span><span class="p">.</span><span class="nx">toggle</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span> <span class="nx">options</span> <span class="p">)</span> <span class="p">{</span>
+
+    <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">each</span><span class="p">(</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+        <span class="c1">// caching objects</span>
+        <span class="kd">var</span> <span class="nx">$this</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span> <span class="k">this</span> <span class="p">),</span>
+            <span class="c1">// limited options</span>
+            <span class="nx">settings</span> <span class="o">=</span> <span class="nx">$</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span>
+                <span class="nx">effect</span><span class="o">:</span> <span class="kc">undefined</span>
+            <span class="p">},</span> <span class="nx">options</span> <span class="p">),</span>
+            <span class="c1">// widget expectations</span>
+            <span class="nx">id</span> <span class="o">=</span> <span class="nx">$this</span><span class="p">.</span><span class="nx">attr</span><span class="p">(</span> <span class="s1">&#39;href&#39;</span> <span class="p">),</span>
+            <span class="nx">panel</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span> <span class="nx">id</span> <span class="p">);</span>
+
+        <span class="c1">// widget logic</span>
+        <span class="nx">$this</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span> <span class="s1">&#39;click&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span> <span class="nx">e</span> <span class="p">)</span> <span class="p">{</span>
+            <span class="nx">e</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">();</span>
+            <span class="k">if</span> <span class="p">(</span> <span class="nx">panel</span><span class="p">.</span><span class="nx">css</span><span class="p">(</span> <span class="s1">&#39;display&#39;</span> <span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;none&#39;</span> <span class="p">)</span> <span class="p">{</span>
+                <span class="nx">panel</span><span class="p">.</span><span class="nx">show</span><span class="p">(</span> <span class="nx">settings</span><span class="p">.</span><span class="nx">effect</span> <span class="p">);</span>
+            <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+                <span class="nx">panel</span><span class="p">.</span><span class="nx">hide</span><span class="p">(</span> <span class="nx">settings</span><span class="p">.</span><span class="nx">effect</span> <span class="p">);</span>
+            <span class="p">}</span>
+        <span class="p">});</span>
+    <span class="p">});</span>
+
+<span class="p">};</span>
+
+<span class="nx">$</span><span class="p">(</span> <span class="s1">&#39;.trigger&#39;</span> <span class="p">).</span><span class="nx">toggle</span><span class="p">();</span>
+</code></pre></div>
+
+<p>This is an example of a typical jQuery plugin*. It has few options,
+expectations on markup structure, and very specific widget logic. Not
+exactly ideal for integrating into a larger-scale application.</p>
+
+<h5 id="toc_6">Framework-based</h5>
+
+<p>Next up is the framework-based approach to writing components. I&#39;m
+personally a big fan of MVC in app development, but when it comes to
+writing UI components, however, there&#39;s one thing I get annoyed with
+often &mdash; if you do it the &quot;framework&quot; way, it&#39;s less reusable by
 definition.</p>
 
-<p>Sure you can reuse a Backbone view in any Backbone project.
-But what if you switch frameworks? What if you&#39;re implementing something
-on a smaller scale and don&#39;t have a framework at all? Prepare for a
-couple hours of refactoring and you slowly elbow out Backbone and try to
-write a more &quot;universal&quot; widget, all along, asking yourself, &quot;Why on
-earth didn&#39;t I just do it this way from the start?&quot;</p>
+<p>Here&#39;s an example:</p>
 
-<h5 id="toc_6">The Holy Grail</h5>
+<div class="highlight"><pre><code class="javascript"><span class="kd">var</span> <span class="nx">ToggleView</span> <span class="o">=</span> <span class="nx">Backbone</span><span class="p">.</span><span class="nx">View</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span>
+    <span class="nx">initialize</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">options</span><span class="p">)</span> <span class="p">{</span>
+        <span class="kd">var</span> <span class="nx">id</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">$el</span><span class="p">.</span><span class="nx">attr</span><span class="p">(</span> <span class="s1">&#39;href&#39;</span> <span class="p">);</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">$panel</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span> <span class="nx">id</span> <span class="p">);</span>
+    <span class="p">},</span>
+
+    <span class="nx">events</span><span class="o">:</span> <span class="p">{</span>
+        <span class="s1">&#39;click&#39;</span><span class="o">:</span> <span class="s1">&#39;togglePanel&#39;</span>
+    <span class="p">},</span>
+    
+    <span class="nx">togglePanel</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span> <span class="nx">evt</span> <span class="p">)</span> <span class="p">{</span>
+        <span class="nx">evt</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">();</span>
+
+        <span class="k">if</span> <span class="p">(</span> <span class="k">this</span><span class="p">.</span><span class="nx">$panel</span><span class="p">.</span><span class="nx">css</span><span class="p">(</span> <span class="s1">&#39;display&#39;</span> <span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;none&#39;</span> <span class="p">)</span> <span class="p">{</span>
+            <span class="k">this</span><span class="p">.</span><span class="nx">$panel</span><span class="p">.</span><span class="nx">show</span><span class="p">();</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="k">this</span><span class="p">.</span><span class="nx">$panel</span><span class="p">.</span><span class="nx">hide</span><span class="p">();</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">});</span>
+
+<span class="kd">var</span> <span class="nx">toggleView</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ToggleView</span><span class="p">({</span>
+    <span class="nx">el</span><span class="o">:</span> <span class="nx">$</span><span class="p">(</span> <span class="s1">&#39;.trigger&#39;</span> <span class="p">)[</span><span class="mi">0</span><span class="p">],</span>
+    <span class="nx">panel</span><span class="o">:</span> <span class="nx">$</span><span class="p">(</span> <span class="s1">&#39;.panel&#39;</span> <span class="p">)</span>
+<span class="p">});</span>
+</code></pre></div>
+
+<p>Notice that there are no options at all in this view. This is because
+it&#39;s custom-made for this application and we (ideally) know what our requirements are
+while growing the codebase.</p>
+
+<p>There&#39;s an even bigger problem here, we&#39;ve just rewritten a common UI
+widget in a very specific &quot;Backbone-y&quot; way. All reusability is gone
+(outside of another Backbone project that is). Converting
+this code into a more flexible widget will take time and effort.</p>
+
+<h5 id="toc_7">The Sweet Spot</h5>
 
 <p>That&#39;s where option #3 comes in. The compromise between isolated,
 they-just-work plugins and event-driven MVC-friendly components.</p>
@@ -137,7 +200,7 @@ they-just-work plugins and event-driven MVC-friendly components.</p>
 <p>We&#39;re going to find a way to write UI components in a way that they can
 work well in any context.</p>
 
-<h5 id="toc_7">What does it look like?</h5>
+<h5 id="toc_8">What does it look like?</h5>
 
 <p>A solid reusable widget should have the following criteria:</p>
 
@@ -148,50 +211,209 @@ work well in any context.</p>
 <li>External events</li>
 </ol>
 
-<p>You write widgets with all 4 of those and here&#39;s what you&#39;ll get.</p>
+<p>Let&#39;s take a look at some code:</p>
 
-<p>You&#39;ll have components that are customizable with options, that do their
-job as their supposed to and that provide ways for other pieces of an
-application to hook into and modify the widget&#39;s behavior.</p>
+<div class="highlight"><pre><code class="javascript"><span class="kd">var</span> <span class="nx">Toggle</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span> <span class="nx">el</span><span class="p">,</span> <span class="nx">options</span> <span class="p">)</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">widget</span> <span class="o">=</span> <span class="k">this</span><span class="p">;</span>
 
-<p>External events are key to allowing extensibility when writing UI
-widgets.</p>
+    <span class="c1">// override defaults with options passed in</span>
+    <span class="nx">options</span> <span class="o">=</span> <span class="nx">$</span><span class="p">.</span><span class="nx">extend</span><span class="p">(</span> <span class="k">this</span><span class="p">.</span><span class="nx">defaultOptions</span><span class="p">,</span> <span class="nx">options</span> <span class="p">);</span>
 
-<h5 id="toc_8">Example</h5>
+    <span class="k">this</span><span class="p">.</span><span class="nx">$el</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span> <span class="nx">el</span> <span class="p">);</span>
+    <span class="c1">// selector for our trigger is an option</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">$trigger</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span> <span class="nx">options</span><span class="p">.</span><span class="nx">triggerSelector</span> <span class="p">);</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">options</span> <span class="o">=</span> <span class="nx">options</span><span class="p">;</span>
 
-<p>Let&#39;s say we have a simple widget like Bootstrap&#39;s dropdown. Before we
-dive into writing such a widget, we try to identify any higher-level UI
-patterns it uses (part of the reduce step I mentioned above).</p>
+    <span class="c1">// eventName is an option and the event itself</span>
+    <span class="c1">// calls a method that can be overridden</span>
+    <span class="k">this</span><span class="p">.</span><span class="nx">$trigger</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span> <span class="nx">options</span><span class="p">.</span><span class="nx">eventName</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span> <span class="nx">evt</span> <span class="p">)</span> <span class="p">{</span>
+        <span class="nx">widget</span><span class="p">.</span><span class="nx">_handleEvent</span><span class="p">(</span> <span class="nx">evt</span> <span class="p">);</span>
+    <span class="p">});</span>
+<span class="p">};</span>
 
-<p>The most basic aspect of the dropdown&#39;s behavior is binding the click of button
-to displaying some panel. So we write a widget that does just that.
-Click a button, and we&#39;ll open an associated panel. Click anywhere else
-once it&#39;s opened, and we&#39;ll hide the panel for you. We&#39;ll call it a
-&quot;toggle&quot; widget.</p>
+<span class="nx">$</span><span class="p">.</span><span class="nx">extend</span><span class="p">(</span> <span class="nx">Toggle</span><span class="p">.</span><span class="nx">prototype</span><span class="p">,</span> <span class="p">{</span>
+    <span class="nx">defaultOptions</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">triggerSelector</span><span class="o">:</span> <span class="s1">&#39;.trigger&#39;</span><span class="p">,</span>
+        <span class="nx">eventName</span><span class="o">:</span> <span class="s1">&#39;click&#39;</span><span class="p">,</span>
+        <span class="nx">preventDefault</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
+        <span class="nx">showClassName</span><span class="o">:</span> <span class="s1">&#39;show&#39;</span><span class="p">,</span>
+        <span class="nx">hideClassName</span><span class="o">:</span> <span class="s1">&#39;hide&#39;</span>
+    <span class="p">},</span>
 
-<p>Now, we want an actual dropdown. That is, we want to use our little
+    <span class="nx">_handleEvent</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span> <span class="nx">evt</span> <span class="p">)</span> <span class="p">{</span>
+        <span class="kd">var</span> <span class="nx">opts</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">options</span><span class="p">,</span>
+            <span class="nx">$el</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">$el</span><span class="p">,</span>
+            <span class="nx">$target</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span> <span class="nx">evt</span><span class="p">.</span><span class="nx">target</span> <span class="p">);</span>
+
+        <span class="k">if</span> <span class="p">(</span> <span class="nx">opts</span><span class="p">.</span><span class="nx">preventDefault</span> <span class="p">)</span> <span class="p">{</span>
+            <span class="nx">evt</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">();</span>
+        <span class="p">}</span>
+
+        <span class="k">this</span><span class="p">.</span><span class="nx">trigger</span><span class="p">(</span> <span class="s1">&#39;before-toggle&#39;</span><span class="p">,</span> <span class="p">{</span> <span class="nx">panel</span><span class="o">:</span> <span class="nx">$el</span><span class="p">,</span> <span class="nx">trigger</span><span class="o">:</span> <span class="nx">$target</span> <span class="p">}</span> <span class="p">);</span>
+
+        <span class="k">if</span> <span class="p">(</span> <span class="nx">$el</span><span class="p">.</span><span class="nx">hasClass</span><span class="p">(</span> <span class="nx">opts</span><span class="p">.</span><span class="nx">showClassName</span> <span class="p">)</span> <span class="p">)</span> <span class="p">{</span>
+            <span class="k">this</span><span class="p">.</span><span class="nx">trigger</span><span class="p">(</span> <span class="s1">&#39;before-toggle-hide&#39;</span><span class="p">,</span> <span class="p">{</span> <span class="nx">panel</span><span class="o">:</span> <span class="nx">$el</span><span class="p">,</span> <span class="nx">trigger</span><span class="o">:</span> <span class="nx">$target</span> <span class="p">}</span> <span class="p">);</span>
+            <span class="k">this</span><span class="p">.</span><span class="nx">hide</span><span class="p">();</span>
+            <span class="c1">// Events triggered...</span>
+            <span class="k">this</span><span class="p">.</span><span class="nx">trigger</span><span class="p">(</span> <span class="s1">&#39;toggle-hide&#39;</span><span class="p">,</span> <span class="p">{</span> <span class="nx">panel</span><span class="o">:</span> <span class="nx">$el</span><span class="p">,</span> <span class="nx">trigger</span><span class="o">:</span> <span class="nx">$target</span> <span class="p">}</span> <span class="p">);</span>
+        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="k">this</span><span class="p">.</span><span class="nx">trigger</span><span class="p">(</span> <span class="s1">&#39;before-toggle-show&#39;</span><span class="p">,</span> <span class="p">{</span> <span class="nx">panel</span><span class="o">:</span> <span class="nx">$el</span><span class="p">,</span> <span class="nx">trigger</span><span class="o">:</span> <span class="nx">$target</span> <span class="p">}</span> <span class="p">);</span>
+            <span class="k">this</span><span class="p">.</span><span class="nx">show</span><span class="p">();</span>
+            <span class="c1">// ... when important things happen</span>
+            <span class="k">this</span><span class="p">.</span><span class="nx">trigger</span><span class="p">(</span> <span class="s1">&#39;toggle-show&#39;</span><span class="p">,</span> <span class="p">{</span> <span class="nx">panel</span><span class="o">:</span> <span class="nx">$el</span><span class="p">,</span> <span class="nx">trigger</span><span class="o">:</span> <span class="nx">$target</span> <span class="p">}</span> <span class="p">);</span>
+        <span class="p">}</span>
+
+        <span class="c1">// Save last clicked trigger</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">lastClicked</span> <span class="o">=</span> <span class="nx">evt</span><span class="p">.</span><span class="nx">target</span><span class="p">;</span>
+    <span class="p">},</span>
+
+    <span class="c1">// No longer hide and show but rather just applying/removing</span>
+    <span class="c1">// classes</span>
+    <span class="nx">hide</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">$el</span><span class="p">.</span><span class="nx">removeClass</span><span class="p">(</span> <span class="k">this</span><span class="p">.</span><span class="nx">options</span><span class="p">.</span><span class="nx">showClassName</span> <span class="p">).</span><span class="nx">addClass</span><span class="p">(</span> <span class="k">this</span><span class="p">.</span><span class="nx">options</span><span class="p">.</span><span class="nx">hideClassName</span> <span class="p">);</span>
+    <span class="p">},</span>
+
+    <span class="nx">show</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+        <span class="k">this</span><span class="p">.</span><span class="nx">$el</span><span class="p">.</span><span class="nx">removeClass</span><span class="p">(</span> <span class="k">this</span><span class="p">.</span><span class="nx">options</span><span class="p">.</span><span class="nx">hideClassName</span> <span class="p">).</span><span class="nx">addClass</span><span class="p">(</span> <span class="k">this</span><span class="p">.</span><span class="nx">options</span><span class="p">.</span><span class="nx">showClassName</span> <span class="p">);</span>
+    <span class="p">},</span>
+
+    <span class="nx">trigger</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span> <span class="nx">evt</span><span class="p">,</span> <span class="nx">data</span> <span class="p">)</span> <span class="p">{</span>
+        <span class="nx">$</span><span class="p">(</span> <span class="k">this</span> <span class="p">).</span><span class="nx">trigger</span><span class="p">(</span> <span class="nx">evt</span><span class="p">,</span> <span class="nx">data</span> <span class="p">);</span>
+    <span class="p">},</span>
+
+    <span class="nx">on</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span> <span class="nx">evt</span><span class="p">,</span> <span class="nx">fn</span> <span class="p">)</span> <span class="p">{</span>
+        <span class="nx">$</span><span class="p">(</span> <span class="k">this</span> <span class="p">).</span><span class="nx">on</span><span class="p">(</span> <span class="nx">evt</span><span class="p">,</span> <span class="nx">fn</span> <span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">});</span>
+
+<span class="nx">$</span><span class="p">.</span><span class="nx">fn</span><span class="p">.</span><span class="nx">toggle</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span> <span class="nx">options</span> <span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">each</span><span class="p">(</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+        <span class="kd">var</span> <span class="nx">widget</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Toggle</span><span class="p">(</span> <span class="k">this</span><span class="p">,</span> <span class="nx">options</span> <span class="p">);</span>
+    <span class="p">});</span>
+<span class="p">};</span>
+
+<span class="kd">var</span> <span class="nx">toggle</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Toggle</span><span class="p">(</span> <span class="s1">&#39;.panel&#39;</span> <span class="p">);</span> <span class="c1">// or $( &#39;.panel&#39; ).toggle();</span>
+</code></pre></div>
+
+<p>Here have a component that is customizable with options, that does its
+job as it&#39;s supposed to and that provides ways for other pieces of an
+application to hook into and modify the its behavior.</p>
+
+<p>Admittedly, this implementation is much longer, but that&#39;s the price of
+writing something that will work anywhere</p>
+
+<h5 id="toc_9">Dropdown</h5>
+
+<p>Let&#39;s take our example even further. Now, we want an actual dropdown.
+That is, we want to use our little
 toggle widget but change the contents of the panel to reflect what ever
-items are supposed to be in the dropdown.</p>
+items are supposed to be in the dropdown. And we want our widget to be
+smart enough that multiple toggles can control the same dropdown and have
+different markup depending on which toggle was clicked.</p>
 
-<p>Take a look at the following diagram:</p>
+<div class="highlight"><pre><code class="javascript"><span class="kd">var</span> <span class="nx">Dropdown</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span> <span class="nx">ele</span><span class="p">,</span> <span class="nx">templateFn</span><span class="p">,</span> <span class="nx">options</span> <span class="p">)</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">widget</span> <span class="o">=</span> <span class="k">this</span><span class="p">,</span>
+        <span class="nx">toggle</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Toggle</span><span class="p">(</span> <span class="nx">ele</span> <span class="p">);</span>
 
-<p><img src="http://awes0.me/widgetize.png" alt=""></p>
+    <span class="c1">// Need options for the dropdown widget itself</span>
+    <span class="nx">options</span> <span class="o">=</span> <span class="nx">$</span><span class="p">.</span><span class="nx">extend</span><span class="p">(</span> <span class="p">{},</span> <span class="k">this</span><span class="p">.</span><span class="nx">defaultOptions</span><span class="p">,</span> <span class="nx">options</span> <span class="p">);</span>
+
+    <span class="k">this</span><span class="p">.</span><span class="nx">options</span> <span class="o">=</span> <span class="nx">options</span><span class="p">;</span>
+
+    <span class="nx">toggle</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span> <span class="s1">&#39;before-toggle&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span> <span class="nx">evt</span><span class="p">,</span> <span class="nx">data</span> <span class="p">)</span> <span class="p">{</span>
+        <span class="c1">// The toggle widget saves the last trigger used</span>
+        <span class="c1">// If the trigger that was clicked is different than this one</span>
+        <span class="c1">// we hide the panel to override the default toggle behavior</span>
+        <span class="k">if</span> <span class="p">(</span> <span class="nx">data</span><span class="p">.</span><span class="nx">trigger</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">!=</span> <span class="nx">toggle</span><span class="p">.</span><span class="nx">lastClicked</span> <span class="p">)</span> <span class="p">{</span>
+            <span class="nx">toggle</span><span class="p">.</span><span class="nx">hide</span><span class="p">();</span>
+        <span class="p">}</span>
+
+        <span class="kd">var</span> <span class="nx">panel</span> <span class="o">=</span> <span class="nx">data</span><span class="p">.</span><span class="nx">panel</span><span class="p">,</span>
+            <span class="nx">trigger</span> <span class="o">=</span> <span class="nx">data</span><span class="p">.</span><span class="nx">trigger</span><span class="p">,</span>
+            <span class="nx">templateData</span> <span class="o">=</span> <span class="nx">trigger</span><span class="p">.</span><span class="nx">data</span><span class="p">(</span> <span class="nx">options</span><span class="p">.</span><span class="nx">dataAttr</span> <span class="p">);</span>
+
+        <span class="c1">// Please for the love of all things good, use a templating engine</span>
+        <span class="nx">panel</span><span class="p">.</span><span class="nx">html</span><span class="p">(</span> <span class="nx">templateFn</span><span class="p">(</span> <span class="nx">templateData</span> <span class="p">)</span> <span class="p">).</span><span class="nx">addClass</span><span class="p">(</span> <span class="nx">options</span><span class="p">.</span><span class="nx">dropdownClassName</span> <span class="p">);</span>
+
+        <span class="c1">// Small (resuable) utility to position elements relative to others</span>
+        <span class="kd">var</span> <span class="nx">pos</span> <span class="o">=</span> <span class="nx">positionElementAroundAnother</span><span class="p">(</span> <span class="nx">trigger</span><span class="p">,</span> <span class="nx">panel</span><span class="p">,</span> <span class="p">{</span>
+            <span class="nx">align</span><span class="o">:</span> <span class="s1">&#39;right&#39;</span><span class="p">,</span>
+            <span class="nx">alignOffset</span><span class="o">:</span> <span class="mi">10</span><span class="p">,</span>
+            <span class="nx">position</span><span class="o">:</span> <span class="s1">&#39;below&#39;</span><span class="p">,</span>
+            <span class="nx">positionOffset</span><span class="o">:</span> <span class="mi">40</span>
+        <span class="p">});</span>
+
+        <span class="nx">panel</span><span class="p">.</span><span class="nx">css</span><span class="p">({</span>
+            <span class="s1">&#39;top&#39;</span><span class="o">:</span> <span class="nx">pos</span><span class="p">.</span><span class="nx">y</span> <span class="o">+</span> <span class="s1">&#39;px&#39;</span><span class="p">,</span>
+            <span class="s1">&#39;left&#39;</span><span class="o">:</span> <span class="nx">pos</span><span class="p">.</span><span class="nx">x</span> <span class="o">+</span> <span class="s1">&#39;px&#39;</span>
+        <span class="p">});</span>
+    <span class="p">});</span>
+    
+    <span class="nx">toggle</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span> <span class="s1">&#39;toggle-show&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span> <span class="nx">evt</span><span class="p">,</span> <span class="nx">data</span> <span class="p">)</span> <span class="p">{</span>
+        <span class="nx">widget</span><span class="p">.</span><span class="nx">trigger</span><span class="p">(</span> <span class="s1">&#39;dropdown-show&#39;</span><span class="p">,</span> <span class="nx">data</span> <span class="p">);</span>
+    <span class="p">});</span>
+
+    <span class="nx">toggle</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span> <span class="s1">&#39;toggle-hide&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span> <span class="nx">evt</span><span class="p">,</span> <span class="nx">data</span> <span class="p">)</span> <span class="p">{</span>
+        <span class="nx">widget</span><span class="p">.</span><span class="nx">trigger</span><span class="p">(</span> <span class="s1">&#39;dropdown-hide&#39;</span><span class="p">,</span> <span class="nx">data</span> <span class="p">);</span>
+    <span class="p">});</span>
+<span class="p">};</span>
+
+<span class="nx">$</span><span class="p">.</span><span class="nx">extend</span><span class="p">(</span> <span class="nx">Dropdown</span><span class="p">.</span><span class="nx">prototype</span><span class="p">,</span> <span class="p">{</span>
+    <span class="nx">defaultOptions</span><span class="o">:</span> <span class="p">{</span>
+        <span class="nx">dropdownClassName</span><span class="o">:</span> <span class="s1">&#39;dropdown&#39;</span><span class="p">,</span>
+        <span class="nx">dataAttr</span><span class="o">:</span> <span class="s1">&#39;dropdown-list&#39;</span>
+    <span class="p">},</span>
+    
+    <span class="nx">trigger</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span> <span class="nx">evt</span><span class="p">,</span> <span class="nx">data</span> <span class="p">)</span> <span class="p">{</span>
+        <span class="nx">$</span><span class="p">(</span> <span class="k">this</span> <span class="p">).</span><span class="nx">trigger</span><span class="p">(</span> <span class="nx">evt</span><span class="p">,</span> <span class="nx">data</span> <span class="p">);</span>
+    <span class="p">},</span>
+
+    <span class="nx">on</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span> <span class="nx">evt</span><span class="p">,</span> <span class="nx">fn</span> <span class="p">)</span> <span class="p">{</span>
+        <span class="nx">$</span><span class="p">(</span> <span class="k">this</span> <span class="p">).</span><span class="nx">on</span><span class="p">(</span> <span class="nx">evt</span><span class="p">,</span> <span class="nx">fn</span> <span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">});</span>
+
+<span class="c1">// Setting up dropdown object for each trigger</span>
+<span class="nx">$</span><span class="p">(</span> <span class="s1">&#39;.trigger&#39;</span> <span class="p">).</span><span class="nx">each</span><span class="p">(</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">$this</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span> <span class="k">this</span> <span class="p">),</span>
+        <span class="nx">list</span> <span class="o">=</span> <span class="nx">$</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span> <span class="nx">$this</span><span class="p">.</span><span class="nx">data</span><span class="p">(</span> <span class="s1">&#39;items&#39;</span> <span class="p">).</span><span class="nx">split</span><span class="p">(</span> <span class="s1">&#39;,&#39;</span> <span class="p">),</span> <span class="kd">function</span><span class="p">(</span> <span class="nx">item</span> <span class="p">)</span> <span class="p">{</span>
+            <span class="k">return</span> <span class="p">{</span>
+                <span class="nx">link</span><span class="o">:</span> <span class="s1">&#39;#&#39;</span> <span class="o">+</span> <span class="nx">item</span><span class="p">.</span><span class="nx">toLowerCase</span><span class="p">().</span><span class="nx">replace</span><span class="p">(</span> <span class="sr">/\s/g</span><span class="p">,</span> <span class="s1">&#39;-&#39;</span> <span class="p">),</span>
+                <span class="nx">text</span><span class="o">:</span> <span class="nx">item</span>
+            <span class="p">};</span>
+        <span class="p">});</span>
+
+    <span class="c1">// Set our template object for the dropdown</span>
+    <span class="c1">// on a data attribute</span>
+    <span class="nx">$this</span><span class="p">.</span><span class="nx">data</span><span class="p">(</span> <span class="s1">&#39;list&#39;</span><span class="p">,</span> <span class="p">{</span> <span class="nx">list</span><span class="o">:</span> <span class="nx">list</span> <span class="p">}</span> <span class="p">);</span>
+<span class="p">});</span>
+
+<span class="kd">var</span> <span class="nx">dd</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Dropdown</span><span class="p">(</span> <span class="s1">&#39;.panel&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span> <span class="nx">data</span> <span class="p">)</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nx">_</span><span class="p">.</span><span class="nx">template</span><span class="p">(</span> <span class="nx">$</span><span class="p">(</span> <span class="s1">&#39;#dd-menu-template&#39;</span> <span class="p">).</span><span class="nx">text</span><span class="p">(),</span> <span class="nx">data</span> <span class="p">);</span>
+<span class="p">},</span> <span class="p">{</span> <span class="nx">dataAttr</span><span class="o">:</span> <span class="s1">&#39;list&#39;</span> <span class="p">}</span> <span class="p">);</span>
+</code></pre></div>
+
+<p>Live demo <a href="http://codepen.io/tybenz/pen/BIvAo">here</a>.</p>
 
 <p>Notice that the toggle widget does it&#39;s normal thing. It&#39;s really good
 at keeping track of whether or not the panel is showing, but it also
 fires events when a hide or show occurs. This let&#39;s write
-another bit of code that listens for the show event and tweaks the
+another component &quot;Dropdown&quot; that listens for the before show event and tweaks the
 markup of the panel to what we need.</p>
 
 <p>Slick huh? Now you&#39;ve got a widget that can handle a simple UI pattern,
 and it&#39;s customizable/extensible enough to do something <em>really</em> useful.</p>
 
-<p>Not to mention the more-complex dropdown widget should follow the same
-criteria, and provide a variety of options, as well as events for when
-things are hidden/shown and whatever else the markup within the panel
-should handle.</p>
+<p>Not to mention the more-complex dropdown widget follows the same
+principles. It provides options, as well as events for when
+things are hidden/shown.</p>
 
-<h5 id="toc_9">Wrap up</h5>
+<p>It&#39;s also flexible in other respects.
+The markup generation for the dropdown is left outside of the widget. That
+should be left up to the developer to do as they please. (In this case, I&#39;m using
+data attributes and a templating engine to generate the markup.)</p>
+
+<h5 id="toc_10">Wrap up</h5>
 
 <p>In my experience amassing an arsenal of these small pattern-based
 reusable bits of code can really make working on any application so much
