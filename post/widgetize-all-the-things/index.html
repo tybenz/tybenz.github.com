@@ -71,7 +71,7 @@
                     <h1>Widget-ize All The Things!</h1>
                 </div>
                 <div class="post-body">
-                    <p><strong>Reduce, reuse, refactor.</strong> That&#39;s what we do as developers <em>all day</em>.
+                    <p><strong>Reduce, reuse, refactor.</strong> That&#8217;s what we do as developers <em>all day</em>.
 The <strong>reduce</strong> and <strong>refactor</strong> are obvious necessities, and admittedly some of the most fun and/or
 most painful parts of the job. In my experience, the <strong>reuse</strong> goal is often the easiest to 
 acheive. Yet, somehow, it is often the one most ignored, in the name of
@@ -94,24 +94,23 @@ solid, reusable front-end web components should look like.</p>
 <h5 id="toc_4">Black box</h5>
 
 <p>The black box approach is one that <em>every</em> web developer is familiar with.
-What I&#39;m referring to is a UI-based plugin that might solve a problem, but requires specific
+What I&#8217;m referring to is a UI-based plugin that might solve a problem, but requires specific
 markup structure,
-or an entire 300 lines of code to accomplish something you could have done in 20. It&#39;s a plugin you grab and throw
-in your app/site and it&#39;s supposed to just &quot;work&quot;. And it does for the most part. The convenience is tempting.</p>
+or an entire 300 lines of code to accomplish something you could have done in 20. It&#8217;s a plugin you grab and throw
+in your app/site and it&#8217;s supposed to just &quot;work&quot;. And it does for the most part. The convenience is tempting.</p>
 
 <p>The problem comes when you want to customize/extend the thing to do a
-little something extra. Most plugin authors don&#39;t leave room for
+little something extra. Most plugin authors don&#8217;t leave room for
 interaction with the plugin itself. Sure, you got a slideshow widget by
-downloading a couple of files, but what good is it if it&#39;s not
-fully-customizable?</p>
+downloading a couple of files, but what good is it if it&#8217;s not
+fully customizable?</p>
 
 <h5 id="toc_5">Enter the example</h5>
 
-<p>The example I&#39;ll be using throughout this post is what I call a toggle
-widget. Think of it like a dropdown menu tied to a single link/button.
-Click a button, a panel is shown. Click it again and it goes away.</p>
-
-<p>Let&#39;s take a look at the blackbox approach to this widget:</p>
+<p>The example I&#8217;ll be using throughout this post is what I call a toggle
+widget. It&#8217;s like a dropdown but even simpler.
+Click a button, a panel is shown. Click it again and it goes away.
+Let&#8217;s take a look at the blackbox approach to this widget:</p>
 
 <div class="highlight"><pre><code class="javascript"><span class="nx">$</span><span class="p">.</span><span class="nx">fn</span><span class="p">.</span><span class="nx">toggle</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span> <span class="nx">options</span> <span class="p">)</span> <span class="p">{</span>
 
@@ -148,13 +147,13 @@ exactly ideal for integrating into a larger-scale application.</p>
 
 <h5 id="toc_6">Framework-based</h5>
 
-<p>Next up is the framework-based approach to writing components. I&#39;m
-personally a big fan of MVC in app development, but when it comes to
-writing UI components, however, there&#39;s one thing I get annoyed with
-often &mdash; if you do it the &quot;framework&quot; way, it&#39;s less reusable by
+<p>Next up is the framework-based approach to writing components. I&#8217;m
+personally a big fan of MVC in app development. But, when it comes to
+writing UI components, there&#8217;s one thing I get annoyed with
+often &mdash; if you do it the &quot;framework&quot; way, it&#8217;s less reusable by
 definition.</p>
 
-<p>Here&#39;s an example:</p>
+<p>Here&#8217;s an example:</p>
 
 <div class="highlight"><pre><code class="javascript"><span class="kd">var</span> <span class="nx">ToggleView</span> <span class="o">=</span> <span class="nx">Backbone</span><span class="p">.</span><span class="nx">View</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span>
     <span class="nx">initialize</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">options</span><span class="p">)</span> <span class="p">{</span>
@@ -184,20 +183,20 @@ definition.</p>
 </code></pre></div>
 
 <p>Notice that there are no options at all in this view. This is because
-it&#39;s custom-made for this application and we (ideally) know what our requirements are
+it&#8217;s custom-made for this application and we (ideally) know what our requirements are
 while growing the codebase.</p>
 
-<p>There&#39;s an even bigger problem here, we&#39;ve just rewritten a common UI
+<p>There&#8217;s an even bigger problem here, we&#8217;ve just rewritten a common UI
 widget in a very specific &quot;Backbone-y&quot; way. All reusability is gone
 (outside of another Backbone project that is). Converting
 this code into a more flexible widget will take time and effort.</p>
 
 <h5 id="toc_7">The Sweet Spot</h5>
 
-<p>That&#39;s where option #3 comes in. The compromise between isolated,
+<p>That&#8217;s where option #3 comes in. The compromise between isolated,
 they-just-work plugins and event-driven MVC-friendly components.</p>
 
-<p>We&#39;re going to find a way to write UI components in a way that they can
+<p>We&#8217;re going to find a way to write UI components in a way that they can
 work well in any context.</p>
 
 <h5 id="toc_8">What does it look like?</h5>
@@ -211,7 +210,7 @@ work well in any context.</p>
 <li>External events</li>
 </ol>
 
-<p>Let&#39;s take a look at some code:</p>
+<p>Let&#8217;s take a look at some code:</p>
 
 <div class="highlight"><pre><code class="javascript"><span class="kd">var</span> <span class="nx">Toggle</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span> <span class="nx">el</span><span class="p">,</span> <span class="nx">options</span> <span class="p">)</span> <span class="p">{</span>
     <span class="kd">var</span> <span class="nx">widget</span> <span class="o">=</span> <span class="k">this</span><span class="p">;</span>
@@ -296,15 +295,15 @@ work well in any context.</p>
 </code></pre></div>
 
 <p>Here have a component that is customizable with options, that does its
-job as it&#39;s supposed to and that provides ways for other pieces of an
-application to hook into and modify the its behavior.</p>
+job as it&#8217;s supposed to and that provides ways for other pieces of an
+application to hook into and modify its behavior.</p>
 
-<p>Admittedly, this implementation is much longer, but that&#39;s the price of
+<p>Admittedly, this implementation is much longer, but that&#8217;s the price of
 writing something that will work anywhere</p>
 
 <h5 id="toc_9">Dropdown</h5>
 
-<p>Let&#39;s take our example even further. Now, we want an actual dropdown.
+<p>Let&#8217;s take our example even further. Now, we want an actual dropdown.
 That is, we want to use our little
 toggle widget but change the contents of the panel to reflect what ever
 items are supposed to be in the dropdown. And we want our widget to be
@@ -395,29 +394,33 @@ different markup depending on which toggle was clicked.</p>
 
 <p>Live demo <a href="http://codepen.io/tybenz/pen/BIvAo">here</a>.</p>
 
-<p>Notice that the toggle widget does it&#39;s normal thing. It&#39;s really good
+<p>Notice that the toggle widget does it&#8217;s normal thing. It&#8217;s really good
 at keeping track of whether or not the panel is showing, but it also
-fires events when a hide or show occurs. This let&#39;s write
+fires events when a hide or show occurs. This let&#8217;s write
 another component &quot;Dropdown&quot; that listens for the before show event and tweaks the
 markup of the panel to what we need.</p>
 
-<p>Slick huh? Now you&#39;ve got a widget that can handle a simple UI pattern,
-and it&#39;s customizable/extensible enough to do something <em>really</em> useful.</p>
+<p>Slick huh? Now you&#8217;ve got a widget that can handle a simple UI pattern,
+and it&#8217;s customizable/extensible enough to do something <em>really</em> useful.</p>
 
 <p>Not to mention the more-complex dropdown widget follows the same
 principles. It provides options, as well as events for when
 things are hidden/shown.</p>
 
-<p>It&#39;s also flexible in other respects.
+<p>It&#8217;s also flexible in other respects.
 The markup generation for the dropdown is left outside of the widget. That
-should be left up to the developer to do as they please. (In this case, I&#39;m using
-data attributes and a templating engine to generate the markup.)</p>
+should be left up to the developer to do as they please. In this case, I&#8217;m using
+data attributes and a templating engine to generate the markup.</p>
 
 <h5 id="toc_10">Wrap up</h5>
 
 <p>In my experience amassing an arsenal of these small pattern-based
 reusable bits of code can really make working on any application so much
-easier. I&#39;ve tried to lay out what I think is a template for simple, but
+easier. Give it a try and you&#8217;ll find that building out a library of
+these types of components is extremely rewarding and in general, it will
+make you a better developer.</p>
+
+<p>I&#8217;ve tried to lay out what I think is a template for simple, but
 powerful components so that you can go forth and widgetize all of your UI.
 As always feel free to submit any comments/questions on
 <a href="http://twitter.com/tybenz">Twitter</a>.</p>
