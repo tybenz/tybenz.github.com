@@ -194,14 +194,8 @@ this code into a more flexible widget will take time and effort.</p>
 <h5 id="toc_7">The Sweet Spot</h5>
 
 <p>That&#8217;s where option #3 comes in. The compromise between isolated,
-they-just-work plugins and event-driven MVC-friendly components.</p>
-
-<p>We&#8217;re going to find a way to write UI components in a way that they can
-work well in any context.</p>
-
-<h5 id="toc_8">What does it look like?</h5>
-
-<p>A solid reusable widget should have the following criteria:</p>
+they-just-work plugins and event-driven MVC-friendly components. A solid
+reusable widget should have the following criteria:</p>
 
 <ol>
 <li>Options (and defaults)</li>
@@ -301,7 +295,7 @@ application to hook into and modify its behavior.</p>
 <p>Admittedly, this implementation is much longer, but that&#8217;s the price of
 writing something that will work anywhere</p>
 
-<h5 id="toc_9">Dropdown</h5>
+<h5 id="toc_8">Dropdown</h5>
 
 <p>Let&#8217;s take our example even further. Now, we want an actual dropdown.
 That is, we want to use our little
@@ -412,7 +406,7 @@ The markup generation for the dropdown is left outside of the widget. That
 should be left up to the developer to do as they please. In this case, I&#8217;m using
 data attributes and a templating engine to generate the markup.</p>
 
-<h5 id="toc_10">Wrap up</h5>
+<h5 id="toc_9">Wrap up</h5>
 
 <p>In my experience amassing an arsenal of these small pattern-based
 reusable bits of code can really make working on any application so much
