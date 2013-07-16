@@ -86,16 +86,16 @@ solid, reusable front-end web components should look like.</p>
 <p>There are 3 different approaches when it comes to solving a UI problem or implementing a common UI pattern.</p>
 
 <ol>
-<li>Black box</li>
+<li>Blackbox</li>
 <li>Framework-based</li>
 <li>The sweet spot</li>
 </ol>
 
-<h5 id="toc_4">Black box</h5>
+<h5 id="toc_4">Blackbox</h5>
 
-<p>The black box approach is one that <em>every</em> web developer is familiar with.
-What I&#8217;m referring to is a UI-based plugin that might solve a problem, but requires specific
-markup structure,
+<p>The blackbox approach is one that <em>every</em> web developer is familiar with.
+What I&#8217;m referring to is a UI-based plugin that solves a problem, but
+might require specific markup structure,
 or an entire 300 lines of code to accomplish something you could have done in 20. It&#8217;s a plugin you grab and throw
 in your app/site and it&#8217;s supposed to just &quot;work&quot;. And it does for the most part. The convenience is tempting.</p>
 
@@ -107,43 +107,32 @@ fully customizable?</p>
 
 <h5 id="toc_5">Enter the example</h5>
 
-<p>The example I&#8217;ll be using throughout this post is what I call a toggle
-widget. It&#8217;s like a dropdown but even simpler.
-Click a button, a panel is shown. Click it again and it goes away.
+<p>The example I&#8217;ll be using throughout this post is what I call a &quot;secret&quot;
+widget. The pattern we&#39;re going for is simple: mousedown -&gt; add a class,
+mouseup -&gt; remove a class. That class can do whatever it wants in CSS.
+We&#8217;re going to have it hide/show a child element (thus the name
+&quot;secret&quot;).
 Let&#8217;s take a look at the blackbox approach to this widget:</p>
 
-<div class="highlight"><pre><code class="javascript"><span class="nx">$</span><span class="p">.</span><span class="nx">fn</span><span class="p">.</span><span class="nx">toggle</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span> <span class="nx">options</span> <span class="p">)</span> <span class="p">{</span>
+<div class="highlight"><pre><code class="javascript"><span class="nx">$</span><span class="p">.</span><span class="nx">fn</span><span class="p">.</span><span class="nx">secret</span> <span class="o">=</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
 
-    <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">each</span><span class="p">(</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-        <span class="c1">// caching objects</span>
-        <span class="kd">var</span> <span class="nx">$this</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span> <span class="k">this</span> <span class="p">),</span>
-            <span class="c1">// limited options</span>
-            <span class="nx">settings</span> <span class="o">=</span> <span class="nx">$</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span>
-                <span class="nx">effect</span><span class="o">:</span> <span class="kc">undefined</span>
-            <span class="p">},</span> <span class="nx">options</span> <span class="p">),</span>
-            <span class="c1">// widget expectations</span>
-            <span class="nx">id</span> <span class="o">=</span> <span class="nx">$this</span><span class="p">.</span><span class="nx">attr</span><span class="p">(</span> <span class="s1">&#39;href&#39;</span> <span class="p">),</span>
-            <span class="nx">panel</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span> <span class="nx">id</span> <span class="p">);</span>
-
-        <span class="c1">// widget logic</span>
-        <span class="nx">$this</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span> <span class="s1">&#39;click&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span> <span class="nx">e</span> <span class="p">)</span> <span class="p">{</span>
-            <span class="nx">e</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">();</span>
-            <span class="k">if</span> <span class="p">(</span> <span class="nx">panel</span><span class="p">.</span><span class="nx">css</span><span class="p">(</span> <span class="s1">&#39;display&#39;</span> <span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;none&#39;</span> <span class="p">)</span> <span class="p">{</span>
-                <span class="nx">panel</span><span class="p">.</span><span class="nx">show</span><span class="p">(</span> <span class="nx">settings</span><span class="p">.</span><span class="nx">effect</span> <span class="p">);</span>
-            <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-                <span class="nx">panel</span><span class="p">.</span><span class="nx">hide</span><span class="p">(</span> <span class="nx">settings</span><span class="p">.</span><span class="nx">effect</span> <span class="p">);</span>
-            <span class="p">}</span>
-        <span class="p">});</span>
+    <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">each</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+        <span class="kd">var</span> <span class="nx">$this</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span> <span class="k">this</span> <span class="p">);</span>
+        <span class="nx">$this</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span> <span class="s1">&#39;mousedown&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span> <span class="nx">$this</span><span class="p">.</span><span class="nx">addClass</span><span class="p">(</span> <span class="s1">&#39;show&#39;</span> <span class="p">);</span> <span class="p">}</span> <span class="p">);</span>
+        <span class="nx">$this</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span> <span class="s1">&#39;mouseup&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span> <span class="nx">$this</span><span class="p">.</span><span class="nx">removeClass</span><span class="p">(</span> <span class="s1">&#39;show&#39;</span> <span class="p">);</span> <span class="p">}</span> <span class="p">);</span>
     <span class="p">});</span>
 
 <span class="p">};</span>
-
-<span class="nx">$</span><span class="p">(</span> <span class="s1">&#39;.trigger&#39;</span> <span class="p">).</span><span class="nx">toggle</span><span class="p">();</span>
 </code></pre></div>
 
-<p>This is an example of a typical jQuery plugin*. It has few options,
-expectations on markup structure, and very specific widget logic. Not
-exactly ideal for integrating into a larger-scale application.</p>
+<p>Live demo <a href="/demos/widgetize/secret.html">here</a></p>
+
+<p>This is an example of a typical jQuery plugin*. It has no options,
+and very simple widget logic. What if I wanted to use different events
+other than mousedown/mouseup? What if I want some other piece of an
+application to perform an action when the class is applied? There&#39;s
+nothing external for integration and not enough options for it to do
+what I want.</p>
 
 <h5 id="toc_6">Framework-based</h5>
 
@@ -155,30 +144,15 @@ definition.</p>
 
 <p>Here&#8217;s an example:</p>
 
-<div class="highlight"><pre><code class="javascript"><span class="kd">var</span> <span class="nx">ToggleView</span> <span class="o">=</span> <span class="nx">Backbone</span><span class="p">.</span><span class="nx">View</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span>
-    <span class="nx">initialize</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span><span class="nx">options</span><span class="p">)</span> <span class="p">{</span>
-        <span class="kd">var</span> <span class="nx">id</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">$el</span><span class="p">.</span><span class="nx">attr</span><span class="p">(</span> <span class="s1">&#39;href&#39;</span> <span class="p">);</span>
-        <span class="k">this</span><span class="p">.</span><span class="nx">$panel</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span> <span class="nx">id</span> <span class="p">);</span>
-    <span class="p">},</span>
-
+<div class="highlight"><pre><code class="javascript"><span class="kd">var</span> <span class="nx">Secret</span> <span class="o">=</span> <span class="nx">Backbone</span><span class="p">.</span><span class="nx">View</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span>
     <span class="nx">events</span><span class="o">:</span> <span class="p">{</span>
-        <span class="s1">&#39;click&#39;</span><span class="o">:</span> <span class="s1">&#39;togglePanel&#39;</span>
+        <span class="s1">&#39;mousedown&#39;</span><span class="o">:</span> <span class="s1">&#39;apply&#39;</span><span class="p">,</span>
+        <span class="s1">&#39;mouseup&#39;</span><span class="o">:</span> <span class="s1">&#39;remove&#39;</span>
     <span class="p">},</span>
-    
-    <span class="nx">togglePanel</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span> <span class="nx">evt</span> <span class="p">)</span> <span class="p">{</span>
-        <span class="nx">evt</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">();</span>
 
-        <span class="k">if</span> <span class="p">(</span> <span class="k">this</span><span class="p">.</span><span class="nx">$panel</span><span class="p">.</span><span class="nx">css</span><span class="p">(</span> <span class="s1">&#39;display&#39;</span> <span class="p">)</span> <span class="o">==</span> <span class="s1">&#39;none&#39;</span> <span class="p">)</span> <span class="p">{</span>
-            <span class="k">this</span><span class="p">.</span><span class="nx">$panel</span><span class="p">.</span><span class="nx">show</span><span class="p">();</span>
-        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-            <span class="k">this</span><span class="p">.</span><span class="nx">$panel</span><span class="p">.</span><span class="nx">hide</span><span class="p">();</span>
-        <span class="p">}</span>
-    <span class="p">}</span>
-<span class="p">});</span>
+    <span class="nx">apply</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span> <span class="k">this</span><span class="p">.</span><span class="nx">$el</span><span class="p">.</span><span class="nx">addClass</span><span class="p">(</span> <span class="s1">&#39;show&#39;</span> <span class="p">)</span> <span class="p">},</span>
 
-<span class="kd">var</span> <span class="nx">toggleView</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">ToggleView</span><span class="p">({</span>
-    <span class="nx">el</span><span class="o">:</span> <span class="nx">$</span><span class="p">(</span> <span class="s1">&#39;.trigger&#39;</span> <span class="p">)[</span><span class="mi">0</span><span class="p">],</span>
-    <span class="nx">panel</span><span class="o">:</span> <span class="nx">$</span><span class="p">(</span> <span class="s1">&#39;.panel&#39;</span> <span class="p">)</span>
+    <span class="nx">remove</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span> <span class="k">this</span><span class="p">.</span><span class="nx">$el</span><span class="p">.</span><span class="nx">removeClass</span><span class="p">(</span> <span class="s1">&#39;show&#39;</span> <span class="p">)</span> <span class="p">},</span>
 <span class="p">});</span>
 </code></pre></div>
 
@@ -204,207 +178,64 @@ reusable widget should have the following criteria:</p>
 <li>External events</li>
 </ol>
 
-<p>Let&#8217;s take a look at some code:</p>
+<p>Let&#8217;s take a look at some code within the constructor of our
+widget:</p>
 
-<div class="highlight"><pre><code class="javascript"><span class="kd">var</span> <span class="nx">Toggle</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span> <span class="nx">el</span><span class="p">,</span> <span class="nx">options</span> <span class="p">)</span> <span class="p">{</span>
-    <span class="kd">var</span> <span class="nx">widget</span> <span class="o">=</span> <span class="k">this</span><span class="p">;</span>
-
-    <span class="c1">// override defaults with options passed in</span>
-    <span class="nx">options</span> <span class="o">=</span> <span class="nx">$</span><span class="p">.</span><span class="nx">extend</span><span class="p">(</span> <span class="k">this</span><span class="p">.</span><span class="nx">defaultOptions</span><span class="p">,</span> <span class="nx">options</span> <span class="p">);</span>
-
-    <span class="k">this</span><span class="p">.</span><span class="nx">$el</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span> <span class="nx">el</span> <span class="p">);</span>
-    <span class="c1">// selector for our trigger is an option</span>
-    <span class="k">this</span><span class="p">.</span><span class="nx">$trigger</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span> <span class="nx">options</span><span class="p">.</span><span class="nx">triggerSelector</span> <span class="p">);</span>
-    <span class="k">this</span><span class="p">.</span><span class="nx">options</span> <span class="o">=</span> <span class="nx">options</span><span class="p">;</span>
-
-    <span class="c1">// eventName is an option and the event itself</span>
-    <span class="c1">// calls a method that can be overridden</span>
-    <span class="k">this</span><span class="p">.</span><span class="nx">$trigger</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span> <span class="nx">options</span><span class="p">.</span><span class="nx">eventName</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span> <span class="nx">evt</span> <span class="p">)</span> <span class="p">{</span>
-        <span class="nx">widget</span><span class="p">.</span><span class="nx">_handleEvent</span><span class="p">(</span> <span class="nx">evt</span> <span class="p">);</span>
-    <span class="p">});</span>
-<span class="p">};</span>
-
-<span class="nx">$</span><span class="p">.</span><span class="nx">extend</span><span class="p">(</span> <span class="nx">Toggle</span><span class="p">.</span><span class="nx">prototype</span><span class="p">,</span> <span class="p">{</span>
-    <span class="nx">defaultOptions</span><span class="o">:</span> <span class="p">{</span>
-        <span class="nx">triggerSelector</span><span class="o">:</span> <span class="s1">&#39;.trigger&#39;</span><span class="p">,</span>
-        <span class="nx">eventName</span><span class="o">:</span> <span class="s1">&#39;click&#39;</span><span class="p">,</span>
-        <span class="nx">preventDefault</span><span class="o">:</span> <span class="kc">true</span><span class="p">,</span>
-        <span class="nx">showClassName</span><span class="o">:</span> <span class="s1">&#39;show&#39;</span><span class="p">,</span>
-        <span class="nx">hideClassName</span><span class="o">:</span> <span class="s1">&#39;hide&#39;</span>
-    <span class="p">},</span>
-
-    <span class="nx">_handleEvent</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span> <span class="nx">evt</span> <span class="p">)</span> <span class="p">{</span>
-        <span class="kd">var</span> <span class="nx">opts</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">options</span><span class="p">,</span>
-            <span class="nx">$el</span> <span class="o">=</span> <span class="k">this</span><span class="p">.</span><span class="nx">$el</span><span class="p">,</span>
-            <span class="nx">$target</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span> <span class="nx">evt</span><span class="p">.</span><span class="nx">target</span> <span class="p">);</span>
-
-        <span class="k">if</span> <span class="p">(</span> <span class="nx">opts</span><span class="p">.</span><span class="nx">preventDefault</span> <span class="p">)</span> <span class="p">{</span>
-            <span class="nx">evt</span><span class="p">.</span><span class="nx">preventDefault</span><span class="p">();</span>
-        <span class="p">}</span>
-
-        <span class="k">this</span><span class="p">.</span><span class="nx">trigger</span><span class="p">(</span> <span class="s1">&#39;before-toggle&#39;</span><span class="p">,</span> <span class="p">{</span> <span class="nx">panel</span><span class="o">:</span> <span class="nx">$el</span><span class="p">,</span> <span class="nx">trigger</span><span class="o">:</span> <span class="nx">$target</span> <span class="p">}</span> <span class="p">);</span>
-
-        <span class="k">if</span> <span class="p">(</span> <span class="nx">$el</span><span class="p">.</span><span class="nx">hasClass</span><span class="p">(</span> <span class="nx">opts</span><span class="p">.</span><span class="nx">showClassName</span> <span class="p">)</span> <span class="p">)</span> <span class="p">{</span>
-            <span class="k">this</span><span class="p">.</span><span class="nx">trigger</span><span class="p">(</span> <span class="s1">&#39;before-toggle-hide&#39;</span><span class="p">,</span> <span class="p">{</span> <span class="nx">panel</span><span class="o">:</span> <span class="nx">$el</span><span class="p">,</span> <span class="nx">trigger</span><span class="o">:</span> <span class="nx">$target</span> <span class="p">}</span> <span class="p">);</span>
-            <span class="k">this</span><span class="p">.</span><span class="nx">hide</span><span class="p">();</span>
-            <span class="c1">// Events triggered...</span>
-            <span class="k">this</span><span class="p">.</span><span class="nx">trigger</span><span class="p">(</span> <span class="s1">&#39;toggle-hide&#39;</span><span class="p">,</span> <span class="p">{</span> <span class="nx">panel</span><span class="o">:</span> <span class="nx">$el</span><span class="p">,</span> <span class="nx">trigger</span><span class="o">:</span> <span class="nx">$target</span> <span class="p">}</span> <span class="p">);</span>
-        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
-            <span class="k">this</span><span class="p">.</span><span class="nx">trigger</span><span class="p">(</span> <span class="s1">&#39;before-toggle-show&#39;</span><span class="p">,</span> <span class="p">{</span> <span class="nx">panel</span><span class="o">:</span> <span class="nx">$el</span><span class="p">,</span> <span class="nx">trigger</span><span class="o">:</span> <span class="nx">$target</span> <span class="p">}</span> <span class="p">);</span>
-            <span class="k">this</span><span class="p">.</span><span class="nx">show</span><span class="p">();</span>
-            <span class="c1">// ... when important things happen</span>
-            <span class="k">this</span><span class="p">.</span><span class="nx">trigger</span><span class="p">(</span> <span class="s1">&#39;toggle-show&#39;</span><span class="p">,</span> <span class="p">{</span> <span class="nx">panel</span><span class="o">:</span> <span class="nx">$el</span><span class="p">,</span> <span class="nx">trigger</span><span class="o">:</span> <span class="nx">$target</span> <span class="p">}</span> <span class="p">);</span>
-        <span class="p">}</span>
-
-        <span class="c1">// Save last clicked trigger</span>
-        <span class="k">this</span><span class="p">.</span><span class="nx">lastClicked</span> <span class="o">=</span> <span class="nx">evt</span><span class="p">.</span><span class="nx">target</span><span class="p">;</span>
-    <span class="p">},</span>
-
-    <span class="c1">// No longer hide and show but rather just applying/removing</span>
-    <span class="c1">// classes</span>
-    <span class="nx">hide</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-        <span class="k">this</span><span class="p">.</span><span class="nx">$el</span><span class="p">.</span><span class="nx">removeClass</span><span class="p">(</span> <span class="k">this</span><span class="p">.</span><span class="nx">options</span><span class="p">.</span><span class="nx">showClassName</span> <span class="p">).</span><span class="nx">addClass</span><span class="p">(</span> <span class="k">this</span><span class="p">.</span><span class="nx">options</span><span class="p">.</span><span class="nx">hideClassName</span> <span class="p">);</span>
-    <span class="p">},</span>
-
-    <span class="nx">show</span><span class="o">:</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-        <span class="k">this</span><span class="p">.</span><span class="nx">$el</span><span class="p">.</span><span class="nx">removeClass</span><span class="p">(</span> <span class="k">this</span><span class="p">.</span><span class="nx">options</span><span class="p">.</span><span class="nx">hideClassName</span> <span class="p">).</span><span class="nx">addClass</span><span class="p">(</span> <span class="k">this</span><span class="p">.</span><span class="nx">options</span><span class="p">.</span><span class="nx">showClassName</span> <span class="p">);</span>
-    <span class="p">},</span>
-
-    <span class="nx">trigger</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span> <span class="nx">evt</span><span class="p">,</span> <span class="nx">data</span> <span class="p">)</span> <span class="p">{</span>
-        <span class="nx">$</span><span class="p">(</span> <span class="k">this</span> <span class="p">).</span><span class="nx">trigger</span><span class="p">(</span> <span class="nx">evt</span><span class="p">,</span> <span class="nx">data</span> <span class="p">);</span>
-    <span class="p">},</span>
-
-    <span class="nx">on</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span> <span class="nx">evt</span><span class="p">,</span> <span class="nx">fn</span> <span class="p">)</span> <span class="p">{</span>
-        <span class="nx">$</span><span class="p">(</span> <span class="k">this</span> <span class="p">).</span><span class="nx">on</span><span class="p">(</span> <span class="nx">evt</span><span class="p">,</span> <span class="nx">fn</span> <span class="p">);</span>
-    <span class="p">}</span>
+<div class="highlight"><pre><code class="javascript"><span class="nx">widget</span><span class="p">.</span><span class="nx">options</span> <span class="o">=</span> <span class="nx">$</span><span class="p">.</span><span class="nx">extend</span><span class="p">(</span> <span class="p">{},</span> <span class="nx">widget</span><span class="p">.</span><span class="nx">defaultOptions</span><span class="p">,</span> <span class="nx">options</span> <span class="p">);</span>
+<span class="nx">widget</span><span class="p">.</span><span class="nx">$el</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span> <span class="nx">widget</span><span class="p">.</span><span class="nx">options</span><span class="p">.</span><span class="nx">applyEvent</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="c1">// apply/remove are just calling addClass/removeClass respectively</span>
+    <span class="nx">widget</span><span class="p">.</span><span class="nx">apply</span><span class="p">();</span>
+    <span class="nx">widget</span><span class="p">.</span><span class="nx">trigger</span><span class="p">(</span> <span class="s1">&#39;secret-apply&#39;</span> <span class="p">);</span>
 <span class="p">});</span>
-
-<span class="nx">$</span><span class="p">.</span><span class="nx">fn</span><span class="p">.</span><span class="nx">toggle</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span> <span class="nx">options</span> <span class="p">)</span> <span class="p">{</span>
-    <span class="k">return</span> <span class="k">this</span><span class="p">.</span><span class="nx">each</span><span class="p">(</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-        <span class="kd">var</span> <span class="nx">widget</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Toggle</span><span class="p">(</span> <span class="k">this</span><span class="p">,</span> <span class="nx">options</span> <span class="p">);</span>
-    <span class="p">});</span>
-<span class="p">};</span>
-
-<span class="kd">var</span> <span class="nx">toggle</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Toggle</span><span class="p">(</span> <span class="s1">&#39;.panel&#39;</span> <span class="p">);</span> <span class="c1">// or $( &#39;.panel&#39; ).toggle();</span>
+<span class="nx">widget</span><span class="p">.</span><span class="nx">$el</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span> <span class="nx">widget</span><span class="p">.</span><span class="nx">options</span><span class="p">.</span><span class="nx">removeEvent</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">widget</span><span class="p">.</span><span class="nx">remove</span><span class="p">();</span>
+    <span class="nx">widget</span><span class="p">.</span><span class="nx">trigger</span><span class="p">(</span> <span class="s1">&#39;secret-remove&#39;</span> <span class="p">);</span>
+<span class="p">});</span>
 </code></pre></div>
 
-<p>Here have a component that is customizable with options, that does its
+<p>Here we have a component that is customizable with options, that does its
 job as it&#8217;s supposed to and that provides ways for other pieces of an
 application to hook into and modify its behavior.</p>
 
-<p>Admittedly, this implementation is much longer, but that&#8217;s the price of
-writing something that will work anywhere</p>
+<h5 id="toc_8">Time to extend</h5>
 
-<h5 id="toc_8">Dropdown</h5>
+<p>Let&#8217;s try to extend this widget&#39;s behavior. What if I had two divs
+on the page each with their own secret? And, let&#8217;s say I want to
+show both secrets when I mousedown the first div.
+With our new event-based widget, it&#8217;s simple:</p>
 
-<p>Let&#8217;s take our example even further. Now, we want an actual dropdown.
-That is, we want to use our little
-toggle widget but change the contents of the panel to reflect what ever
-items are supposed to be in the dropdown. And we want our widget to be
-smart enough that multiple toggles can control the same dropdown and have
-different markup depending on which toggle was clicked.</p>
+<div class="highlight"><pre><code class="javascript"><span class="kd">var</span> <span class="nx">secret1</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Secret</span><span class="p">(</span> <span class="nx">$</span><span class="p">(</span> <span class="s1">&#39;#secret1&#39;</span> <span class="p">)</span> <span class="p">),</span>
+    <span class="nx">secret2</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Secret</span><span class="p">(</span> <span class="nx">$</span><span class="p">(</span> <span class="s1">&#39;#secret2&#39;</span> <span class="p">)</span> <span class="p">);</span>
 
-<div class="highlight"><pre><code class="javascript"><span class="kd">var</span> <span class="nx">Dropdown</span> <span class="o">=</span> <span class="kd">function</span><span class="p">(</span> <span class="nx">ele</span><span class="p">,</span> <span class="nx">templateFn</span><span class="p">,</span> <span class="nx">options</span> <span class="p">)</span> <span class="p">{</span>
-    <span class="kd">var</span> <span class="nx">widget</span> <span class="o">=</span> <span class="k">this</span><span class="p">,</span>
-        <span class="nx">toggle</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Toggle</span><span class="p">(</span> <span class="nx">ele</span> <span class="p">);</span>
-
-    <span class="c1">// Need options for the dropdown widget itself</span>
-    <span class="nx">options</span> <span class="o">=</span> <span class="nx">$</span><span class="p">.</span><span class="nx">extend</span><span class="p">(</span> <span class="p">{},</span> <span class="k">this</span><span class="p">.</span><span class="nx">defaultOptions</span><span class="p">,</span> <span class="nx">options</span> <span class="p">);</span>
-
-    <span class="k">this</span><span class="p">.</span><span class="nx">options</span> <span class="o">=</span> <span class="nx">options</span><span class="p">;</span>
-
-    <span class="nx">toggle</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span> <span class="s1">&#39;before-toggle&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span> <span class="nx">evt</span><span class="p">,</span> <span class="nx">data</span> <span class="p">)</span> <span class="p">{</span>
-        <span class="c1">// The toggle widget saves the last trigger used</span>
-        <span class="c1">// If the trigger that was clicked is different than this one</span>
-        <span class="c1">// we hide the panel to override the default toggle behavior</span>
-        <span class="k">if</span> <span class="p">(</span> <span class="nx">data</span><span class="p">.</span><span class="nx">trigger</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">!=</span> <span class="nx">toggle</span><span class="p">.</span><span class="nx">lastClicked</span> <span class="p">)</span> <span class="p">{</span>
-            <span class="nx">toggle</span><span class="p">.</span><span class="nx">hide</span><span class="p">();</span>
-        <span class="p">}</span>
-
-        <span class="kd">var</span> <span class="nx">panel</span> <span class="o">=</span> <span class="nx">data</span><span class="p">.</span><span class="nx">panel</span><span class="p">,</span>
-            <span class="nx">trigger</span> <span class="o">=</span> <span class="nx">data</span><span class="p">.</span><span class="nx">trigger</span><span class="p">,</span>
-            <span class="nx">templateData</span> <span class="o">=</span> <span class="nx">trigger</span><span class="p">.</span><span class="nx">data</span><span class="p">(</span> <span class="nx">options</span><span class="p">.</span><span class="nx">dataAttr</span> <span class="p">);</span>
-
-        <span class="c1">// Please for the love of all things good, use a templating engine</span>
-        <span class="nx">panel</span><span class="p">.</span><span class="nx">html</span><span class="p">(</span> <span class="nx">templateFn</span><span class="p">(</span> <span class="nx">templateData</span> <span class="p">)</span> <span class="p">).</span><span class="nx">addClass</span><span class="p">(</span> <span class="nx">options</span><span class="p">.</span><span class="nx">dropdownClassName</span> <span class="p">);</span>
-
-        <span class="c1">// Small (resuable) utility to position elements relative to others</span>
-        <span class="kd">var</span> <span class="nx">pos</span> <span class="o">=</span> <span class="nx">positionElementAroundAnother</span><span class="p">(</span> <span class="nx">trigger</span><span class="p">,</span> <span class="nx">panel</span><span class="p">,</span> <span class="p">{</span>
-            <span class="nx">align</span><span class="o">:</span> <span class="s1">&#39;right&#39;</span><span class="p">,</span>
-            <span class="nx">alignOffset</span><span class="o">:</span> <span class="mi">10</span><span class="p">,</span>
-            <span class="nx">position</span><span class="o">:</span> <span class="s1">&#39;below&#39;</span><span class="p">,</span>
-            <span class="nx">positionOffset</span><span class="o">:</span> <span class="mi">40</span>
-        <span class="p">});</span>
-
-        <span class="nx">panel</span><span class="p">.</span><span class="nx">css</span><span class="p">({</span>
-            <span class="s1">&#39;top&#39;</span><span class="o">:</span> <span class="nx">pos</span><span class="p">.</span><span class="nx">y</span> <span class="o">+</span> <span class="s1">&#39;px&#39;</span><span class="p">,</span>
-            <span class="s1">&#39;left&#39;</span><span class="o">:</span> <span class="nx">pos</span><span class="p">.</span><span class="nx">x</span> <span class="o">+</span> <span class="s1">&#39;px&#39;</span>
-        <span class="p">});</span>
-    <span class="p">});</span>
-    
-    <span class="nx">toggle</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span> <span class="s1">&#39;toggle-show&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span> <span class="nx">evt</span><span class="p">,</span> <span class="nx">data</span> <span class="p">)</span> <span class="p">{</span>
-        <span class="nx">widget</span><span class="p">.</span><span class="nx">trigger</span><span class="p">(</span> <span class="s1">&#39;dropdown-show&#39;</span><span class="p">,</span> <span class="nx">data</span> <span class="p">);</span>
-    <span class="p">});</span>
-
-    <span class="nx">toggle</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span> <span class="s1">&#39;toggle-hide&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span> <span class="nx">evt</span><span class="p">,</span> <span class="nx">data</span> <span class="p">)</span> <span class="p">{</span>
-        <span class="nx">widget</span><span class="p">.</span><span class="nx">trigger</span><span class="p">(</span> <span class="s1">&#39;dropdown-hide&#39;</span><span class="p">,</span> <span class="nx">data</span> <span class="p">);</span>
-    <span class="p">});</span>
-<span class="p">};</span>
-
-<span class="nx">$</span><span class="p">.</span><span class="nx">extend</span><span class="p">(</span> <span class="nx">Dropdown</span><span class="p">.</span><span class="nx">prototype</span><span class="p">,</span> <span class="p">{</span>
-    <span class="nx">defaultOptions</span><span class="o">:</span> <span class="p">{</span>
-        <span class="nx">dropdownClassName</span><span class="o">:</span> <span class="s1">&#39;dropdown&#39;</span><span class="p">,</span>
-        <span class="nx">dataAttr</span><span class="o">:</span> <span class="s1">&#39;dropdown-list&#39;</span>
-    <span class="p">},</span>
-    
-    <span class="nx">trigger</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span> <span class="nx">evt</span><span class="p">,</span> <span class="nx">data</span> <span class="p">)</span> <span class="p">{</span>
-        <span class="nx">$</span><span class="p">(</span> <span class="k">this</span> <span class="p">).</span><span class="nx">trigger</span><span class="p">(</span> <span class="nx">evt</span><span class="p">,</span> <span class="nx">data</span> <span class="p">);</span>
-    <span class="p">},</span>
-
-    <span class="nx">on</span><span class="o">:</span> <span class="kd">function</span><span class="p">(</span> <span class="nx">evt</span><span class="p">,</span> <span class="nx">fn</span> <span class="p">)</span> <span class="p">{</span>
-        <span class="nx">$</span><span class="p">(</span> <span class="k">this</span> <span class="p">).</span><span class="nx">on</span><span class="p">(</span> <span class="nx">evt</span><span class="p">,</span> <span class="nx">fn</span> <span class="p">);</span>
-    <span class="p">}</span>
+<span class="nx">secret1</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span> <span class="s1">&#39;secret-apply&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">secret2</span><span class="p">.</span><span class="nx">apply</span><span class="p">();</span>
 <span class="p">});</span>
 
-<span class="c1">// Setting up dropdown object for each trigger</span>
-<span class="nx">$</span><span class="p">(</span> <span class="s1">&#39;.trigger&#39;</span> <span class="p">).</span><span class="nx">each</span><span class="p">(</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
-    <span class="kd">var</span> <span class="nx">$this</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span> <span class="k">this</span> <span class="p">),</span>
-        <span class="nx">list</span> <span class="o">=</span> <span class="nx">$</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span> <span class="nx">$this</span><span class="p">.</span><span class="nx">data</span><span class="p">(</span> <span class="s1">&#39;items&#39;</span> <span class="p">).</span><span class="nx">split</span><span class="p">(</span> <span class="s1">&#39;,&#39;</span> <span class="p">),</span> <span class="kd">function</span><span class="p">(</span> <span class="nx">item</span> <span class="p">)</span> <span class="p">{</span>
-            <span class="k">return</span> <span class="p">{</span>
-                <span class="nx">link</span><span class="o">:</span> <span class="s1">&#39;#&#39;</span> <span class="o">+</span> <span class="nx">item</span><span class="p">.</span><span class="nx">toLowerCase</span><span class="p">().</span><span class="nx">replace</span><span class="p">(</span> <span class="sr">/\s/g</span><span class="p">,</span> <span class="s1">&#39;-&#39;</span> <span class="p">),</span>
-                <span class="nx">text</span><span class="o">:</span> <span class="nx">item</span>
-            <span class="p">};</span>
-        <span class="p">});</span>
-
-    <span class="c1">// Set our template object for the dropdown</span>
-    <span class="c1">// on a data attribute</span>
-    <span class="nx">$this</span><span class="p">.</span><span class="nx">data</span><span class="p">(</span> <span class="s1">&#39;list&#39;</span><span class="p">,</span> <span class="p">{</span> <span class="nx">list</span><span class="o">:</span> <span class="nx">list</span> <span class="p">}</span> <span class="p">);</span>
+<span class="nx">secret1</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span> <span class="s1">&#39;secret-remove&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+    <span class="nx">secret2</span><span class="p">.</span><span class="nx">remove</span><span class="p">();</span>
 <span class="p">});</span>
-
-<span class="kd">var</span> <span class="nx">dd</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Dropdown</span><span class="p">(</span> <span class="s1">&#39;.panel&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span> <span class="nx">data</span> <span class="p">)</span> <span class="p">{</span>
-    <span class="k">return</span> <span class="nx">_</span><span class="p">.</span><span class="nx">template</span><span class="p">(</span> <span class="nx">$</span><span class="p">(</span> <span class="s1">&#39;#dd-menu-template&#39;</span> <span class="p">).</span><span class="nx">text</span><span class="p">(),</span> <span class="nx">data</span> <span class="p">);</span>
-<span class="p">},</span> <span class="p">{</span> <span class="nx">dataAttr</span><span class="o">:</span> <span class="s1">&#39;list&#39;</span> <span class="p">}</span> <span class="p">);</span>
 </code></pre></div>
 
-<p>Live demo <a href="http://codepen.io/tybenz/pen/BIvAo">here</a>.</p>
+<p>Live demo <a href="/demos/widgetize/secret4.html">here</a>.</p>
 
-<p>Notice that the toggle widget does it&#8217;s normal thing. It&#8217;s really good
-at keeping track of whether or not the panel is showing, but it also
-fires events when a hide or show occurs. This let&#8217;s write
-another component &quot;Dropdown&quot; that listens for the before show event and tweaks the
-markup of the panel to what we need.</p>
+<p>Notice that the secret widget does it&#8217;s normal thing. It&#8217;s really good
+at applying/removing classes, but it also fires events when those things
+happens. This let&#8217;s us write a bit of code to create the master/slave
+relationship. If we want, we could even package this new behavior as a
+widget.</p>
 
 <p>Slick huh? Now you&#8217;ve got a widget that can handle a simple UI pattern,
 and it&#8217;s customizable/extensible enough to do something <em>really</em> useful.</p>
 
-<p>Not to mention the more-complex dropdown widget follows the same
-principles. It provides options, as well as events for when
-things are hidden/shown.</p>
-
-<p>It&#8217;s also flexible in other respects.
-The markup generation for the dropdown is left outside of the widget. That
-should be left up to the developer to do as they please. In this case, I&#8217;m using
-data attributes and a templating engine to generate the markup.</p>
+<p>Also, if you haven&#8217;t noticed, our example widget is extremely
+simple. But I wanted to show how small components can be used to do cool
+things (especially when they leverage CSS).
+<a href="/demos/widgetize/secret5.html" target="_blank">Here&#8217;s</a> an example I made to show
+that. The example consists of 91 secret widgets lined up side-by-side.
+Each widget contains an image and the widget&#8217;s applyClass toggle&#39;s
+the visibility of the image. We use the events mouseover and mouseout for this one,
+giving the effect that hovering over the image from left/right scrubs a
+rotating animation.</p>
 
 <h5 id="toc_9">Wrap up</h5>
 
@@ -418,6 +249,9 @@ make you a better developer.</p>
 powerful components so that you can go forth and widgetize all of your UI.
 As always feel free to submit any comments/questions on
 <a href="http://twitter.com/tybenz">Twitter</a>.</p>
+
+<p>* To clarify, I have nothing against jQuery plugins. It&#8217;s just
+that jQuery Plugin authors can be extremely lazy.</p>
 
                 </div>
             </article>
