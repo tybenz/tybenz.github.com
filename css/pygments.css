@@ -14,6 +14,13 @@
 .highlight pre code {
   font-family: 'Source Code Pro', monospace; }
 
+p code {
+  font-size: 0.8em;
+  border: 1px solid #ccc;
+  background: #fff;
+  padding: 5px;
+  margin: 0 5px; }
+
 .highlight .c {
   color: #999988;
   font-style: italic; }
