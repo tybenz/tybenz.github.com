@@ -41,6 +41,8 @@
             </div>
             <img src="http://gravatar.com/avatar/9f5734a7063a4c48139f4999f3100167
 ?s=54" alt="avatar" class="avatar" />
+            <img src="http://gravatar.com/avatar/9f5734a7063a4c48139f4999f3100167
+?s=108" alt="avatar" class="avatar-large" />
         </div>
         <h5 class="logo"><a href="http://tybenz.com">Tyler Benziger</a></h5>
         <nav>
@@ -91,7 +93,7 @@ solid, reusable front-end web components should look like.</p>
 <li>The sweet spot</li>
 </ol>
 
-<h5 id="toc_4">Blackbox</h5>
+<h4 id="toc_4">Blackbox</h4>
 
 <p>The blackbox approach is one that <em>every</em> web developer is familiar with.
 What I&#8217;m referring to is a UI-based plugin that solves a problem, but
@@ -105,7 +107,7 @@ interaction with the plugin itself. Sure, you got a slideshow widget by
 downloading a couple of files, but what good is it if it&#8217;s not
 fully customizable?</p>
 
-<h5 id="toc_5">Enter the example</h5>
+<h4 id="toc_5">Enter the example</h4>
 
 <p>The example I&#8217;ll be using throughout this post is what I call a &quot;secret&quot;
 widget. The pattern we&#39;re going for is simple: mousedown -&gt; add a class,
@@ -134,7 +136,7 @@ application to perform an action when the class is applied? There&#39;s
 nothing external for integration and not enough options for it to do
 what I want.</p>
 
-<h5 id="toc_6">Framework-based</h5>
+<h4 id="toc_6">Framework-based</h4>
 
 <p>Next up is the framework-based approach to writing components. I&#8217;m
 personally a big fan of MVC in app development. But, when it comes to
@@ -165,7 +167,7 @@ widget in a very specific &quot;Backbone-y&quot; way. All reusability is gone
 (outside of another Backbone project that is). Converting
 this code into a more flexible widget will take time and effort.</p>
 
-<h5 id="toc_7">The Sweet Spot</h5>
+<h4 id="toc_7">The Sweet Spot</h4>
 
 <p>That&#8217;s where option #3 comes in. The compromise between isolated,
 they-just-work plugins and event-driven MVC-friendly components. A solid
@@ -197,7 +199,7 @@ widget:</p>
 job as it&#8217;s supposed to and that provides ways for other pieces of an
 application to hook into and modify its behavior.</p>
 
-<h5 id="toc_8">Time to extend</h5>
+<h4 id="toc_8">Time to extend</h4>
 
 <p>Let&#8217;s try to extend this widget&#39;s behavior. What if I had two divs
 on the page each with their own secret? And, let&#8217;s say I want to
@@ -239,7 +241,7 @@ top and left coordinates. We use the events mouseover and mouseout for this one,
 giving the effect that hovering over the image from left/right scrubs a
 rotating animation.</p>
 
-<h5 id="toc_9">Wrap up</h5>
+<h4 id="toc_9">Wrap up</h4>
 
 <p>In my experience amassing an arsenal of these small pattern-based
 reusable bits of code can really make working on any application so much
