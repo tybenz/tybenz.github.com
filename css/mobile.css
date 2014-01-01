@@ -181,11 +181,11 @@ header .subnav-selection {
   transition-timing-function: compact(linear, false, false, false, false, false, false, false, false); }
 
 header .subnav-selection.walkie-home {
-  right: 150px;
+  right: 156px;
   width: 42px; }
 
 header .subnav-selection.walkie-hubot {
-  right: 88px;
+  right: 91px;
   width: 44px; }
 
 header .subnav-selection.download {
