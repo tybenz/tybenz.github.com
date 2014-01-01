@@ -99,6 +99,16 @@ header nav ul li {
   header nav ul li a {
     padding-right: 20px; }
 
+header nav.subnav {
+  z-index: 2;
+  margin: 10px 0 -40px;
+  position: absolute;
+  right: 0; }
+
+header .subnav a {
+  padding-right: 0;
+  padding-left: 20px; }
+
 header .nav-slider {
   height: 3px;
   background-color: #111111;
@@ -147,6 +157,55 @@ header .nav-selection.projects {
   -ms-transform: translateX(114px);
   -o-transform: translateX(114px);
   transform: translateX(114px); }
+
+header .subnav-selection {
+  position: absolute;
+  height: 10px;
+  background-color: #111111;
+  width: 50px;
+  -webkit-transition-property: compact(right, false, false, false, false, false, false, false, false);
+  -moz-transition-property: compact(right, false, false, false, false, false, false, false, false);
+  -ms-transition-property: compact(right, false, false, false, false, false, false, false, false);
+  -o-transition-property: compact(right, false, false, false, false, false, false, false, false);
+  transition-property: compact(right, false, false, false, false, false, false, false, false);
+  -webkit-transition-duration: compact(0.05s, false, false, false, false, false, false, false, false);
+  -moz-transition-duration: compact(0.05s, false, false, false, false, false, false, false, false);
+  -ms-transition-duration: compact(0.05s, false, false, false, false, false, false, false, false);
+  -o-transition-duration: compact(0.05s, false, false, false, false, false, false, false, false);
+  transition-duration: compact(0.05s, false, false, false, false, false, false, false, false);
+  -webkit-transition-timing-function: compact(linear, false, false, false, false, false, false, false, false);
+  -moz-transition-timing-function: compact(linear, false, false, false, false, false, false, false, false);
+  -ms-transition-timing-function: compact(linear, false, false, false, false, false, false, false, false);
+  -o-transition-timing-function: compact(linear, false, false, false, false, false, false, false, false);
+  transition-timing-function: compact(linear, false, false, false, false, false, false, false, false); }
+
+header .subnav-selection.walkie-home {
+  right: 150px;
+  width: 42px; }
+
+header .subnav-selection.walkie-hubot {
+  right: 88px;
+  width: 44px; }
+
+header .subnav-selection.download {
+  right: 0;
+  width: 69px; }
+
+header .subnav-selection.vimdeck-home {
+  right: 52px;
+  width: 42px; }
+
+header .subnav-selection.vimdeck-docs {
+  right: 0px;
+  width: 34px; }
+
+header .subnav-selection.exemplar-home {
+  right: 140px;
+  width: 42px; }
+
+header .subnav-selection.exemplar-docs {
+  right: 87px;
+  width: 35px; }
 
 header .profile {
   float: right;
