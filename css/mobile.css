@@ -102,7 +102,7 @@ header nav ul li {
 
 header nav.subnav {
   z-index: 2;
-  margin: 10px 0 -40px;
+  margin: 7px 0 -40px;
   position: absolute;
   right: 0; }
 
@@ -161,7 +161,7 @@ header .nav-selection.projects {
 
 header .subnav-selection {
   position: absolute;
-  height: 10px;
+  height: 3px;
   background-color: #111111;
   width: 50px;
   -webkit-transition-property: compact(right, false, false, false, false, false, false, false, false);
@@ -190,7 +190,7 @@ header .subnav-selection.walkie-hubot {
 
 header .subnav-selection.download {
   right: 0;
-  width: 69px; }
+  width: 71px; }
 
 header .subnav-selection.vimdeck-home {
   right: 52px;
@@ -201,12 +201,12 @@ header .subnav-selection.vimdeck-docs {
   width: 34px; }
 
 header .subnav-selection.exemplar-home {
-  right: 140px;
-  width: 42px; }
+  right: 145px;
+  width: 44px; }
 
 header .subnav-selection.exemplar-docs {
-  right: 87px;
-  width: 35px; }
+  right: 91px;
+  width: 34px; }
 
 header .profile {
   float: right;
