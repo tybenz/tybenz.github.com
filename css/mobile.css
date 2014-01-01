@@ -316,12 +316,15 @@ ul {
   font-family: "Ubuntu Condensed", Helvetica, Arial, sans-serif;
   font-size: 1.2rem; }
 
+.key-selector {
+  margin-bottom: 1rem; }
+
 .key-selector a {
   float: left;
   padding: 0.5em 0.4em 0.4em;
   margin-right: 0.4em;
   font-family: "Ubuntu", Helvetica, Arial, sans-serif;
-  font-size: 0.9rem; }
+  font-size: 0.8rem; }
 
 .key-selector a.active {
   background-color: #6ec5ff; }
