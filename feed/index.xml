@@ -6,9 +6,10 @@
     <link>http://tybenz.com</link>
     <atom:link href="http://tybenz.com/feed.xml" rel="self" type="application/rss+xml" />
     
-      <item>
-        <title>My Hour Of Code</title>
-        <description>&lt;p&gt;This past week was &lt;a href=&quot;http://code.org&quot;&gt;code.org&amp;#39;s&lt;/a&gt; first &lt;a href=&quot;http://csedweek.org&quot;&gt;Computer Science Education Week&lt;/a&gt;. They set a goal of getting 10 million students worldwide to participate
+      
+        <item>
+          <title>My Hour Of Code</title>
+          <description>&lt;p&gt;This past week was &lt;a href=&quot;http://code.org&quot;&gt;code.org&amp;#39;s&lt;/a&gt; first &lt;a href=&quot;http://csedweek.org&quot;&gt;Computer Science Education Week&lt;/a&gt;. They set a goal of getting 10 million students worldwide to participate
 in an hour of code (they ended up with over 16 million). Code.org and many other participating organizations created self-guided tutorials to walk students through the fundamentals
 of programming.&lt;/p&gt;
 
@@ -20,14 +21,16 @@ code.org&amp;#39;s efforts to educate young people on such an important topic. H
 &lt;img src=&quot;https://raw.github.com/tybenz/awes0.me/gh-pages/hoc3.jpg&quot; alt=&quot;&quot;&gt;
 &lt;img src=&quot;https://raw.github.com/tybenz/awes0.me/gh-pages/hoc4.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 </description>
-        <pubDate>Mon, 16 Dec 2013 00:00:00 -0800</pubDate>
-        <link>http://tybenz.com//post/my-hour-of-code</link>
-        <guid isPermaLink="true">http://tybenz.com//post/my-hour-of-code</guid>
-      </item>
+          <pubDate>Mon, 16 Dec 2013 00:00:00 -0800</pubDate>
+          <link>http://tybenz.com//post/my-hour-of-code</link>
+          <guid isPermaLink="true">http://tybenz.com//post/my-hour-of-code</guid>
+        </item>
+      
     
-      <item>
-        <title>VIM as a presentation tool</title>
-        <description>&lt;p&gt;I made a thing. It&amp;#39;s called &lt;a href=&quot;https://raw.github.com/tybenz/vimdeck/master/img/demo3.png&quot;&gt;Vimdeck&lt;/a&gt;
+      
+        <item>
+          <title>VIM as a presentation tool</title>
+          <description>&lt;p&gt;I made a thing. It&amp;#39;s called &lt;a href=&quot;https://raw.github.com/tybenz/vimdeck/master/img/demo3.png&quot;&gt;Vimdeck&lt;/a&gt;
 and it lets you write a presentation
 in a single markdown file and then converts that file into multiple &amp;quot;slides&amp;quot;
 to be opened and shared in VIM.&lt;/p&gt;
@@ -38,47 +41,31 @@ to be opened and shared in VIM.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://raw.github.com/tybenz/vimdeck/master/img/demo3.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 </description>
-        <pubDate>Thu, 19 Sep 2013 00:00:00 -0700</pubDate>
-        <link>http://tybenz.com//post/vimdeck-vim-as-a-presentation-tool</link>
-        <guid isPermaLink="true">http://tybenz.com//post/vimdeck-vim-as-a-presentation-tool</guid>
-      </item>
+          <pubDate>Thu, 19 Sep 2013 00:00:00 -0700</pubDate>
+          <link>http://tybenz.com//post/vimdeck-vim-as-a-presentation-tool</link>
+          <guid isPermaLink="true">http://tybenz.com//post/vimdeck-vim-as-a-presentation-tool</guid>
+        </item>
+      
     
-      <item>
-        <title>Presentation: Widget-ize</title>
-        <description>&lt;p&gt;I&amp;#39;m headed to &lt;a href=&quot;http://frontporch.com&quot;&gt;Frontporch&lt;/a&gt; in Sonora, CA to the &lt;a href=&quot;http://www.meetup.com/The-Sonora-Software-Developers-Group/&quot;&gt;Sonora Software
+      
+        <item>
+          <title>Presentation: Widget-ize</title>
+          <description>&lt;p&gt;I&amp;#39;m headed to &lt;a href=&quot;http://frontporch.com&quot;&gt;Frontporch&lt;/a&gt; in Sonora, CA to the &lt;a href=&quot;http://www.meetup.com/The-Sonora-Software-Developers-Group/&quot;&gt;Sonora Software
 Developers Group Meetup&lt;/a&gt; to give a presentation
 based on my &lt;a href=&quot;http://tybenz.com/post/widgetize-all-the-things&quot;&gt;widget-ize&lt;/a&gt; blog post.&lt;/p&gt;
 
 &lt;p&gt;The slides can be found here: &lt;a href=&quot;http://tybenz.com/presentation-widgetize&quot;&gt;http://tybenz.com/presentation-widgetize&lt;/a&gt;&lt;/p&gt;
 </description>
-        <pubDate>Tue, 27 Aug 2013 00:00:00 -0700</pubDate>
-        <link>http://tybenz.com//post/presentation-widget-ize</link>
-        <guid isPermaLink="true">http://tybenz.com//post/presentation-widget-ize</guid>
-      </item>
+          <pubDate>Tue, 27 Aug 2013 00:00:00 -0700</pubDate>
+          <link>http://tybenz.com//post/presentation-widget-ize</link>
+          <guid isPermaLink="true">http://tybenz.com//post/presentation-widget-ize</guid>
+        </item>
+      
     
-      <item>
-        <title>Hacker Journal: Writing my HTML5 Game</title>
-        <description>&lt;p&gt;I finally decided to get serious about writing an HTML5 game a few
-months back. It&amp;#39;s been a blast and one heck of a learning experience.
-A couple weeks into it, we started to keep a hacker journal on all of the
-problems we came across and how we chose to solve them.&lt;/p&gt;
-
-&lt;p&gt;You can click the link below and find all kinds of stuff from nailing
-down artificial intelligence to performance tweaks to information about
-custom tools we made along the way.&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://blacktunnel.github.io/blog&quot; target=&quot;_blank&quot;&gt;
-  &lt;img src=&quot;/img/morph.png&quot;&gt;
-&lt;/a&gt;&lt;/p&gt;
-</description>
-        <pubDate>Sun, 21 Jul 2013 00:00:00 -0700</pubDate>
-        <link>http://tybenz.com//post/hacker-journal-writing-my-html5-game</link>
-        <guid isPermaLink="true">http://tybenz.com//post/hacker-journal-writing-my-html5-game</guid>
-      </item>
-    
-      <item>
-        <title>Widget-ize All The Things!</title>
-        <description>&lt;p&gt;&lt;strong&gt;Reduce, reuse, refactor.&lt;/strong&gt; That&amp;#8217;s what we do as developers &lt;em&gt;all day&lt;/em&gt;.
+      
+        <item>
+          <title>Widget-ize All The Things!</title>
+          <description>&lt;p&gt;&lt;strong&gt;Reduce, reuse, refactor.&lt;/strong&gt; That&amp;#8217;s what we do as developers &lt;em&gt;all day&lt;/em&gt;.
 The &lt;strong&gt;reduce&lt;/strong&gt; and &lt;strong&gt;refactor&lt;/strong&gt; are obvious necessities, and admittedly some of the most fun and/or
 most painful parts of the job. In my experience, the &lt;strong&gt;reuse&lt;/strong&gt; goal is often the easiest to 
 acheive. Yet, somehow, it is often the one most ignored, in the name of
@@ -270,14 +257,16 @@ most jQuery plugins are written to solve a specific problem. They do
 their job well but they don&amp;#8217;t necessarily provide
 the options and events to modify/extend behavior.&lt;/p&gt;
 </description>
-        <pubDate>Mon, 08 Jul 2013 00:00:00 -0700</pubDate>
-        <link>http://tybenz.com//post/widgetize-all-the-things</link>
-        <guid isPermaLink="true">http://tybenz.com//post/widgetize-all-the-things</guid>
-      </item>
+          <pubDate>Mon, 08 Jul 2013 00:00:00 -0700</pubDate>
+          <link>http://tybenz.com//post/widgetize-all-the-things</link>
+          <guid isPermaLink="true">http://tybenz.com//post/widgetize-all-the-things</guid>
+        </item>
+      
     
-      <item>
-        <title>Gitwar: Gaming with Git</title>
-        <description>&lt;p&gt;I recently came across a &lt;a href=&quot;https://github.com/blog/1499-the-revolution-will-be-forked&quot;&gt;blog
+      
+        <item>
+          <title>Gitwar: Gaming with Git</title>
+          <description>&lt;p&gt;I recently came across a &lt;a href=&quot;https://github.com/blog/1499-the-revolution-will-be-forked&quot;&gt;blog
 post&lt;/a&gt; that talked about non-developers using Git and GitHub to
 do some pretty cool things. It got me thinking about other cool and unsual
 things possible with GitHub.&lt;/p&gt;
@@ -313,14 +302,16 @@ command-line games can be built on top of a pattern like this. Be sure to check 
 Gitwar repo &lt;a href=&quot;http://github.com/gitwar/gitwar&quot;&gt;here&lt;/a&gt;. And give me a shoutout on
 &lt;a href=&quot;https://twitter.com/share?text=%40tybenz&amp;amp;url=http://tybenz.com/post/gitwar&quot;&gt;Twitter&lt;/a&gt; if you have comments.&lt;/p&gt;
 </description>
-        <pubDate>Fri, 10 May 2013 00:00:00 -0700</pubDate>
-        <link>http://tybenz.com//post/gitwar</link>
-        <guid isPermaLink="true">http://tybenz.com//post/gitwar</guid>
-      </item>
+          <pubDate>Fri, 10 May 2013 00:00:00 -0700</pubDate>
+          <link>http://tybenz.com//post/gitwar</link>
+          <guid isPermaLink="true">http://tybenz.com//post/gitwar</guid>
+        </item>
+      
     
-      <item>
-        <title>Lain Lee 3 Design</title>
-        <description>&lt;p&gt;Recently I was looking for a designer to collaborate with on a project
+      
+        <item>
+          <title>Lain Lee 3 Design</title>
+          <description>&lt;p&gt;Recently I was looking for a designer to collaborate with on a project
 called &lt;a href=&quot;/post/codearmory&quot;&gt;Code Armory&lt;/a&gt;. I started looking for online resources to meet some
 talented designers. I discovered a site called
 &lt;a href=&quot;http://collabfinder.com&quot;&gt;CollabFinder&lt;/a&gt; and immediately realized I had
@@ -359,14 +350,16 @@ as I move further along with it.&lt;/p&gt;
 portfolio and see what you think. I&amp;#39;d highly recommend him for any of your
 design needs.&lt;/p&gt;
 </description>
-        <pubDate>Wed, 27 Mar 2013 00:00:00 -0700</pubDate>
-        <link>http://tybenz.com//post/lainlee3design</link>
-        <guid isPermaLink="true">http://tybenz.com//post/lainlee3design</guid>
-      </item>
+          <pubDate>Wed, 27 Mar 2013 00:00:00 -0700</pubDate>
+          <link>http://tybenz.com//post/lainlee3design</link>
+          <guid isPermaLink="true">http://tybenz.com//post/lainlee3design</guid>
+        </item>
+      
     
-      <item>
-        <title>Walkie Pt. 2</title>
-        <description>&lt;p&gt;I ported walkie to run as a hubot* script! What does that mean? It means basecamp notifications in your chat room!&lt;/p&gt;
+      
+        <item>
+          <title>Walkie Pt. 2</title>
+          <description>&lt;p&gt;I ported walkie to run as a hubot* script! What does that mean? It means basecamp notifications in your chat room!&lt;/p&gt;
 
 &lt;p&gt;Go to walkie&amp;#39;s hubot page for more info: &lt;a href=&quot;http://walkie.tybenz.com/hubot&quot;&gt;http://walkie.tybenz.com/hubot&lt;/a&gt;&lt;/p&gt;
 
@@ -374,14 +367,16 @@ design needs.&lt;/p&gt;
 
 &lt;p&gt;* &lt;a href=&quot;http://hubot.github.com&quot;&gt;http://hubot.github.com&lt;/a&gt;&lt;/p&gt;
 </description>
-        <pubDate>Fri, 08 Mar 2013 00:00:00 -0800</pubDate>
-        <link>http://tybenz.com//post/walkie-pt-2</link>
-        <guid isPermaLink="true">http://tybenz.com//post/walkie-pt-2</guid>
-      </item>
+          <pubDate>Fri, 08 Mar 2013 00:00:00 -0800</pubDate>
+          <link>http://tybenz.com//post/walkie-pt-2</link>
+          <guid isPermaLink="true">http://tybenz.com//post/walkie-pt-2</guid>
+        </item>
+      
     
-      <item>
-        <title>Walkie Pt. 1</title>
-        <description>&lt;p&gt;
+      
+        <item>
+          <title>Walkie Pt. 1</title>
+          <description>&lt;p&gt;
 Introducing the coolest way to stay in sync with Basecamp. That's right. It's a node.js script that will send you updates via Mountain Lion's Notification Center whenever something's going down at HQ.
 &lt;/p&gt;
 
@@ -398,14 +393,16 @@ Check out Walkie's project page for more info: &lt;a href=&quot;http://walkie.ty
 &lt;/p&gt;
 
 </description>
-        <pubDate>Thu, 28 Feb 2013 00:00:00 -0800</pubDate>
-        <link>http://tybenz.com//post/walkie</link>
-        <guid isPermaLink="true">http://tybenz.com//post/walkie</guid>
-      </item>
+          <pubDate>Thu, 28 Feb 2013 00:00:00 -0800</pubDate>
+          <link>http://tybenz.com//post/walkie</link>
+          <guid isPermaLink="true">http://tybenz.com//post/walkie</guid>
+        </item>
+      
     
-      <item>
-        <title>Bash URL Shortener</title>
-        <description>&lt;p&gt;A couple months ago I got curious about URL shorteners and how they were
+      
+        <item>
+          <title>Bash URL Shortener</title>
+          <description>&lt;p&gt;A couple months ago I got curious about URL shorteners and how they were
 implemented. As I was researching the subject, I realized it might be
 fun to write my own. So, of course, the next logical step was to steal
 someone else&amp;#39;s script and modify it for my needs. (I&amp;#39;ve lost the link to
@@ -436,10 +433,47 @@ Deploying a URL that looks something like: &lt;a href=&quot;http://awes0.me/K6g&
 &lt;p&gt;And that&amp;#39;s it. I can now shorten URLs to my heart&amp;#39;s content. No PHP, no
 paid hosting, no headaches. You can view the source &lt;a href=&quot;https://gist.github.com/4735033&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
 </description>
-        <pubDate>Thu, 07 Feb 2013 00:00:00 -0800</pubDate>
-        <link>http://tybenz.com//post/bash-url-shortener</link>
-        <guid isPermaLink="true">http://tybenz.com//post/bash-url-shortener</guid>
-      </item>
+          <pubDate>Thu, 07 Feb 2013 00:00:00 -0800</pubDate>
+          <link>http://tybenz.com//post/bash-url-shortener</link>
+          <guid isPermaLink="true">http://tybenz.com//post/bash-url-shortener</guid>
+        </item>
+      
+    
+      
+        <item>
+          <title>Static Waves</title>
+          <description>&lt;p&gt;I thought I&amp;#39;d write a quick post about what I used to create this blog.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;&lt;a href=&quot;http://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt;: Static site generator&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://sass-lang.com&quot;&gt;Sass&lt;/a&gt;: CSS preprocessor&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://bourbon.io&quot;&gt;Bourbon&lt;/a&gt;: Set of generic Sass mixins&lt;/li&gt;
+&lt;li&gt;&lt;a href=&quot;http://neat.bourbon.io&quot;&gt;Neat&lt;/a&gt;: Set of grid-based Sass mixins (dependent on Bourbon)&lt;/li&gt;
+&lt;li&gt;Fonts: &lt;a href=&quot;http://www.fontsquirrel.com/fonts/bebas-neue&quot;&gt;Bebas Neue&lt;/a&gt;, &lt;a href=&quot;https://github.com/adobe/source-sans-pro&quot;&gt;Adobe Source Sans Pro&lt;/a&gt;, &lt;a href=&quot;https://github.com/adobe/source-code-pro&quot;&gt;Adobe Source Code Pro&lt;/a&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;If you&amp;#39;re not using Github Pages and Jekyll yet, get cracking. There is
+nothing I love more than to write a post in markdown, deploy it with
+git, and have the whole thing hosted for free!&lt;/p&gt;
+
+&lt;p&gt;Sass just makes life better. There are far too many vendor prefixes to
+deal with these days. And Sass makes styling quick and painless.&lt;/p&gt;
+
+&lt;p&gt;Bourbon and Neat are my new favorite mixin library. The guys at
+Thoughtbot are always doing some great things, but this small, intuitive
+mixin and grid system just works.&lt;/p&gt;
+
+&lt;p&gt;The Adobe fonts have become my new favorite defaults. Bebas is just a
+great headings fault, similar to din. I&amp;#39;m in love.&lt;/p&gt;
+
+&lt;p&gt;Well that about wraps it up. The list is pretty short and I&amp;#39;m extremely
+happy with the results. Thanks for reading.&lt;/p&gt;
+</description>
+          <pubDate>Wed, 06 Feb 2013 00:00:00 -0800</pubDate>
+          <link>http://tybenz.com//post/static-waves</link>
+          <guid isPermaLink="true">http://tybenz.com//post/static-waves</guid>
+        </item>
+      
     
   </channel>
 </rss>
