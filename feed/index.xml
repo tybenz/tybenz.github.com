@@ -8,6 +8,20 @@
     
       
         <item>
+          <title>Presentation: CSS Layout</title>
+          <description>&lt;p&gt;I presented on new CSS Layout features at a Game and App Devs Meetup group at Adobe SF tonight.
+Here are the slides for my presentation:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://tybenz.com/presentation-css-layout&quot;&gt;Finally! Layout in CSS&lt;/a&gt;&lt;/p&gt;
+</description>
+          <pubDate>Tue, 04 Feb 2014 00:00:00 -0800</pubDate>
+          <link>http://tybenz.com//post/presentation-css-layout</link>
+          <guid isPermaLink="true">http://tybenz.com//post/presentation-css-layout</guid>
+        </item>
+      
+    
+      
+        <item>
           <title>My Hour Of Code</title>
           <description>&lt;p&gt;This past week was &lt;a href=&quot;http://code.org&quot;&gt;code.org&amp;#39;s&lt;/a&gt; first &lt;a href=&quot;http://csedweek.org&quot;&gt;Computer Science Education Week&lt;/a&gt;. They set a goal of getting 10 million students worldwide to participate
 in an hour of code (they ended up with over 16 million). Code.org and many other participating organizations created self-guided tutorials to walk students through the fundamentals
@@ -436,42 +450,6 @@ paid hosting, no headaches. You can view the source &lt;a href=&quot;https://gis
           <pubDate>Thu, 07 Feb 2013 00:00:00 -0800</pubDate>
           <link>http://tybenz.com//post/bash-url-shortener</link>
           <guid isPermaLink="true">http://tybenz.com//post/bash-url-shortener</guid>
-        </item>
-      
-    
-      
-        <item>
-          <title>Static Waves</title>
-          <description>&lt;p&gt;I thought I&amp;#39;d write a quick post about what I used to create this blog.&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;&lt;a href=&quot;http://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt;: Static site generator&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://sass-lang.com&quot;&gt;Sass&lt;/a&gt;: CSS preprocessor&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://bourbon.io&quot;&gt;Bourbon&lt;/a&gt;: Set of generic Sass mixins&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://neat.bourbon.io&quot;&gt;Neat&lt;/a&gt;: Set of grid-based Sass mixins (dependent on Bourbon)&lt;/li&gt;
-&lt;li&gt;Fonts: &lt;a href=&quot;http://www.fontsquirrel.com/fonts/bebas-neue&quot;&gt;Bebas Neue&lt;/a&gt;, &lt;a href=&quot;https://github.com/adobe/source-sans-pro&quot;&gt;Adobe Source Sans Pro&lt;/a&gt;, &lt;a href=&quot;https://github.com/adobe/source-code-pro&quot;&gt;Adobe Source Code Pro&lt;/a&gt;&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;If you&amp;#39;re not using Github Pages and Jekyll yet, get cracking. There is
-nothing I love more than to write a post in markdown, deploy it with
-git, and have the whole thing hosted for free!&lt;/p&gt;
-
-&lt;p&gt;Sass just makes life better. There are far too many vendor prefixes to
-deal with these days. And Sass makes styling quick and painless.&lt;/p&gt;
-
-&lt;p&gt;Bourbon and Neat are my new favorite mixin library. The guys at
-Thoughtbot are always doing some great things, but this small, intuitive
-mixin and grid system just works.&lt;/p&gt;
-
-&lt;p&gt;The Adobe fonts have become my new favorite defaults. Bebas is just a
-great headings fault, similar to din. I&amp;#39;m in love.&lt;/p&gt;
-
-&lt;p&gt;Well that about wraps it up. The list is pretty short and I&amp;#39;m extremely
-happy with the results. Thanks for reading.&lt;/p&gt;
-</description>
-          <pubDate>Wed, 06 Feb 2013 00:00:00 -0800</pubDate>
-          <link>http://tybenz.com//post/static-waves</link>
-          <guid isPermaLink="true">http://tybenz.com//post/static-waves</guid>
         </item>
       
     
