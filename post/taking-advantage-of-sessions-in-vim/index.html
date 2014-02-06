@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-  <title>Blog | Tyler Benziger</title>
+  <title>Taking advantage of sessions in Vim | Tyler Benziger</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
 
   <link rel="alternate" type="application/rss+xml" title="Tyler Benziger's Blog" href="http://tybenz.com/feed/index.xml">
@@ -14,7 +14,7 @@
   <link rel="stylesheet" href="/css/mobile.css">
   <link rel="stylesheet" href="/css/desktop.css" media="(min-width:40em)">
   <link rel="stylesheet" href="/css/pygments.css">
-  <!--<link href='http://fonts.googleapis.com/css?family=Ubuntu+Mono:400,700|Ubuntu:300,500,300italic,500italic|Ubuntu+Condensed' rel='stylesheet' type='text/css'>-->
+  <link rel="stylesheet" href="/css/font.css">
   <script type="text/javascript" charset="utf-8" src="/js/matchmedia.js"></script>
   <script type="text/javascript" charset="utf-8" src="/js/picturefill.js"></script>
 </head>
@@ -65,103 +65,88 @@
     </div>
 </header>
 
-
+    
     <section id="main">
         <article class="container">
-          
-          
-  
+            <article class="post">
+                <div class="post-header">
+                    <p class="date">Feb 06, 2014</p>
+                    <h1>Taking advantage of sessions in Vim</h1>
+                </div>
+                <div class="post-body">
+                    <p>I&#39;m a VIM fanatic, and I&#39;m always on the lookout for ways to improve my
+workflow.</p>
 
-  
-      <article class="post">
-          <div class="post-header">
-                <p class="date">Feb 04, 2014</p>
-                <h1><a href="/post/presentation-css-layout">Presentation: CSS Layout</a></h1>
-          </div>
-          <div class="post-body">
-            <p>I presented on new CSS Layout features at a Game and App Devs Meetup group at Adobe SF tonight.
-Here are the slides for my presentation:</p>
+<p>A few months ago, on my daily hunt for new, useful VIM plugins, I discovered
+<a href="http://github.com/mhinz/vim-startify">vim-startify</a>. Startify is a beautiful
+and organized startup screen for VIM. It provides shortcuts into files from
+your working directory, a list of bookmarks to files you edit all the time, and
+your most-recently edited files. As I was going over its docs, I also
+discovered that it can list out vim sessions. I&#39;d never read about sessions
+before. So I began googling.</p>
 
-<p><a href="http://tybenz.com/presentation-css-layout">Finally! Layout in CSS</a></p>
+<p>Vim provides some commands that let you store sessions based on the current
+state of VIM. You can load in previously created sessions with <code>source</code> (just
+like any other vim script). The <code>mksession</code> command, out-of-the-box, stores every
+little detail about your current session &mdash; plugins, scripts, which buffers are
+loaded, what your tabs and windows are doing.  Because of this, a <code>mksession</code>
+file can be really large and really ugly. I actually found that most of the
+things <code>mksession</code> was saving to be a bit redudant. For the most part, the
+scripts I want executed when I launch VIM are all present in my <code>.vimrc</code>. So I
+took the bits that I needed and starting creating my own session files.</p>
 
-          </div>
-      </article>
-  
+<p>The only commands I really need in a project-specific session have to do with
+changing VIM&#39;s working directory, opening files into buffers, and choosing
+which of those buffers to edit (I usually start with two files in vertical
+split panes).</p>
 
-  
-      <article class="post">
-          <div class="post-header">
-                <p class="date">Dec 16, 2013</p>
-                <h1><a href="/post/my-hour-of-code">My Hour Of Code</a></h1>
-          </div>
-          <div class="post-body">
-            <p>This past week was <a href="http://code.org">code.org&#39;s</a> first <a href="http://csedweek.org">Computer Science Education Week</a>. They set a goal of getting 10 million students worldwide to participate
-in an hour of code (they ended up with over 16 million). Code.org and many other participating organizations created self-guided tutorials to walk students through the fundamentals
-of programming.</p>
+<p>Here&#39;s one of my session files (vimdeck.vim):</p>
 
-<p>I was able to help out at a <a href="http://hcs.hickmanschools.org">Hickman Charter School</a> by adding a short presentation on what code is all about. I&#39;m extrememly appreciative of
-code.org&#39;s efforts to educate young people on such an important topic. Here&#39;s some photos from the event:</p>
-
-<p><img src="https://raw.github.com/tybenz/awes0.me/gh-pages/hoc1.jpg" alt="">
-<img src="https://raw.github.com/tybenz/awes0.me/gh-pages/hoc2.jpg" alt="">
-<img src="https://raw.github.com/tybenz/awes0.me/gh-pages/hoc3.jpg" alt="">
-<img src="https://raw.github.com/tybenz/awes0.me/gh-pages/hoc4.jpg" alt=""></p>
-
-          </div>
-      </article>
-  
-
-  
-      <article class="post">
-          <div class="post-header">
-                <p class="date">Sep 19, 2013</p>
-                <h1><a href="/post/vimdeck-vim-as-a-presentation-tool">VIM as a presentation tool</a></h1>
-          </div>
-          <div class="post-body">
-            <p>I made a thing. It&#39;s called <a href="https://raw.github.com/tybenz/vimdeck/master/img/demo3.png">Vimdeck</a>
-and it lets you write a presentation
-in a single markdown file and then converts that file into multiple &quot;slides&quot;
-to be opened and shared in VIM.</p>
-
-<p>Buffers as slides. Genius, no? Plus, I added some ascii art conversion stuff too.</p>
-
-<p>Head over to the <a href="http://github.com/tybenz/vimdeck">GitHub page</a> to check it out.</p>
-
-<p><img src="https://raw.github.com/tybenz/vimdeck/master/img/demo3.png" alt=""></p>
-
-          </div>
-      </article>
-  
-
-  
-      <article class="post">
-          <div class="post-header">
-                <p class="date">Aug 27, 2013</p>
-                <h1><a href="/post/presentation-widget-ize">Presentation: Widget-ize</a></h1>
-          </div>
-          <div class="post-body">
-            <p>I&#39;m headed to <a href="http://frontporch.com">Frontporch</a> in Sonora, CA to the <a href="http://www.meetup.com/The-Sonora-Software-Developers-Group/">Sonora Software
-Developers Group Meetup</a> to give a presentation
-based on my <a href="http://tybenz.com/post/widgetize-all-the-things">widget-ize</a> blog post.</p>
-
-<p>The slides can be found here: <a href="http://tybenz.com/presentation-widgetize">http://tybenz.com/presentation-widgetize</a></p>
-
-          </div>
-      </article>
-  
-
-
-<!-- Pagination links -->
-<div class="pagination">
-  
-  
-    <a href="/page2" class="next button"><span>Older</span></a>
-  
+<div class="highlight">
+<pre><code><strong>cd</strong> ~/src/vimdeck
+<strong>args</strong> lib/* lib/templates/* bin/vimdeck Rakefile Gemfile README.md slides.md
+<strong>edit</strong> slides.md vert
+<strong>sb</strong> lib/vimdeck.rb</code></pre>
 </div>
 
+<p>I change the working directory to the project folder, open files into buffers,
+then I choose which two files I want to start with (in the above case slides.md
+and lib/vimdeck.rb). And I can execute all of this by typing:</p>
+
+<div class="highlight"><pre><code class="text">:source ~/.vim/sessions/vimdeck.vim
+</code></pre></div>
+
+<p>Now sessions get even cooler when you pair sessions with Startify. Startify
+will list all session files from a directory and provide keyboard shortcuts to
+execute them. I put my session files into <code>~/.vim/sessions</code> and tell startify
+where they&#39;re located with:</p>
+
+<div class="highlight"><pre><code class="vim"><span class="k">let</span> <span class="k">g</span>:startify_session_dir <span class="p">=</span> <span class="s2">&quot;~/.vim/sessions&quot;</span>
+</code></pre></div>
+
+<p>Now everytime I start VIM, I&#39;m greeted with this:</p>
+
+<p><img src="http://awes0.me/startify.png" alt=""></p>
+
+<p>Note that the first section consists of a list of numbered sessions. Startify
+assigns shortcut keys to them so if I want to jump into my vimdeck session, all
+I have to do is open VIM and hit <code>h</code> and it will drop me into the right
+directory with all of the files I want to be able to edit for that project.</p>
+
+<p>Startify also provides directory-level session file detection. So it will check VIM&#39;s
+working directory for a <code>Session.vim</code> file and write out a shortcut for that
+session as well. Useful if you&#39;d like to include your session file in your
+projects git repository.</p>
+
+<p>Make sure you grab <a href="http://github.com/mhinz/vim-startify">startify</a> and start
+playing around with its session support. Also, hit me up on
+<a href="http://twitter.com/tybenz">twitter</a> if you have any questions/suggestions.</p>
+
+                </div>
+            </article>
         </article>
     </section>
-
+    
     <footer>
     <nav class="container">
         <ul>
@@ -170,6 +155,7 @@ based on my <a href="http://tybenz.com/post/widgetize-all-the-things">widget-ize
     </nav>
 </footer>
 
+</div>
 </body>
 <script type="text/javascript">
 
@@ -207,3 +193,4 @@ based on my <a href="http://tybenz.com/post/widgetize-all-the-things">widget-ize
 </script>
 
 </html>
+

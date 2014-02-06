@@ -73,6 +73,48 @@
   
       <article class="post">
           <div class="post-header">
+                <p class="date">Feb 07, 2013</p>
+                <h1><a href="/post/bash-url-shortener">Bash URL Shortener</a></h1>
+          </div>
+          <div class="post-body">
+            <p>A couple months ago I got curious about URL shorteners and how they were
+implemented. As I was researching the subject, I realized it might be
+fun to write my own. So, of course, the next logical step was to steal
+someone else&#39;s script and modify it for my needs. (I&#39;ve lost the link to
+that actual script I used for my inspiration but it was similar to
+<a href="https://gist.github.com/zumbojo/1073996">this</a> one.)</p>
+
+<p>I wanted my URL Shortener to meet a few criteria:</p>
+
+<ol>
+<li><p>Bash: I wanted to call the script from the command line, have it
+register the redirect on the server and put the shortened URL in my
+clipboard</p></li>
+<li><p>GitHub Pages: I wanted the server with the redirects to be hosted for
+free. That naturally brought me to GitHub.</p></li>
+<li><p>Awesomeness: I wanted my shortened URLs to live on an awesome domain.
+What&#39;s more awesome than the word itself right?</p></li>
+</ol>
+
+<p>So I registered the domain awes0.me, ported the script over to BASH.
+And deployed to Github.</p>
+
+<p>The resulting script keeps a running count of how many URLs have been
+generated, generates a hash on that value, creates a directory with that
+hash as its name and injects a simple Javascript redirect into an
+index.html document inside that directory, and pushes the GitHub Repo.
+Deploying a URL that looks something like: <a href="http://awes0.me/K6g">http://awes0.me/K6g</a>.</p>
+
+<p>And that&#39;s it. I can now shorten URLs to my heart&#39;s content. No PHP, no
+paid hosting, no headaches. You can view the source <a href="https://gist.github.com/4735033">here</a>.</p>
+
+          </div>
+      </article>
+  
+
+  
+      <article class="post">
+          <div class="post-header">
                 <p class="date">Feb 06, 2013</p>
                 <h1><a href="/post/static-waves">Static Waves</a></h1>
           </div>

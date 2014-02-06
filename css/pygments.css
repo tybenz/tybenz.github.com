@@ -10,6 +10,7 @@
   color: #222; }
 
 p code {
+  font-family: "Ubuntu Mono", monospace;
   font-size: 0.8em;
   border: 1px solid #ccc;
   background: #fff;
