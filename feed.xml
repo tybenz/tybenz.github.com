@@ -8,6 +8,21 @@
     
       
         <item>
+          <title>Presentation: JS Legos</title>
+          <description>&lt;p&gt;I&amp;#39;m presenting at &lt;a href=&quot;http://events.jquery.com/2014/san-diego&quot;&gt;jQuery Conference in San Diego&lt;/a&gt; this afternoon.
+This talk is an adaptation from a &lt;a href=&quot;http://tybenz.com/post/widgetize-all-the-things&quot;&gt;previous blog post&lt;/a&gt; 
+about resuable UI components in JavaScript. Slides are posted here:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://tybenz.com/presentation-js-legos&quot;&gt;http://tybenz.com/presentation-js-legos&lt;/a&gt;&lt;/p&gt;
+</description>
+          <pubDate>Thu, 13 Feb 2014 00:00:00 -0800</pubDate>
+          <link>http://tybenz.com//post/presentation-js-legos</link>
+          <guid isPermaLink="true">http://tybenz.com//post/presentation-js-legos</guid>
+        </item>
+      
+    
+      
+        <item>
           <title>Taking advantage of sessions in Vim</title>
           <description>&lt;p&gt;A few months ago, on my daily hunt for new, useful VIM plugins, I discovered
 &lt;a href=&quot;http://github.com/mhinz/vim-startify&quot;&gt;vim-startify&lt;/a&gt;. Startify is a beautiful
@@ -458,32 +473,6 @@ design needs.&lt;/p&gt;
           <pubDate>Fri, 08 Mar 2013 00:00:00 -0800</pubDate>
           <link>http://tybenz.com//post/walkie-pt-2</link>
           <guid isPermaLink="true">http://tybenz.com//post/walkie-pt-2</guid>
-        </item>
-      
-    
-      
-        <item>
-          <title>Walkie Pt. 1</title>
-          <description>&lt;p&gt;
-Introducing the coolest way to stay in sync with Basecamp. That's right. It's a node.js script that will send you updates via Mountain Lion's Notification Center whenever something's going down at HQ.
-&lt;/p&gt;
-
-&lt;p&gt;
-Check out Walkie's project page for more info: &lt;a href=&quot;http://walkie.tybenz.com&quot;&gt;http://walkie.tybenz.com&lt;/a&gt;
-&lt;/p&gt;
-
-&lt;p&gt;
-  &lt;div data-picture data-alt=&quot;walkie&quot;&gt;
-      &lt;div data-src=&quot;/img/walkie/small.png&quot;&gt;&lt;/div&gt;
-      &lt;div data-src=&quot;/img/walkie/big.png&quot; data-media=&quot;(min-width: 412px)&quot;&gt;&lt;/div&gt;
-      &lt;noscript&gt;&lt;img src=&quot;/img/walkie/big.png&quot; alt=&quot;walkie&quot;&gt;&lt;/noscript&gt;
-  &lt;/div&gt;
-&lt;/p&gt;
-
-</description>
-          <pubDate>Thu, 28 Feb 2013 00:00:00 -0800</pubDate>
-          <link>http://tybenz.com//post/walkie</link>
-          <guid isPermaLink="true">http://tybenz.com//post/walkie</guid>
         </item>
       
     
