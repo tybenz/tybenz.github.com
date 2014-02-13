@@ -14,6 +14,12 @@ This talk is an adaptation from a &lt;a href=&quot;http://tybenz.com/post/widget
 about resuable UI components in JavaScript. Slides are posted here:&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;http://tybenz.com/presentation-js-legos&quot;&gt;http://tybenz.com/presentation-js-legos&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Also, I&amp;#39;m releasing this small open-source UI component library as part of the talk, called &lt;strong&gt;lego.js&lt;/strong&gt;.
+It&amp;#39;s really just meant to be a repository of more in-depth code samples of the kind of components
+presented in the talk. Feel free to check it out:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://tybenz.com/legojs&quot;&gt;http://tybenz.com/legojs&lt;/a&gt;&lt;/p&gt;
 </description>
           <pubDate>Thu, 13 Feb 2014 00:00:00 -0800</pubDate>
           <link>http://tybenz.com//post/presentation-js-legos</link>
