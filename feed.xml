@@ -8,6 +8,54 @@
     
       
         <item>
+          <title>Making Spam Cool Again</title>
+          <description>&lt;p&gt;I&amp;#39;m an information junky. I spend hours a day on &lt;a href=&quot;http://twitter.com&quot;&gt;Twitter&lt;/a&gt;,
+&lt;a href=&quot;http://news.ycombinator.com&quot;&gt;Hacker News&lt;/a&gt;, &lt;a href=&quot;http://usevim.com&quot;&gt;UseVim&lt;/a&gt;, &lt;a href=&quot;http://robots.thoughtbot.com&quot;&gt;Giant
+Robots&lt;/a&gt;, &lt;a href=&quot;http://dailyjs.com&quot;&gt;DailyJS&lt;/a&gt; &amp;mdash; if
+it&amp;#39;s about developer-anything, I&amp;#39;m there. So I decided to share the wealth of
+links that I visit on a daily basis with the world.&lt;/p&gt;
+
+&lt;p&gt;Introducing &lt;strong&gt;spamthe.net&lt;/strong&gt; &amp;mdash; my very own link spammer. Follow on twitter
+(&lt;a href=&quot;http://twitter.com/spamthenet&quot;&gt;@spamthenet&lt;/a&gt;), bookmark in your browser
+(&lt;a href=&quot;http://spamthe.net&quot;&gt;spamthe.net&lt;/a&gt;) *, or join the IRC channel on Freenode
+(&lt;a href=&quot;http://webchat.freenode.net&quot;&gt;#spamthenet&lt;/a&gt;).&lt;/p&gt;
+
+&lt;p&gt;The links themselves can be found easily by anyone else who is as obsessed
+with the above-mentioned resources as I am. But the fun part was building it.&lt;/p&gt;
+
+&lt;p&gt;I use &lt;a href=&quot;http://pages.github.com&quot;&gt;GitHub Pages&lt;/a&gt; to host the site and a node.js
+(ew) app to update twitter and the blog simultaneously. Oh, and I wrote a
+bookmarklet so that I can just click a button from within a site and send it to
+the spammer.&lt;/p&gt;
+
+&lt;p&gt;The node app listens for a request (CORS of course) from the
+bookmarklet. The title and url are passed in the request, and the app
+posts to the twitter account and writes a new file into the website&amp;#39;s repo,
+commits, and pushes to GitHub. Now I can share links with the click of a
+button. Copy + paste is so 2013.&lt;/p&gt;
+
+&lt;p&gt;The IRC channel is running a version of &lt;a href=&quot;http://hubot.github.io&quot;&gt;hubot&lt;/a&gt; that
+listens to spamthenet&amp;#39;s Twitter stream and auto-posts the links.
+Join the channel if you feel like chatting with cool people while you wait for
+the links to pour in.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://github.com/tybenz/spamthe.net/tree/master&quot;&gt;Click here&lt;/a&gt; to check out the
+awful source.  Also don&amp;#39;t forget to bookmark &lt;a href=&quot;http://spamthe.net&quot;&gt;spamthe.net&lt;/a&gt;,
+follow &lt;a href=&quot;http://spamthe.net&quot;&gt;@spamthenet&lt;/a&gt;, and join us on IRC.&lt;/p&gt;
+
+&lt;p&gt;* I know the site has spam in the title. So here&amp;#39;s a screenshot for all you out
+there who are too scared to actually click on the link:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://spamthe.net&quot;&gt;&lt;img src=&quot;http://awes0.me/spamsite.png&quot; alt=&quot;&quot;&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+          <pubDate>Tue, 18 Feb 2014 00:00:00 -0800</pubDate>
+          <link>http://tybenz.com//post/links-links-links</link>
+          <guid isPermaLink="true">http://tybenz.com//post/links-links-links</guid>
+        </item>
+      
+    
+      
+        <item>
           <title>Presentation: JS Legos</title>
           <description>&lt;p&gt;I&amp;#39;m presenting at &lt;a href=&quot;http://events.jquery.com/2014/san-diego&quot;&gt;jQuery Conference in San Diego&lt;/a&gt; this afternoon.
 This talk is an adaptation from a &lt;a href=&quot;http://tybenz.com/post/widgetize-all-the-things&quot;&gt;previous blog post&lt;/a&gt; 
@@ -194,7 +242,7 @@ solid, reusable front-end web components should look like.&lt;/p&gt;
 &lt;li&gt;The sweet spot&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h4 id=&quot;toc_4&quot;&gt;Blackbox&lt;/h4&gt;
+&lt;h4 id=&quot;blackbox&quot;&gt;Blackbox&lt;/h4&gt;
 
 &lt;p&gt;The blackbox approach is one that &lt;em&gt;every&lt;/em&gt; web developer is familiar with.
 What I&amp;#8217;m referring to is a UI-based plugin that solves a problem, but
@@ -208,7 +256,7 @@ interaction with the plugin itself. Sure, you got a slideshow widget by
 downloading a couple of files, but what good is it if it&amp;#8217;s not
 fully customizable?&lt;/p&gt;
 
-&lt;h4 id=&quot;toc_5&quot;&gt;Enter the example&lt;/h4&gt;
+&lt;h4 id=&quot;enter-the-example&quot;&gt;Enter the example&lt;/h4&gt;
 
 &lt;p&gt;The example I&amp;#8217;ll be using throughout this post is what I call a &amp;quot;secret&amp;quot;
 widget. The pattern we&amp;#39;re going for is simple: mousedown -&amp;gt; add a class,
@@ -237,7 +285,7 @@ application to perform an action when the class is applied? There&amp;#39;s
 nothing external for integration and not enough options for it to do
 what I want.&lt;/p&gt;
 
-&lt;h4 id=&quot;toc_6&quot;&gt;Framework-based&lt;/h4&gt;
+&lt;h4 id=&quot;framework-based&quot;&gt;Framework-based&lt;/h4&gt;
 
 &lt;p&gt;Next up is the framework-based approach to writing components. I&amp;#8217;m
 personally a big fan of MVC in app development. But, when it comes to
@@ -268,7 +316,7 @@ widget in a very specific &amp;quot;Backbone-y&amp;quot; way. All reusability is
 (outside of another Backbone project that is). Converting
 this code into a more flexible widget will take time and effort.&lt;/p&gt;
 
-&lt;h4 id=&quot;toc_7&quot;&gt;The Sweet Spot&lt;/h4&gt;
+&lt;h4 id=&quot;the-sweet-spot&quot;&gt;The Sweet Spot&lt;/h4&gt;
 
 &lt;p&gt;That&amp;#8217;s where option #3 comes in. The compromise between isolated,
 they-just-work plugins and event-driven MVC-friendly components. A solid
@@ -300,7 +348,7 @@ widget:&lt;/p&gt;
 job as it&amp;#8217;s supposed to and that provides ways for other pieces of an
 application to hook into and modify its behavior.&lt;/p&gt;
 
-&lt;h4 id=&quot;toc_8&quot;&gt;Time to extend&lt;/h4&gt;
+&lt;h4 id=&quot;time-to-extend&quot;&gt;Time to extend&lt;/h4&gt;
 
 &lt;p&gt;Let&amp;#8217;s try to extend this widget&amp;#39;s behavior. What if I had two divs
 on the page each with their own secret? And, let&amp;#8217;s say I want to
@@ -342,7 +390,7 @@ top and left coordinates. We use the events mouseover and mouseout for this one,
 giving the effect that hovering over the image from left/right scrubs a
 rotating animation.&lt;/p&gt;
 
-&lt;h4 id=&quot;toc_9&quot;&gt;Wrap up&lt;/h4&gt;
+&lt;h4 id=&quot;wrap-up&quot;&gt;Wrap up&lt;/h4&gt;
 
 &lt;p&gt;In my experience amassing an arsenal of these small pattern-based
 reusable bits of code can really make working on any application so much
@@ -462,23 +510,6 @@ design needs.&lt;/p&gt;
           <pubDate>Wed, 27 Mar 2013 00:00:00 -0700</pubDate>
           <link>http://tybenz.com//post/lainlee3design</link>
           <guid isPermaLink="true">http://tybenz.com//post/lainlee3design</guid>
-        </item>
-      
-    
-      
-        <item>
-          <title>Walkie Pt. 2</title>
-          <description>&lt;p&gt;I ported walkie to run as a hubot* script! What does that mean? It means basecamp notifications in your chat room!&lt;/p&gt;
-
-&lt;p&gt;Go to walkie&amp;#39;s hubot page for more info: &lt;a href=&quot;http://walkie.tybenz.com/hubot&quot;&gt;http://walkie.tybenz.com/hubot&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/img/walkie/irc.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-
-&lt;p&gt;* &lt;a href=&quot;http://hubot.github.com&quot;&gt;http://hubot.github.com&lt;/a&gt;&lt;/p&gt;
-</description>
-          <pubDate>Fri, 08 Mar 2013 00:00:00 -0800</pubDate>
-          <link>http://tybenz.com//post/walkie-pt-2</link>
-          <guid isPermaLink="true">http://tybenz.com//post/walkie-pt-2</guid>
         </item>
       
     

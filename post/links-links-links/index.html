@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-  <title>Code Armory | Tyler Benziger</title>
+  <title>Making Spam Cool Again | Tyler Benziger</title>
   <meta name="viewport" content="width=device-width,initial-scale=1">
 
   <link rel="alternate" type="application/rss+xml" title="Tyler Benziger's Blog" href="http://tybenz.com/feed/index.xml">
@@ -70,63 +70,48 @@
         <article class="container">
             <article class="post">
                 <div class="post-header">
-                    <p class="date">Sep 18, 2012</p>
-                    <h1>Code Armory</h1>
+                    <p class="date">Feb 18, 2014</p>
+                    <h1>Making Spam Cool Again</h1>
                 </div>
                 <div class="post-body">
-                    <p>I&#39;ve been using Gists a lot recently to pass code back and forth between
-myself and my co-workers, and I&#39;m starting to realize more and more how
-valuable good code snippets can be. I find myself perusing Github all
-the time to see what other people are working on and half the time I
-stumble upon some small, reusable piece of code that I force myself to
-grab and dump into my own little directory of code snippets.</p>
+                    <p>I&#39;m an information junky. I spend hours a day on <a href="http://twitter.com">Twitter</a>,
+<a href="http://news.ycombinator.com">Hacker News</a>, <a href="http://usevim.com">UseVim</a>, <a href="http://robots.thoughtbot.com">Giant
+Robots</a>, <a href="http://dailyjs.com">DailyJS</a> &mdash; if
+it&#39;s about developer-anything, I&#39;m there. So I decided to share the wealth of
+links that I visit on a daily basis with the world.</p>
 
-<p>The more and more I collect, the more I realize the process of finding
-good code snippets on the web is pretty terrible. I often just hit
-google and wind up on stack overflow, having to sift through a bunch of
-people&#39;s ramblings and log files and whatnot. Why isn&#39;t there a better
-place to search for these small bits of wonder-code?</p>
+<p>Introducing <strong>spamthe.net</strong> &mdash; my very own link spammer. Follow on twitter
+(<a href="http://twitter.com/spamthenet">@spamthenet</a>), bookmark in your browser
+(<a href="http://spamthe.net">spamthe.net</a>) *, or join the IRC channel on Freenode
+(<a href="http://webchat.freenode.net">#spamthenet</a>).</p>
 
-<p>I set out to see if it already existed, and it turns out that it
-doesn&#39;t. So I plan on creating one. </p>
+<p>The links themselves can be found easily by anyone else who is as obsessed
+with the above-mentioned resources as I am. But the fun part was building it.</p>
 
-<h4 id="side-story">Side Story</h4>
+<p>I use <a href="http://pages.github.com">GitHub Pages</a> to host the site and a node.js
+(ew) app to update twitter and the blog simultaneously. Oh, and I wrote a
+bookmarklet so that I can just click a button from within a site and send it to
+the spammer.</p>
 
-<p>My sister-in-law went into labor last week so my wife and I
-went down to Lemoore Naval Air Station to see the baby. As I was driving
-off the base I saw a sign indicating which way to turn to get to the
-Armory. That&#39;s when it hit me. This code snippet site need not only
-focus on code snippets. I want to make it a place where developers get
-equipped in every way they need.</p>
+<p>The node app listens for a request (CORS of course) from the
+bookmarklet. The title and url are passed in the request, and the app
+posts to the twitter account and writes a new file into the website&#39;s repo,
+commits, and pushes to GitHub. Now I can share links with the click of a
+button. Copy + paste is so 2013.</p>
 
-<h4 id="the-plan">The Plan</h4>
+<p>The IRC channel is running a version of <a href="http://hubot.github.io">hubot</a> that
+listens to spamthenet&#39;s Twitter stream and auto-posts the links.
+Join the channel if you feel like chatting with cool people while you wait for
+the links to pour in.</p>
 
-<p>Offer the soliders (developers) a chance to stock up on weapons
-(snippets), load up on ammo (frameworks/libraries), engage in training
-(walkthroughs) and choose their
-barracks (development environments). The latter will most likely allow
-for users to peruse various <a href="http://vagrantup.com">vagrant</a> boxes and
-associated chef recipes (if you don&#39;t know about vagrant, get it).</p>
+<p><a href="http://github.com/tybenz/spamthe.net/tree/master">Click here</a> to check out the
+awful source.  Also don&#39;t forget to bookmark <a href="http://spamthe.net">spamthe.net</a>,
+follow <a href="http://spamthe.net">@spamthenet</a>, and join us on IRC.</p>
 
-<h4 id="implementation">Implementation</h4>
+<p>* I know the site has spam in the title. So here&#39;s a screenshot for all you out
+there who are too scared to actually click on the link:</p>
 
-<p>Like I said I love Gists. Rather than re-inventing the wheel 
-this new project is simply going to
-leverage gists. I&#39;ll add some meta-data to various gists to create a place
-where code snippets can be searched and saved more easily.</p>
-
-<p>Why hasn&#39;t Github added this to Gist already? My bet is they&#39;ve been
-busy. You know, redefining how everyone codes? They might
-get around to improving Gist, but for now, I&#39;m taking it upon myself.
-Who&#39;s with me?</p>
-
-<h4 id="i-need-help">I Need Help</h4>
-
-<p>I don&#39;t know about you, but this sounds like a dream to me. But I&#39;m
-going to need help in getting some solid content onto this site. If you
-can help spread the word, or send me some code snippets you&#39;ve found to
-be invaluable, it would go a long way toward getting this project off
-the ground.</p>
+<p><a href="http://spamthe.net"><img src="http://awes0.me/spamsite.png" alt=""></a></p>
 
                 </div>
             </article>

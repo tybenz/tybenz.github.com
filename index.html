@@ -73,6 +73,56 @@
   
       <article class="post">
           <div class="post-header">
+                <p class="date">Feb 18, 2014</p>
+                <h1><a href="/post/links-links-links">Making Spam Cool Again</a></h1>
+          </div>
+          <div class="post-body">
+            <p>I&#39;m an information junky. I spend hours a day on <a href="http://twitter.com">Twitter</a>,
+<a href="http://news.ycombinator.com">Hacker News</a>, <a href="http://usevim.com">UseVim</a>, <a href="http://robots.thoughtbot.com">Giant
+Robots</a>, <a href="http://dailyjs.com">DailyJS</a> &mdash; if
+it&#39;s about developer-anything, I&#39;m there. So I decided to share the wealth of
+links that I visit on a daily basis with the world.</p>
+
+<p>Introducing <strong>spamthe.net</strong> &mdash; my very own link spammer. Follow on twitter
+(<a href="http://twitter.com/spamthenet">@spamthenet</a>), bookmark in your browser
+(<a href="http://spamthe.net">spamthe.net</a>) *, or join the IRC channel on Freenode
+(<a href="http://webchat.freenode.net">#spamthenet</a>).</p>
+
+<p>The links themselves can be found easily by anyone else who is as obsessed
+with the above-mentioned resources as I am. But the fun part was building it.</p>
+
+<p>I use <a href="http://pages.github.com">GitHub Pages</a> to host the site and a node.js
+(ew) app to update twitter and the blog simultaneously. Oh, and I wrote a
+bookmarklet so that I can just click a button from within a site and send it to
+the spammer.</p>
+
+<p>The node app listens for a request (CORS of course) from the
+bookmarklet. The title and url are passed in the request, and the app
+posts to the twitter account and writes a new file into the website&#39;s repo,
+commits, and pushes to GitHub. Now I can share links with the click of a
+button. Copy + paste is so 2013.</p>
+
+<p>The IRC channel is running a version of <a href="http://hubot.github.io">hubot</a> that
+listens to spamthenet&#39;s Twitter stream and auto-posts the links.
+Join the channel if you feel like chatting with cool people while you wait for
+the links to pour in.</p>
+
+<p><a href="http://github.com/tybenz/spamthe.net/tree/master">Click here</a> to check out the
+awful source.  Also don&#39;t forget to bookmark <a href="http://spamthe.net">spamthe.net</a>,
+follow <a href="http://spamthe.net">@spamthenet</a>, and join us on IRC.</p>
+
+<p>* I know the site has spam in the title. So here&#39;s a screenshot for all you out
+there who are too scared to actually click on the link:</p>
+
+<p><a href="http://spamthe.net"><img src="http://awes0.me/spamsite.png" alt=""></a></p>
+
+          </div>
+      </article>
+  
+
+  
+      <article class="post">
+          <div class="post-header">
                 <p class="date">Feb 13, 2014</p>
                 <h1><a href="/post/presentation-js-legos">Presentation: JS Legos</a></h1>
           </div>
@@ -203,28 +253,6 @@ code.org&#39;s efforts to educate young people on such an important topic. Here&
 <img src="https://raw.github.com/tybenz/awes0.me/gh-pages/hoc2.jpg" alt="">
 <img src="https://raw.github.com/tybenz/awes0.me/gh-pages/hoc3.jpg" alt="">
 <img src="https://raw.github.com/tybenz/awes0.me/gh-pages/hoc4.jpg" alt=""></p>
-
-          </div>
-      </article>
-  
-
-  
-      <article class="post">
-          <div class="post-header">
-                <p class="date">Sep 19, 2013</p>
-                <h1><a href="/post/vimdeck-vim-as-a-presentation-tool">VIM as a presentation tool</a></h1>
-          </div>
-          <div class="post-body">
-            <p>I made a thing. It&#39;s called <a href="https://raw.github.com/tybenz/vimdeck/master/img/demo3.png">Vimdeck</a>
-and it lets you write a presentation
-in a single markdown file and then converts that file into multiple &quot;slides&quot;
-to be opened and shared in VIM.</p>
-
-<p>Buffers as slides. Genius, no? Plus, I added some ascii art conversion stuff too.</p>
-
-<p>Head over to the <a href="http://github.com/tybenz/vimdeck">GitHub page</a> to check it out.</p>
-
-<p><img src="https://raw.github.com/tybenz/vimdeck/master/img/demo3.png" alt=""></p>
 
           </div>
       </article>

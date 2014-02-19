@@ -73,6 +73,28 @@
   
       <article class="post">
           <div class="post-header">
+                <p class="date">Sep 19, 2013</p>
+                <h1><a href="/post/vimdeck-vim-as-a-presentation-tool">VIM as a presentation tool</a></h1>
+          </div>
+          <div class="post-body">
+            <p>I made a thing. It&#39;s called <a href="https://raw.github.com/tybenz/vimdeck/master/img/demo3.png">Vimdeck</a>
+and it lets you write a presentation
+in a single markdown file and then converts that file into multiple &quot;slides&quot;
+to be opened and shared in VIM.</p>
+
+<p>Buffers as slides. Genius, no? Plus, I added some ascii art conversion stuff too.</p>
+
+<p>Head over to the <a href="http://github.com/tybenz/vimdeck">GitHub page</a> to check it out.</p>
+
+<p><img src="https://raw.github.com/tybenz/vimdeck/master/img/demo3.png" alt=""></p>
+
+          </div>
+      </article>
+  
+
+  
+      <article class="post">
+          <div class="post-header">
                 <p class="date">Aug 27, 2013</p>
                 <h1><a href="/post/presentation-widget-ize">Presentation: Widget-ize</a></h1>
           </div>
@@ -114,7 +136,7 @@ solid, reusable front-end web components should look like.</p>
 <li>The sweet spot</li>
 </ol>
 
-<h4 id="toc_4">Blackbox</h4>
+<h4 id="blackbox">Blackbox</h4>
 
 <p>The blackbox approach is one that <em>every</em> web developer is familiar with.
 What I&#8217;m referring to is a UI-based plugin that solves a problem, but
@@ -128,7 +150,7 @@ interaction with the plugin itself. Sure, you got a slideshow widget by
 downloading a couple of files, but what good is it if it&#8217;s not
 fully customizable?</p>
 
-<h4 id="toc_5">Enter the example</h4>
+<h4 id="enter-the-example">Enter the example</h4>
 
 <p>The example I&#8217;ll be using throughout this post is what I call a &quot;secret&quot;
 widget. The pattern we&#39;re going for is simple: mousedown -&gt; add a class,
@@ -157,7 +179,7 @@ application to perform an action when the class is applied? There&#39;s
 nothing external for integration and not enough options for it to do
 what I want.</p>
 
-<h4 id="toc_6">Framework-based</h4>
+<h4 id="framework-based">Framework-based</h4>
 
 <p>Next up is the framework-based approach to writing components. I&#8217;m
 personally a big fan of MVC in app development. But, when it comes to
@@ -188,7 +210,7 @@ widget in a very specific &quot;Backbone-y&quot; way. All reusability is gone
 (outside of another Backbone project that is). Converting
 this code into a more flexible widget will take time and effort.</p>
 
-<h4 id="toc_7">The Sweet Spot</h4>
+<h4 id="the-sweet-spot">The Sweet Spot</h4>
 
 <p>That&#8217;s where option #3 comes in. The compromise between isolated,
 they-just-work plugins and event-driven MVC-friendly components. A solid
@@ -220,7 +242,7 @@ widget:</p>
 job as it&#8217;s supposed to and that provides ways for other pieces of an
 application to hook into and modify its behavior.</p>
 
-<h4 id="toc_8">Time to extend</h4>
+<h4 id="time-to-extend">Time to extend</h4>
 
 <p>Let&#8217;s try to extend this widget&#39;s behavior. What if I had two divs
 on the page each with their own secret? And, let&#8217;s say I want to
@@ -262,7 +284,7 @@ top and left coordinates. We use the events mouseover and mouseout for this one,
 giving the effect that hovering over the image from left/right scrubs a
 rotating animation.</p>
 
-<h4 id="toc_9">Wrap up</h4>
+<h4 id="wrap-up">Wrap up</h4>
 
 <p>In my experience amassing an arsenal of these small pattern-based
 reusable bits of code can really make working on any application so much
@@ -382,25 +404,6 @@ as I move further along with it.</p>
 (<a href="http://lainlee3design.com">http://lainlee3design.com</a>). Check out his
 portfolio and see what you think. I&#39;d highly recommend him for any of your
 design needs.</p>
-
-          </div>
-      </article>
-  
-
-  
-      <article class="post">
-          <div class="post-header">
-                <p class="date">Mar 08, 2013</p>
-                <h1><a href="/post/walkie-pt-2">Walkie Pt. 2</a></h1>
-          </div>
-          <div class="post-body">
-            <p>I ported walkie to run as a hubot* script! What does that mean? It means basecamp notifications in your chat room!</p>
-
-<p>Go to walkie&#39;s hubot page for more info: <a href="http://walkie.tybenz.com/hubot">http://walkie.tybenz.com/hubot</a></p>
-
-<p><img src="/img/walkie/irc.png" alt=""></p>
-
-<p>* <a href="http://hubot.github.com">http://hubot.github.com</a></p>
 
           </div>
       </article>
