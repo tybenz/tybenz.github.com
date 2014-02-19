@@ -1,0 +1,167 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+  <title>Making Spam Cool Again | Tyler Benziger</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+
+  <link rel="alternate" type="application/rss+xml" title="Tyler Benziger's Blog" href="http://tybenz.com/feed/index.xml">
+  <link rel="shortcut icon" href="http://gravatar.com/avatar/9f5734a7063a4c48139f4999f3100167
+?s=16">
+  <link rel="stylesheet" href="/css/reset.css">
+  <link rel="stylesheet" href="/css/mobile.css">
+  <link rel="stylesheet" href="/css/desktop.css" media="(min-width:40em)">
+  <link rel="stylesheet" href="/css/pygments.css">
+  <link rel="stylesheet" href="/css/font.css">
+  <script type="text/javascript" charset="utf-8" src="/js/matchmedia.js"></script>
+  <script type="text/javascript" charset="utf-8" src="/js/picturefill.js"></script>
+</head>
+
+<body>
+<div class="wrapper">
+    <header>
+    <div class="container">
+        <div class="profile">
+            <div class="social">
+                <a href="http://twitter.com/tybenz">
+                    <div data-picture data-alt="Twitter">
+                        <div data-src="/img/twitter16.png"></div>
+                        <div data-src="/img/twitter32.png"     data-media="(-webkit-min-device-pixel-ratio: 2)"></div>
+                        <noscript><img src="/img/twitter16.png" alt="Twitter"></noscript>
+                    </div>
+                </a>
+                <a href="http://github.com/tybenz">
+                    <div data-picture data-alt="Github">
+                        <div data-src="/img/octocat16.png"></div>
+                        <div data-src="/img/octocat32.png"     data-media="(-webkit-min-device-pixel-ratio: 2)"></div>
+                        <noscript><img src="/img/octocat16.png" alt="Github"></noscript>
+                    </div>
+                </a>
+            </div>
+            <img src="http://gravatar.com/avatar/9f5734a7063a4c48139f4999f3100167
+?s=54" alt="avatar" class="avatar" />
+            <img src="http://gravatar.com/avatar/9f5734a7063a4c48139f4999f3100167
+?s=108" alt="avatar" class="avatar-large" />
+        </div>
+        <h5 class="logo"><a href="http://tybenz.com">Tyler Benziger</a></h5>
+        <nav>
+            <ul>
+                
+                    <li><a href="http://tybenz.com" class="active">Blog</a></li>
+                
+                
+                <li><a href="http://tybenz.com/about">About</a></li>
+                
+                
+                <li><a href="http://tybenz.com/projects">Projects</a></li>
+                
+            </ul>
+        </nav>
+        <div class="nav-slider">
+            <div class="nav-selection blog"></div>
+        </div>
+    </div>
+</header>
+
+    
+    <section id="main">
+        <article class="container">
+            <article class="post">
+                <div class="post-header">
+                    <p class="date">Feb 18, 2014</p>
+                    <h1>Making Spam Cool Again</h1>
+                </div>
+                <div class="post-body">
+                    <p>I&#39;m an information junky. I spend hours a day on <a href="http://twitter.com">Twitter</a>,
+<a href="http://news.ycombinator.com">Hacker News</a>, <a href="http://usevim.com">UseVim</a>, <a href="http://robots.thoughtbot.com">Giant
+Robots</a>, <a href="http://dailyjs.com">DailyJS</a> &mdash; if
+it&#39;s about developer-anything, I&#39;m there. So I decided to share the wealth of
+links that I visit on a daily basis with the world.</p>
+
+<p>Introducing <strong>spamthe.net</strong> &mdash; my very own link spammer. Follow on twitter
+(<a href="http://twitter.com/spamthenet">@spamthenet</a>), bookmark in your browser
+(<a href="http://spamthe.net">spamthe.net</a>) *, or join the IRC channel on Freenode
+(<a href="http://webchat.freenode.net">#spamthenet</a>).</p>
+
+<p>The links themselves can be found easily by anyone else who is as obsessed
+with the above-mentioned resources as I am. But the fun part was building it.</p>
+
+<p>I use <a href="http://pages.github.com">GitHub Pages</a> to host the site and a node.js
+(ew) app to update twitter and the blog simultaneously. Oh, and I wrote a
+bookmarklet so that I can just click a button from within a site and send it to
+the spammer.</p>
+
+<p>The node app listens for a request (CORS of course) from the
+bookmarklet. The title and url are passed in the request, and the app
+posts to the twitter account and writes a new file into the website&#39;s repo,
+commits, and pushes to GitHub. Now I can share links with the click of a
+button. Copy + paste is so 2013.</p>
+
+<p>The IRC channel is running a version of <a href="http://hubot.github.io">hubot</a> that
+listens to spamthenet&#39;s Twitter stream and auto-posts the links.
+Join the channel if you feel like chatting with cool people while you wait for
+the links to pour in.</p>
+
+<p><a href="http://github.com/tybenz/spamthe.net/tree/master">Click here</a> to check out the
+awful source.  Also don&#39;t forget to bookmark <a href="http://spamthe.net">spamthe.net</a>,
+follow <a href="http://spamthe.net">@spamthenet</a>, and join us on IRC.</p>
+
+<p>* I know the site has spam in the title. So here&#39;s a screenshot for all you out
+there who are too scared to actually click on the link:</p>
+
+<p><a href="http://spamthe.net"><img src="http://awes0.me/spamsite.png" alt=""></a></p>
+
+                </div>
+            </article>
+        </article>
+    </section>
+    
+    <footer>
+    <nav class="container">
+        <ul>
+            <li>&copy; Tyler Benziger 2013</li>
+        </ul>
+    </nav>
+</footer>
+
+</div>
+</body>
+<script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-33073396-1']);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+        var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+        ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+        var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+</script>
+<script type="text/javascript" charset="utf-8">
+    document.onreadystatechange = function() {
+        if ( document.readyState == 'complete' ) {
+            var active = document.querySelector( 'header a.active' ).innerHTML.toLowerCase(),
+                links = document.querySelectorAll( 'header nav li a'),
+                selection = document.querySelector( 'header .nav-selection' ),
+                i, link;
+            for ( i = 0; i < links.length; i++ ) {
+                link = links[ i ];
+                console.log(link);
+                link.addEventListener( 'mouseover', function() {
+                    selection.className = 'nav-selection';
+                    selection.className = 'nav-selection ' + this.innerHTML.toLowerCase();
+                });
+                link.addEventListener( 'mouseout', function() {
+                    selection.className = 'nav-selection ' + active;
+                });
+            }
+        }
+    };
+</script>
+
+</html>
+
