@@ -8,6 +8,26 @@
     
       
         <item>
+          <title>Presentation: CSS Layout</title>
+          <description>&lt;p&gt;I presented on new CSS Layout features at a Game and App Devs Meetup group at Adobe SF on February 4.
+Here are the slides for my presentation:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://tybenz.com/presentation-css-layout&quot;&gt;Finally! Layout in CSS&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Here&amp;#39;s a recording of the talk:&lt;/p&gt;
+
+&lt;div class=&quot;video-container&quot;&gt;
+  &lt;iframe src=&quot;//www.youtube.com/embed/Q-EkoYILdYg&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+</description>
+          <pubDate>Sat, 22 Feb 2014 00:00:00 -0800</pubDate>
+          <link>http://tybenz.com//post/presentation-css-layout</link>
+          <guid isPermaLink="true">http://tybenz.com//post/presentation-css-layout</guid>
+        </item>
+      
+    
+      
+        <item>
           <title>Making Spam Cool Again</title>
           <description>&lt;p&gt;I&amp;#39;m an information junky. I spend hours a day on &lt;a href=&quot;http://twitter.com&quot;&gt;Twitter&lt;/a&gt;,
 &lt;a href=&quot;http://news.ycombinator.com&quot;&gt;Hacker News&lt;/a&gt;, &lt;a href=&quot;http://usevim.com&quot;&gt;UseVim&lt;/a&gt;, &lt;a href=&quot;http://robots.thoughtbot.com&quot;&gt;Giant
@@ -146,20 +166,6 @@ playing around with its session support. Also, hit me up on
           <pubDate>Thu, 06 Feb 2014 00:00:00 -0800</pubDate>
           <link>http://tybenz.com//post/taking-advantage-of-sessions-in-vim</link>
           <guid isPermaLink="true">http://tybenz.com//post/taking-advantage-of-sessions-in-vim</guid>
-        </item>
-      
-    
-      
-        <item>
-          <title>Presentation: CSS Layout</title>
-          <description>&lt;p&gt;I presented on new CSS Layout features at a Game and App Devs Meetup group at Adobe SF tonight.
-Here are the slides for my presentation:&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://tybenz.com/presentation-css-layout&quot;&gt;Finally! Layout in CSS&lt;/a&gt;&lt;/p&gt;
-</description>
-          <pubDate>Tue, 04 Feb 2014 00:00:00 -0800</pubDate>
-          <link>http://tybenz.com//post/presentation-css-layout</link>
-          <guid isPermaLink="true">http://tybenz.com//post/presentation-css-layout</guid>
         </item>
       
     
