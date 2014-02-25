@@ -8,26 +8,6 @@
     
       
         <item>
-          <title>Presentation: CSS Layout</title>
-          <description>&lt;p&gt;I presented on new CSS Layout features at a Game and App Devs Meetup group at Adobe SF on February 4.
-Here are the slides for my presentation:&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://tybenz.com/presentation-css-layout&quot;&gt;Finally! Layout in CSS&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Here&amp;#39;s a recording of the talk:&lt;/p&gt;
-
-&lt;div class=&quot;video-container&quot;&gt;
-  &lt;iframe src=&quot;//www.youtube.com/embed/Q-EkoYILdYg&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
-&lt;/div&gt;
-</description>
-          <pubDate>Sat, 22 Feb 2014 00:00:00 -0800</pubDate>
-          <link>http://tybenz.com//post/presentation-css-layout</link>
-          <guid isPermaLink="true">http://tybenz.com//post/presentation-css-layout</guid>
-        </item>
-      
-    
-      
-        <item>
           <title>Making Spam Cool Again</title>
           <description>&lt;p&gt;I&amp;#39;m an information junky. I spend hours a day on &lt;a href=&quot;http://twitter.com&quot;&gt;Twitter&lt;/a&gt;,
 &lt;a href=&quot;http://news.ycombinator.com&quot;&gt;Hacker News&lt;/a&gt;, &lt;a href=&quot;http://usevim.com&quot;&gt;UseVim&lt;/a&gt;, &lt;a href=&quot;http://robots.thoughtbot.com&quot;&gt;Giant
@@ -37,7 +17,8 @@ links that I visit on a daily basis with the world.&lt;/p&gt;
 
 &lt;p&gt;Introducing &lt;strong&gt;spamthe.net&lt;/strong&gt; &amp;mdash; my very own link spammer. Follow on twitter
 (&lt;a href=&quot;http://twitter.com/spamthenet&quot;&gt;@spamthenet&lt;/a&gt;), bookmark in your browser
-(&lt;a href=&quot;http://spamthe.net&quot;&gt;spamthe.net&lt;/a&gt;) *, or join the IRC channel on Freenode
+(&lt;a href=&quot;http://spamthe.net&quot;&gt;spamthe.net&lt;/a&gt;) *, subscribe to the weekly newsletter
+(&lt;a href=&quot;http://spamthe.net&quot;&gt;here&lt;/a&gt;), or join the IRC channel on Freenode
 (&lt;a href=&quot;http://webchat.freenode.net&quot;&gt;#spamthenet&lt;/a&gt;).&lt;/p&gt;
 
 &lt;p&gt;The links themselves can be found easily by anyone else who is as obsessed
@@ -60,17 +41,43 @@ Join the channel if you feel like chatting with cool people while you wait for
 the links to pour in.&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;http://github.com/tybenz/spamthe.net/tree/master&quot;&gt;Click here&lt;/a&gt; to check out the
-awful source.  Also don&amp;#39;t forget to bookmark &lt;a href=&quot;http://spamthe.net&quot;&gt;spamthe.net&lt;/a&gt;,
-follow &lt;a href=&quot;http://spamthe.net&quot;&gt;@spamthenet&lt;/a&gt;, and join us on IRC.&lt;/p&gt;
+awful source. If you&amp;#39;re interested in helping me collect links, ping me on IRC
+(tybenz) or Twitter (&lt;a href=&quot;http://twitter.com/tybenz&quot;&gt;@tybenz&lt;/a&gt;) and be sure to check the
+&lt;a href=&quot;https://github.com/tybenz/spamthe.net#contributing&quot;&gt;contributing&lt;/a&gt; section of the
+README.&lt;/p&gt;
+
+&lt;p&gt;Also don&amp;#39;t forget to bookmark &lt;a href=&quot;http://spamthe.net&quot;&gt;spamthe.net&lt;/a&gt;, sign up for
+our newsletter, follow &lt;a href=&quot;http://spamthe.net&quot;&gt;@spamthenet&lt;/a&gt;, and join us on IRC.
+Or maybe just one of those, if you feel doing all of them would be redudant.&lt;/p&gt;
 
 &lt;p&gt;* I know the site has spam in the title. So here&amp;#39;s a screenshot for all you out
 there who are too scared to actually click on the link:&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;http://spamthe.net&quot;&gt;&lt;img src=&quot;http://awes0.me/spamsite.png&quot; alt=&quot;&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 </description>
-          <pubDate>Tue, 18 Feb 2014 00:00:00 -0800</pubDate>
+          <pubDate>Tue, 25 Feb 2014 00:00:00 -0800</pubDate>
           <link>http://tybenz.com//post/making-spam-cool-again</link>
           <guid isPermaLink="true">http://tybenz.com//post/making-spam-cool-again</guid>
+        </item>
+      
+    
+      
+        <item>
+          <title>Presentation: CSS Layout</title>
+          <description>&lt;p&gt;I presented on new CSS Layout features at a Game and App Devs Meetup group at Adobe SF on February 4.
+Here are the slides for my presentation:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://tybenz.com/presentation-css-layout&quot;&gt;Finally! Layout in CSS&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Here&amp;#39;s a recording of the talk:&lt;/p&gt;
+
+&lt;div class=&quot;video-container&quot;&gt;
+  &lt;iframe src=&quot;//www.youtube.com/embed/Q-EkoYILdYg&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+</description>
+          <pubDate>Sat, 22 Feb 2014 00:00:00 -0800</pubDate>
+          <link>http://tybenz.com//post/presentation-css-layout</link>
+          <guid isPermaLink="true">http://tybenz.com//post/presentation-css-layout</guid>
         </item>
       
     

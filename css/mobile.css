@@ -417,9 +417,7 @@ pre, .highlight pre, .highlight code {
       margin-right: 0; }
 
   header .avatar {
-    display: block; }
-  header .profile {
-    width: 84px; } }
+    display: block; } }
   @media only screen and (min-width: 40em) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-width: 40em) and (min--moz-device-pixel-ratio: 1.5), only screen and (min-width: 40em) and (-o-min-device-pixel-ratio: 1.5 / 1), only screen and (min-width: 40em) and (min-resolution: 144dpi), only screen and (min-width: 40em) and (min-resolution: 1.5dppx) {
     header .avatar {
       display: none; } }
@@ -427,3 +425,7 @@ pre, .highlight pre, .highlight code {
 @media only screen and (min-width: 40em) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-width: 40em) and (min--moz-device-pixel-ratio: 1.5), only screen and (min-width: 40em) and (-o-min-device-pixel-ratio: 1.5 / 1), only screen and (min-width: 40em) and (min-resolution: 144dpi), only screen and (min-width: 40em) and (min-resolution: 1.5dppx) {
   header .avatar-large {
     display: block; } }
+
+@media only screen and (min-width: 40em) {
+  header .profile {
+    width: 84px; } }
