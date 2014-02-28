@@ -8,6 +8,30 @@
     
       
         <item>
+          <title>Presentation: JS Legos</title>
+          <description>&lt;p&gt;I&amp;#39;m presenting at &lt;a href=&quot;http://gentics.com/jquery-europe&quot;&gt;jQuery Europe&lt;/a&gt; today. The
+talk is an adaptation from a &lt;a href=&quot;http://tybenz.com/post/widgetize-all-the-things&quot;&gt;previous blog
+post&lt;/a&gt; about resuable UI
+components in JavaScript.&lt;/p&gt;
+
+&lt;p&gt;Live stream here: &lt;a href=&quot;http://gentics.com/jquery-europe&quot;&gt;http://gentics.com/jquery-europe&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Slides are posted here: &lt;a href=&quot;http://tybenz.com/presentation-js-legos&quot;&gt;http://tybenz.com/presentation-js-legos&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Also, I&amp;#39;m releasing this small open-source UI component library as part of the talk, called &lt;strong&gt;lego.js&lt;/strong&gt;.
+It&amp;#39;s really just meant to be a repository of more in-depth code samples of the kind of components
+presented in the talk. Feel free to check it out:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://tybenz.com/legojs&quot;&gt;http://tybenz.com/legojs&lt;/a&gt;&lt;/p&gt;
+</description>
+          <pubDate>Fri, 28 Feb 2014 00:00:00 +0100</pubDate>
+          <link>http://tybenz.com//post/presentation-js-legos</link>
+          <guid isPermaLink="true">http://tybenz.com//post/presentation-js-legos</guid>
+        </item>
+      
+    
+      
+        <item>
           <title>Making Spam Cool Again</title>
           <description>&lt;p&gt;I&amp;#39;m an information junky. I spend hours a day on &lt;a href=&quot;http://twitter.com&quot;&gt;Twitter&lt;/a&gt;,
 &lt;a href=&quot;http://news.ycombinator.com&quot;&gt;Hacker News&lt;/a&gt;, &lt;a href=&quot;http://usevim.com&quot;&gt;UseVim&lt;/a&gt;, &lt;a href=&quot;http://robots.thoughtbot.com&quot;&gt;Giant
@@ -55,7 +79,7 @@ there who are too scared to actually click on the link:&lt;/p&gt;
 
 &lt;p&gt;&lt;a href=&quot;http://spamthe.net&quot;&gt;&lt;img src=&quot;http://awes0.me/spamsite.png&quot; alt=&quot;&quot;&gt;&lt;/a&gt;&lt;/p&gt;
 </description>
-          <pubDate>Tue, 25 Feb 2014 00:00:00 -0800</pubDate>
+          <pubDate>Tue, 25 Feb 2014 00:00:00 +0100</pubDate>
           <link>http://tybenz.com//post/making-spam-cool-again</link>
           <guid isPermaLink="true">http://tybenz.com//post/making-spam-cool-again</guid>
         </item>
@@ -75,30 +99,9 @@ Here are the slides for my presentation:&lt;/p&gt;
   &lt;iframe src=&quot;//www.youtube.com/embed/Q-EkoYILdYg&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
 &lt;/div&gt;
 </description>
-          <pubDate>Sat, 22 Feb 2014 00:00:00 -0800</pubDate>
+          <pubDate>Sat, 22 Feb 2014 00:00:00 +0100</pubDate>
           <link>http://tybenz.com//post/presentation-css-layout</link>
           <guid isPermaLink="true">http://tybenz.com//post/presentation-css-layout</guid>
-        </item>
-      
-    
-      
-        <item>
-          <title>Presentation: JS Legos</title>
-          <description>&lt;p&gt;I&amp;#39;m presenting at &lt;a href=&quot;http://events.jquery.com/2014/san-diego&quot;&gt;jQuery Conference in San Diego&lt;/a&gt; this afternoon.
-This talk is an adaptation from a &lt;a href=&quot;http://tybenz.com/post/widgetize-all-the-things&quot;&gt;previous blog post&lt;/a&gt; 
-about resuable UI components in JavaScript. Slides are posted here:&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://tybenz.com/presentation-js-legos&quot;&gt;http://tybenz.com/presentation-js-legos&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Also, I&amp;#39;m releasing this small open-source UI component library as part of the talk, called &lt;strong&gt;lego.js&lt;/strong&gt;.
-It&amp;#39;s really just meant to be a repository of more in-depth code samples of the kind of components
-presented in the talk. Feel free to check it out:&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://tybenz.com/legojs&quot;&gt;http://tybenz.com/legojs&lt;/a&gt;&lt;/p&gt;
-</description>
-          <pubDate>Thu, 13 Feb 2014 00:00:00 -0800</pubDate>
-          <link>http://tybenz.com//post/presentation-js-legos</link>
-          <guid isPermaLink="true">http://tybenz.com//post/presentation-js-legos</guid>
         </item>
       
     
@@ -170,7 +173,7 @@ projects git repository.&lt;/p&gt;
 playing around with its session support. Also, hit me up on
 &lt;a href=&quot;http://twitter.com/tybenz&quot;&gt;twitter&lt;/a&gt; if you have any questions/suggestions.&lt;/p&gt;
 </description>
-          <pubDate>Thu, 06 Feb 2014 00:00:00 -0800</pubDate>
+          <pubDate>Thu, 06 Feb 2014 00:00:00 +0100</pubDate>
           <link>http://tybenz.com//post/taking-advantage-of-sessions-in-vim</link>
           <guid isPermaLink="true">http://tybenz.com//post/taking-advantage-of-sessions-in-vim</guid>
         </item>
@@ -191,7 +194,7 @@ code.org&amp;#39;s efforts to educate young people on such an important topic. H
 &lt;img src=&quot;https://raw.github.com/tybenz/awes0.me/gh-pages/hoc3.jpg&quot; alt=&quot;&quot;&gt;
 &lt;img src=&quot;https://raw.github.com/tybenz/awes0.me/gh-pages/hoc4.jpg&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 </description>
-          <pubDate>Mon, 16 Dec 2013 00:00:00 -0800</pubDate>
+          <pubDate>Mon, 16 Dec 2013 00:00:00 +0100</pubDate>
           <link>http://tybenz.com//post/my-hour-of-code</link>
           <guid isPermaLink="true">http://tybenz.com//post/my-hour-of-code</guid>
         </item>
@@ -211,7 +214,7 @@ to be opened and shared in VIM.&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://raw.github.com/tybenz/vimdeck/master/img/demo3.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
 </description>
-          <pubDate>Thu, 19 Sep 2013 00:00:00 -0700</pubDate>
+          <pubDate>Thu, 19 Sep 2013 00:00:00 +0200</pubDate>
           <link>http://tybenz.com//post/vimdeck-vim-as-a-presentation-tool</link>
           <guid isPermaLink="true">http://tybenz.com//post/vimdeck-vim-as-a-presentation-tool</guid>
         </item>
@@ -226,7 +229,7 @@ based on my &lt;a href=&quot;http://tybenz.com/post/widgetize-all-the-things&quo
 
 &lt;p&gt;The slides can be found here: &lt;a href=&quot;http://tybenz.com/presentation-widgetize&quot;&gt;http://tybenz.com/presentation-widgetize&lt;/a&gt;&lt;/p&gt;
 </description>
-          <pubDate>Tue, 27 Aug 2013 00:00:00 -0700</pubDate>
+          <pubDate>Tue, 27 Aug 2013 00:00:00 +0200</pubDate>
           <link>http://tybenz.com//post/presentation-widget-ize</link>
           <guid isPermaLink="true">http://tybenz.com//post/presentation-widget-ize</guid>
         </item>
@@ -427,7 +430,7 @@ most jQuery plugins are written to solve a specific problem. They do
 their job well but they don&amp;#8217;t necessarily provide
 the options and events to modify/extend behavior.&lt;/p&gt;
 </description>
-          <pubDate>Mon, 08 Jul 2013 00:00:00 -0700</pubDate>
+          <pubDate>Mon, 08 Jul 2013 00:00:00 +0200</pubDate>
           <link>http://tybenz.com//post/widgetize-all-the-things</link>
           <guid isPermaLink="true">http://tybenz.com//post/widgetize-all-the-things</guid>
         </item>
@@ -472,7 +475,7 @@ command-line games can be built on top of a pattern like this. Be sure to check 
 Gitwar repo &lt;a href=&quot;http://github.com/gitwar/gitwar&quot;&gt;here&lt;/a&gt;. And give me a shoutout on
 &lt;a href=&quot;https://twitter.com/share?text=%40tybenz&amp;amp;url=http://tybenz.com/post/gitwar&quot;&gt;Twitter&lt;/a&gt; if you have comments.&lt;/p&gt;
 </description>
-          <pubDate>Fri, 10 May 2013 00:00:00 -0700</pubDate>
+          <pubDate>Fri, 10 May 2013 00:00:00 +0200</pubDate>
           <link>http://tybenz.com//post/gitwar</link>
           <guid isPermaLink="true">http://tybenz.com//post/gitwar</guid>
         </item>
@@ -520,7 +523,7 @@ as I move further along with it.&lt;/p&gt;
 portfolio and see what you think. I&amp;#39;d highly recommend him for any of your
 design needs.&lt;/p&gt;
 </description>
-          <pubDate>Wed, 27 Mar 2013 00:00:00 -0700</pubDate>
+          <pubDate>Wed, 27 Mar 2013 00:00:00 +0100</pubDate>
           <link>http://tybenz.com//post/lainlee3design</link>
           <guid isPermaLink="true">http://tybenz.com//post/lainlee3design</guid>
         </item>
