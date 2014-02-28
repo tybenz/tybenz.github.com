@@ -380,7 +380,7 @@ pre, .highlight pre, .highlight code {
   width: 100%;
   height: 100%; }
 
-@media only screen and (min-width: 40em) {
+@media only screen and (min-width: 29em) {
   html {
     font-size: 22px; }
 
@@ -418,14 +418,14 @@ pre, .highlight pre, .highlight code {
 
   header .avatar {
     display: block; } }
-  @media only screen and (min-width: 40em) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-width: 40em) and (min--moz-device-pixel-ratio: 1.5), only screen and (min-width: 40em) and (-o-min-device-pixel-ratio: 1.5 / 1), only screen and (min-width: 40em) and (min-resolution: 144dpi), only screen and (min-width: 40em) and (min-resolution: 1.5dppx) {
+  @media only screen and (min-width: 29em) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-width: 29em) and (min--moz-device-pixel-ratio: 1.5), only screen and (min-width: 29em) and (-o-min-device-pixel-ratio: 1.5 / 1), only screen and (min-width: 29em) and (min-resolution: 144dpi), only screen and (min-width: 29em) and (min-resolution: 1.5dppx) {
     header .avatar {
       display: none; } }
 
-@media only screen and (min-width: 40em) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-width: 40em) and (min--moz-device-pixel-ratio: 1.5), only screen and (min-width: 40em) and (-o-min-device-pixel-ratio: 1.5 / 1), only screen and (min-width: 40em) and (min-resolution: 144dpi), only screen and (min-width: 40em) and (min-resolution: 1.5dppx) {
+@media only screen and (min-width: 29em) and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-width: 29em) and (min--moz-device-pixel-ratio: 1.5), only screen and (min-width: 29em) and (-o-min-device-pixel-ratio: 1.5 / 1), only screen and (min-width: 29em) and (min-resolution: 144dpi), only screen and (min-width: 29em) and (min-resolution: 1.5dppx) {
   header .avatar-large {
     display: block; } }
 
-@media only screen and (min-width: 40em) {
+@media only screen and (min-width: 29em) {
   header .profile {
     width: 84px; } }
