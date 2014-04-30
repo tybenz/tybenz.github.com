@@ -11,7 +11,7 @@
           <title>Presentation: JS Legos</title>
           <description>&lt;p&gt;I&amp;#39;m presenting at &lt;a href=&quot;http://gentics.com/jquery-europe&quot;&gt;jQuery Europe&lt;/a&gt; today. The
 talk is an adaptation from a &lt;a href=&quot;http://tybenz.com/post/widgetize-all-the-things&quot;&gt;previous blog
-post&lt;/a&gt; about resuable UI
+post&lt;/a&gt; about reusable UI
 components in JavaScript. I&amp;#39;ve also given versions of the talk at &lt;a href=&quot;http://events.jquery.org/2014/san-diego/&quot;&gt;jQuery San
 Diego&lt;/a&gt; and
 &lt;a href=&quot;http://www.meetup.com/The-Sonora-Software-Developers-Group/&quot;&gt;SSDG&lt;/a&gt;.&lt;/p&gt;
@@ -77,7 +77,7 @@ README.&lt;/p&gt;
 
 &lt;p&gt;Also don&amp;#39;t forget to bookmark &lt;a href=&quot;http://spamthe.net&quot;&gt;spamthe.net&lt;/a&gt;, sign up for
 our newsletter, follow &lt;a href=&quot;http://spamthe.net&quot;&gt;@spamthenet&lt;/a&gt;, and join us on IRC.
-Or maybe just one of those, if you feel doing all of them would be redudant.&lt;/p&gt;
+Or maybe just one of those, if you feel doing all of them would be redundant.&lt;/p&gt;
 
 &lt;p&gt;* I know the site has spam in the title. So here&amp;#39;s a screenshot for all you out
 there who are too scared to actually click on the link:&lt;/p&gt;
@@ -127,7 +127,7 @@ like any other vim script). The &lt;code&gt;mksession&lt;/code&gt; command, out-
 little detail about your current session &amp;mdash; plugins, scripts, which buffers are
 loaded, what your tabs and windows are doing.  Because of this, a &lt;code&gt;mksession&lt;/code&gt;
 file can be really large and really ugly. I actually found that most of the
-things &lt;code&gt;mksession&lt;/code&gt; was saving to be a bit redudant. For the most part, the
+things &lt;code&gt;mksession&lt;/code&gt; was saving to be a bit redundant. For the most part, the
 scripts I want executed when I launch VIM are all present in my &lt;code&gt;.vimrc&lt;/code&gt;. So I
 took the bits that I needed and starting creating my own session files by hand.&lt;/p&gt;
 
@@ -191,7 +191,7 @@ playing around with its session support. Also, hit me up on
 in an hour of code (they ended up with over 16 million). Code.org and many other participating organizations created self-guided tutorials to walk students through the fundamentals
 of programming.&lt;/p&gt;
 
-&lt;p&gt;I was able to help out at a &lt;a href=&quot;http://hcs.hickmanschools.org&quot;&gt;Hickman Charter School&lt;/a&gt; by adding a short presentation on what code is all about. I&amp;#39;m extrememly appreciative of
+&lt;p&gt;I was able to help out at a &lt;a href=&quot;http://hcs.hickmanschools.org&quot;&gt;Hickman Charter School&lt;/a&gt; by adding a short presentation on what code is all about. I&amp;#39;m extremely appreciative of
 code.org&amp;#39;s efforts to educate young people on such an important topic. Here&amp;#39;s some photos from the event:&lt;/p&gt;
 
 &lt;p&gt;&lt;img src=&quot;https://raw.github.com/tybenz/awes0.me/gh-pages/hoc1.jpg&quot; alt=&quot;&quot;&gt;
@@ -446,7 +446,7 @@ the options and events to modify/extend behavior.&lt;/p&gt;
           <title>Gitwar: Gaming with Git</title>
           <description>&lt;p&gt;I recently came across a &lt;a href=&quot;https://github.com/blog/1499-the-revolution-will-be-forked&quot;&gt;blog
 post&lt;/a&gt; that talked about non-developers using Git and GitHub to
-do some pretty cool things. It got me thinking about other cool and unsual
+do some pretty cool things. It got me thinking about other cool and unusual
 things possible with GitHub.&lt;/p&gt;
 
 &lt;p&gt;Then I started thinking about games and wondered what it would look like
