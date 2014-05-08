@@ -7,6 +7,8 @@
     <atom:link href="http://tybenz.com/feed.xml" rel="self" type="application/rss+xml" />
     
       
+    
+      
         <item>
           <title>Presentation: JS Legos</title>
           <description>&lt;p&gt;I&amp;#39;m presenting at &lt;a href=&quot;http://gentics.com/jquery-europe&quot;&gt;jQuery Europe&lt;/a&gt; today. The
@@ -483,54 +485,6 @@ Gitwar repo &lt;a href=&quot;http://github.com/gitwar/gitwar&quot;&gt;here&lt;/a
           <pubDate>Fri, 10 May 2013 00:00:00 -0700</pubDate>
           <link>http://tybenz.com//post/gitwar</link>
           <guid isPermaLink="true">http://tybenz.com//post/gitwar</guid>
-        </item>
-      
-    
-      
-        <item>
-          <title>Lain Lee 3 Design</title>
-          <description>&lt;p&gt;Recently I was looking for a designer to collaborate with on a project
-called &lt;a href=&quot;/post/codearmory&quot;&gt;Code Armory&lt;/a&gt;. I started looking for online resources to meet some
-talented designers. I discovered a site called
-&lt;a href=&quot;http://collabfinder.com&quot;&gt;CollabFinder&lt;/a&gt; and immediately realized I had
-discovered something of extraordinary value.&lt;/p&gt;
-
-&lt;p&gt;CollabFinder allows you to search for designers, developers, artists,
-writers, and scientists by physical location, skills, and interests. You
-can pitch them a project you&amp;#39;d like to &amp;quot;collaborate&amp;quot; on (collaboration
-in this context, means non-monetary help). &lt;/p&gt;
-
-&lt;p&gt;So I started looking for designers in the San Francisco area, found some
-really talented people, sent them a note about the project I needed help
-on, and within an hour I had my replies. I quickly started emailing back
-and forth with a designer named &lt;a href=&quot;http://twitter.com/lainlee3design&quot;&gt;Lain Lee&lt;/a&gt;.
-He told me he needed some help coding his new design site, and asked if
-I&amp;#39;d be interested in trading services. We actually met at Starbucks down
-the road from my office that same day, and started talking about our ideas
-and life in general. We just clicked. Our interests and passions line up so well.
-It&amp;#39;s been a great partnership. Today, I&amp;#39;m happy to say we launched
-Lain&amp;#39;s &lt;a href=&quot;http://lainlee3design.com&quot;&gt;new site&lt;/a&gt;.
-The site was put together with KirbyCMS, a few jQuery plugins, and
-some good ol&amp;#39; fashioned elbow grease.&lt;/p&gt;
-
-&lt;p&gt;Quick word about Lain as a designer/illustrator: this guy is one heck of
-an artist. Since we&amp;#39;ve started working together I&amp;#39;ve started to follow
-his work, and honestly, every thing the guy
-creates is pure gold. Check out this
-&lt;a href=&quot;http://lainlee3design.com/blog/avengers-assemble-timelapse&quot;&gt;timelapse&lt;/a&gt; of his mad 
-illustration skills! The stuff he&amp;#39;s designed for Code Armory is
-absolutely perfect. Excellent illustration, web design, and it totally
-lines up with my vision for this new project. I&amp;#39;ll be sure to write more
-as I move further along with it.&lt;/p&gt;
-
-&lt;p&gt;Make sure you head over and check out his new site
-(&lt;a href=&quot;http://lainlee3design.com&quot;&gt;http://lainlee3design.com&lt;/a&gt;). Check out his
-portfolio and see what you think. I&amp;#39;d highly recommend him for any of your
-design needs.&lt;/p&gt;
-</description>
-          <pubDate>Wed, 27 Mar 2013 00:00:00 -0700</pubDate>
-          <link>http://tybenz.com//post/lainlee3design</link>
-          <guid isPermaLink="true">http://tybenz.com//post/lainlee3design</guid>
         </item>
       
     
