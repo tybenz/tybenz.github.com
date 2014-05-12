@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tyler rants about things</title>
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="apple-touch-img/logo-precomposed" href="/img/logo.png">
+    <link rel="apple-touch-img/logo" href="/img/logo.png">
+    <link rel="apple-touch-img/logo" sizes="72x72" href="/img/logo.png">
+    <link rel="apple-touch-img/logo" sizes="114x114" href="/img/logo.png">
+
+    <link href="/css/styles.css" rel="stylesheet" type="text/css">
+    <link href="/css/pygments.css" rel="stylesheet" type="text/css">
+    <link href="/img/icon.jpg" rel="shortcut icon">
+</head>
+<body>
+  <div class="sidebar">
+    <a href="/" class="logo">
+      <img src="/img/logo.png">
+    </a>
+
+    <ul class="nav">
+      <div class="nav-inner">
+        <li><a href="http://tybenz.com"><span class="icon doc"></span>blog</a></li>
+        <li><a href="http://tybenz.com/about"><span class="icon info"></span>about</a></li>
+        <li><a href="http://tybenz.com/projects"><span class="icon code"></span>projects</a></li>
+        <li><a href="http://github.com/tybenz"><span class="icon github"></span>github</a></li>
+        <li><a href="http://twitter.com/tybenz"><span class="icon twitter"></span>twitter</a></li>
+      </div>
+    </ul>
+  </div>
+  <div class="wrapper">
+    <!--<h1><marquee scrolldelay="60">otter pop - the world's greatest jekyll theme</marquee></h1>-->
+    <h1>Bash URL Shortener</h1>
+    
+    <h4>Feb 7 2013</h4>
+    
+
+    <div class="post-body">
+      <p>A couple months ago I got curious about URL shorteners and how they were
+implemented. As I was researching the subject, I realized it might be
+fun to write my own. So, of course, the next logical step was to steal
+someone else's script and modify it for my needs. (I've lost the link to
+that actual script I used for my inspiration but it was similar to
+<a href="https://gist.github.com/zumbojo/1073996">this</a> one.)</p>
+
+<p>I wanted my URL Shortener to meet a few criteria:</p>
+
+<ol>
+<li><p>Bash: I wanted to call the script from the command line, have it
+register the redirect on the server and put the shortened URL in my
+clipboard</p></li>
+<li><p>GitHub Pages: I wanted the server with the redirects to be hosted for
+free. That naturally brought me to GitHub.</p></li>
+<li><p>Awesomeness: I wanted my shortened URLs to live on an awesome domain.
+What's more awesome than the word itself right?</p></li>
+</ol>
+
+
+<p>So I registered the domain awes0.me, ported the script over to BASH.
+And deployed to Github.</p>
+
+<p>The resulting script keeps a running count of how many URLs have been
+generated, generates a hash on that value, creates a directory with that
+hash as its name and injects a simple JavaScript redirect into an
+index.html document inside that directory, and pushes the GitHub Repo.
+Deploying a URL that looks something like: http://awes0.me/K6g.</p>
+
+<p>And that's it. I can now shorten URLs to my heart's content. No PHP, no
+paid hosting, no headaches. You can view the source <a href="https://gist.github.com/4735033">here</a>.</p>
+
+    </div>
+  </div>
+  <script type="text/javascript">
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-33073396-1', 'tybenz.com');
+    ga('send', 'pageview');
+
+  </script>
+</body>
+</html>

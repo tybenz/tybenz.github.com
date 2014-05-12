@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tyler rants about things</title>
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="apple-touch-img/logo-precomposed" href="/img/logo.png">
+    <link rel="apple-touch-img/logo" href="/img/logo.png">
+    <link rel="apple-touch-img/logo" sizes="72x72" href="/img/logo.png">
+    <link rel="apple-touch-img/logo" sizes="114x114" href="/img/logo.png">
+
+    <link href="/css/styles.css" rel="stylesheet" type="text/css">
+    <link href="/css/pygments.css" rel="stylesheet" type="text/css">
+    <link href="/img/icon.jpg" rel="shortcut icon">
+</head>
+<body>
+  <div class="sidebar">
+    <a href="/" class="logo">
+      <img src="/img/logo.png">
+    </a>
+
+    <ul class="nav">
+      <div class="nav-inner">
+        <li><a href="http://tybenz.com"><span class="icon doc"></span>blog</a></li>
+        <li><a href="http://tybenz.com/about"><span class="icon info"></span>about</a></li>
+        <li><a href="http://tybenz.com/projects"><span class="icon code"></span>projects</a></li>
+        <li><a href="http://github.com/tybenz"><span class="icon github"></span>github</a></li>
+        <li><a href="http://twitter.com/tybenz"><span class="icon twitter"></span>twitter</a></li>
+      </div>
+    </ul>
+  </div>
+  <div class="wrapper">
+    <!--<h1><marquee scrolldelay="60">otter pop - the world's greatest jekyll theme</marquee></h1>-->
+    <h1>Taking advantage of sessions in Vim</h1>
+    
+    <h4>Feb 6 2014</h4>
+    
+
+    <div class="post-body">
+      <p>A few months ago, on my daily hunt for new, useful VIM plugins, I discovered
+<a href="http://github.com/mhinz/vim-startify">vim-startify</a>. Startify is a beautiful
+and organized startup screen for VIM. It provides shortcuts into files from
+your working directory, a list of bookmarks to files you edit all the time, and
+your most-recently edited files. As I was going over its docs, I also
+discovered that it can list out vim sessions. I'd never read about sessions
+before. So I began googling.</p>
+
+<p>Vim provides some commands that let you store sessions based on the current
+state of VIM. You can load in previously created sessions with <code>source</code> (just
+like any other vim script). The <code>mksession</code> command, out-of-the-box, stores every
+little detail about your current session &mdash; plugins, scripts, which buffers are
+loaded, what your tabs and windows are doing.  Because of this, a <code>mksession</code>
+file can be really large and really ugly. I actually found that most of the
+things <code>mksession</code> was saving to be a bit redundant. For the most part, the
+scripts I want executed when I launch VIM are all present in my <code>.vimrc</code>. So I
+took the bits that I needed and starting creating my own session files by hand.</p>
+
+<p>The only commands I really need in a project-specific session have to do with
+changing VIM's working directory, opening files into buffers, and choosing
+which of those buffers to edit (I usually start with two files in vertical
+split panes).</p>
+
+<p>Here's one of my session files (vimdeck.vim):</p>
+
+<div class="highlight">
+<pre><code><span class="k">cd</span> ~/src/vimdeck
+<span class="k">args</span> lib/* lib/templates/* bin/vimdeck Rakefile Gemfile README.md slides.md
+<span class="k">edit</span> slides.md
+<span class="k">vertical sb</span> lib/vimdeck.rb</code></pre>
+</div>
+
+
+<p>I change the working directory to the project folder, open files into buffers,
+then I choose which two files I want to start with (in the above case slides.md
+and lib/vimdeck.rb). And I can execute all of this by typing:</p>
+
+<div class="highlight"><pre><code class="text">:source ~/.vim/sessions/vimdeck.vim
+</code></pre></div>
+
+
+<p>Now sessions get even cooler when you pair sessions with Startify. Startify
+will list all session files from a directory and provide keyboard shortcuts to
+execute them. I put my session files into <code>~/.vim/sessions</code> and tell startify
+where they're located with:</p>
+
+<div class="highlight"><pre><code class="vim"><span class="k">let</span> <span class="k">g</span>:startify_session_dir <span class="p">=</span> <span class="s2">&quot;~/.vim/sessions&quot;</span>
+</code></pre></div>
+
+
+<p>Now everytime I start VIM, I'm greeted with this:</p>
+
+<p><img src="http://awes0.me/startify.png" alt="" /></p>
+
+<p>Note that the first section consists of a list of numbered sessions. Startify
+assigns shortcut keys to them so if I want to jump into my vimdeck session, all
+I have to do is open VIM and hit <code>h</code> and it will drop me into the right
+directory with all of the files I want to be able to edit for that project.</p>
+
+<p>Startify also provides directory-level session file detection. So it will check VIM's
+working directory for a <code>Session.vim</code> file and write out a shortcut for that
+session as well. Useful if you'd like to include your session file in your
+projects git repository.</p>
+
+<p>Make sure you grab <a href="http://github.com/mhinz/vim-startify">startify</a> and start
+playing around with its session support. Also, hit me up on
+<a href="http://twitter.com/tybenz">twitter</a> if you have any questions/suggestions.</p>
+
+    </div>
+  </div>
+  <script type="text/javascript">
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-33073396-1', 'tybenz.com');
+    ga('send', 'pageview');
+
+  </script>
+</body>
+</html>

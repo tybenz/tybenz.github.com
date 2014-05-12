@@ -1,0 +1,504 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tyler Benziger's Blog</title>
+    <description>Tyler rants about things</description>
+    <link>http://tybenz.com</link>
+    <atom:link href="http://tybenz.com/feed.xml" rel="self" type="application/rss+xml" />
+    
+      
+    
+      
+        <item>
+          <title>Presentation: JS Legos</title>
+          <description>&lt;p&gt;I'm presenting at &lt;a href=&quot;http://gentics.com/jquery-europe&quot;&gt;jQuery Europe&lt;/a&gt; today. The
+talk is an adaptation from a &lt;a href=&quot;http://tybenz.com/post/widgetize-all-the-things&quot;&gt;previous blog
+post&lt;/a&gt; about reusable UI
+components in JavaScript. I've also given versions of the talk at &lt;a href=&quot;http://events.jquery.org/2014/san-diego/&quot;&gt;jQuery San
+Diego&lt;/a&gt; and
+&lt;a href=&quot;http://www.meetup.com/The-Sonora-Software-Developers-Group/&quot;&gt;SSDG&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Slides are posted here: http://tybenz.com/presentation-js-legos&lt;/p&gt;
+
+&lt;p&gt;Also, I'm releasing this small open-source UI component library as part of the talk, called &lt;strong&gt;lego.js&lt;/strong&gt;.
+It's really just meant to be a repository of more in-depth code samples of the kind of components
+presented in the talk. Feel free to check it out:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://tybenz.com/legojs&quot;&gt;http://tybenz.com/legojs&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Here's a recording of the talk from &lt;a href=&quot;http://www.gentics.com/jquery-eu-2014/page/2014/eu.html&quot;&gt;jQuery Europe&lt;/a&gt;:&lt;/p&gt;
+
+&lt;div class=&quot;video-container skinny&quot;&gt;
+  &lt;iframe src=&quot;//www.youtube.com/embed/S0xH8RxFaBg?start=233&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+</description>
+          <pubDate>Fri, 28 Feb 2014 00:00:00 -0800</pubDate>
+          <link>http://tybenz.com//post/presentation-js-legos</link>
+          <guid isPermaLink="true">http://tybenz.com//post/presentation-js-legos</guid>
+        </item>
+      
+    
+      
+        <item>
+          <title>Making Spam Cool Again</title>
+          <description>&lt;p&gt;I'm an information junky. I spend hours a day on &lt;a href=&quot;http://twitter.com&quot;&gt;Twitter&lt;/a&gt;,
+&lt;a href=&quot;http://news.ycombinator.com&quot;&gt;Hacker News&lt;/a&gt;, &lt;a href=&quot;http://usevim.com&quot;&gt;UseVim&lt;/a&gt;, &lt;a href=&quot;http://robots.thoughtbot.com&quot;&gt;Giant
+Robots&lt;/a&gt;, &lt;a href=&quot;http://dailyjs.com&quot;&gt;DailyJS&lt;/a&gt; &amp;mdash; if
+it's about developer-anything, I'm there. So I decided to share the wealth of
+links that I visit on a daily basis with the world.&lt;/p&gt;
+
+&lt;p&gt;Introducing &lt;strong&gt;spamthe.net&lt;/strong&gt; &amp;mdash; my very own link spammer. Follow on twitter
+(&lt;a href=&quot;http://twitter.com/spamthenet&quot;&gt;@spamthenet&lt;/a&gt;), bookmark in your browser
+(&lt;a href=&quot;http://spamthe.net&quot;&gt;spamthe.net&lt;/a&gt;) *, subscribe to the weekly newsletter
+(&lt;a href=&quot;http://spamthe.net&quot;&gt;here&lt;/a&gt;), or join the IRC channel on Freenode
+(&lt;a href=&quot;http://webchat.freenode.net&quot;&gt;#spamthenet&lt;/a&gt;).&lt;/p&gt;
+
+&lt;p&gt;The links themselves can be found easily by anyone else who is as obsessed
+with the above-mentioned resources as I am. But the fun part was building it.&lt;/p&gt;
+
+&lt;p&gt;I use &lt;a href=&quot;http://pages.github.com&quot;&gt;GitHub Pages&lt;/a&gt; to host the site and a node.js
+(ew) app to update twitter and the blog simultaneously. Oh, and I wrote a
+bookmarklet so that I can just click a button from within a site and send it to
+the spammer.&lt;/p&gt;
+
+&lt;p&gt;The node app listens for a request (CORS of course) from the
+bookmarklet. The title and url are passed in the request, and the app
+posts to the twitter account and writes a new file into the website's repo,
+commits, and pushes to GitHub. Now I can share links with the click of a
+button. Copy + paste is so 2013.&lt;/p&gt;
+
+&lt;p&gt;The IRC channel is running a version of &lt;a href=&quot;http://hubot.github.io&quot;&gt;hubot&lt;/a&gt; that
+listens to spamthenet's Twitter stream and auto-posts the links.
+Join the channel if you feel like chatting with cool people while you wait for
+the links to pour in.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://github.com/tybenz/spamthe.net/tree/master&quot;&gt;Click here&lt;/a&gt; to check out the
+awful source. If you're interested in helping me collect links, ping me on IRC
+(tybenz) or Twitter (&lt;a href=&quot;http://twitter.com/tybenz&quot;&gt;@tybenz&lt;/a&gt;) and be sure to check the
+&lt;a href=&quot;https://github.com/tybenz/spamthe.net#contributing&quot;&gt;contributing&lt;/a&gt; section of the
+README.&lt;/p&gt;
+
+&lt;p&gt;Also don't forget to bookmark &lt;a href=&quot;http://spamthe.net&quot;&gt;spamthe.net&lt;/a&gt;, sign up for
+our newsletter, follow &lt;a href=&quot;http://spamthe.net&quot;&gt;@spamthenet&lt;/a&gt;, and join us on IRC.
+Or maybe just one of those, if you feel doing all of them would be redundant.&lt;/p&gt;
+
+&lt;p&gt;* I know the site has spam in the title. So here's a screenshot for all you out
+there who are too scared to actually click on the link:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://spamthe.net&quot;&gt;&lt;img src=&quot;http://awes0.me/spamsite.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
+</description>
+          <pubDate>Tue, 25 Feb 2014 00:00:00 -0800</pubDate>
+          <link>http://tybenz.com//post/making-spam-cool-again</link>
+          <guid isPermaLink="true">http://tybenz.com//post/making-spam-cool-again</guid>
+        </item>
+      
+    
+      
+        <item>
+          <title>Presentation: CSS Layout</title>
+          <description>&lt;p&gt;I presented on new CSS Layout features at a Game and App Devs Meetup group at Adobe SF on February 4.
+Here are the slides for my presentation:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://tybenz.com/presentation-css-layout&quot;&gt;Finally! Layout in CSS&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Here's a recording of the talk:&lt;/p&gt;
+
+&lt;div class=&quot;video-container&quot;&gt;
+  &lt;iframe src=&quot;//www.youtube.com/embed/Q-EkoYILdYg&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+</description>
+          <pubDate>Sat, 22 Feb 2014 00:00:00 -0800</pubDate>
+          <link>http://tybenz.com//post/presentation-css-layout</link>
+          <guid isPermaLink="true">http://tybenz.com//post/presentation-css-layout</guid>
+        </item>
+      
+    
+      
+        <item>
+          <title>Taking advantage of sessions in Vim</title>
+          <description>&lt;p&gt;A few months ago, on my daily hunt for new, useful VIM plugins, I discovered
+&lt;a href=&quot;http://github.com/mhinz/vim-startify&quot;&gt;vim-startify&lt;/a&gt;. Startify is a beautiful
+and organized startup screen for VIM. It provides shortcuts into files from
+your working directory, a list of bookmarks to files you edit all the time, and
+your most-recently edited files. As I was going over its docs, I also
+discovered that it can list out vim sessions. I'd never read about sessions
+before. So I began googling.&lt;/p&gt;
+
+&lt;p&gt;Vim provides some commands that let you store sessions based on the current
+state of VIM. You can load in previously created sessions with &lt;code&gt;source&lt;/code&gt; (just
+like any other vim script). The &lt;code&gt;mksession&lt;/code&gt; command, out-of-the-box, stores every
+little detail about your current session &amp;mdash; plugins, scripts, which buffers are
+loaded, what your tabs and windows are doing.  Because of this, a &lt;code&gt;mksession&lt;/code&gt;
+file can be really large and really ugly. I actually found that most of the
+things &lt;code&gt;mksession&lt;/code&gt; was saving to be a bit redundant. For the most part, the
+scripts I want executed when I launch VIM are all present in my &lt;code&gt;.vimrc&lt;/code&gt;. So I
+took the bits that I needed and starting creating my own session files by hand.&lt;/p&gt;
+
+&lt;p&gt;The only commands I really need in a project-specific session have to do with
+changing VIM's working directory, opening files into buffers, and choosing
+which of those buffers to edit (I usually start with two files in vertical
+split panes).&lt;/p&gt;
+
+&lt;p&gt;Here's one of my session files (vimdeck.vim):&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;
+&lt;pre&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;cd&lt;/span&gt; ~/src/vimdeck
+&lt;span class=&quot;k&quot;&gt;args&lt;/span&gt; lib/* lib/templates/* bin/vimdeck Rakefile Gemfile README.md slides.md
+&lt;span class=&quot;k&quot;&gt;edit&lt;/span&gt; slides.md
+&lt;span class=&quot;k&quot;&gt;vertical sb&lt;/span&gt; lib/vimdeck.rb&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+
+&lt;p&gt;I change the working directory to the project folder, open files into buffers,
+then I choose which two files I want to start with (in the above case slides.md
+and lib/vimdeck.rb). And I can execute all of this by typing:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;text&quot;&gt;:source ~/.vim/sessions/vimdeck.vim
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Now sessions get even cooler when you pair sessions with Startify. Startify
+will list all session files from a directory and provide keyboard shortcuts to
+execute them. I put my session files into &lt;code&gt;~/.vim/sessions&lt;/code&gt; and tell startify
+where they're located with:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;vim&quot;&gt;&lt;span class=&quot;k&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;g&lt;/span&gt;:startify_session_dir &lt;span class=&quot;p&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;~/.vim/sessions&amp;quot;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Now everytime I start VIM, I'm greeted with this:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://awes0.me/startify.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Note that the first section consists of a list of numbered sessions. Startify
+assigns shortcut keys to them so if I want to jump into my vimdeck session, all
+I have to do is open VIM and hit &lt;code&gt;h&lt;/code&gt; and it will drop me into the right
+directory with all of the files I want to be able to edit for that project.&lt;/p&gt;
+
+&lt;p&gt;Startify also provides directory-level session file detection. So it will check VIM's
+working directory for a &lt;code&gt;Session.vim&lt;/code&gt; file and write out a shortcut for that
+session as well. Useful if you'd like to include your session file in your
+projects git repository.&lt;/p&gt;
+
+&lt;p&gt;Make sure you grab &lt;a href=&quot;http://github.com/mhinz/vim-startify&quot;&gt;startify&lt;/a&gt; and start
+playing around with its session support. Also, hit me up on
+&lt;a href=&quot;http://twitter.com/tybenz&quot;&gt;twitter&lt;/a&gt; if you have any questions/suggestions.&lt;/p&gt;
+</description>
+          <pubDate>Thu, 06 Feb 2014 00:00:00 -0800</pubDate>
+          <link>http://tybenz.com//post/taking-advantage-of-sessions-in-vim</link>
+          <guid isPermaLink="true">http://tybenz.com//post/taking-advantage-of-sessions-in-vim</guid>
+        </item>
+      
+    
+      
+        <item>
+          <title>My Hour Of Code</title>
+          <description>&lt;p&gt;This past week was &lt;a href=&quot;http://code.org&quot;&gt;code.org's&lt;/a&gt; first &lt;a href=&quot;http://csedweek.org&quot;&gt;Computer Science Education Week&lt;/a&gt;. They set a goal of getting 10 million students worldwide to participate
+in an hour of code (they ended up with over 16 million). Code.org and many other participating organizations created self-guided tutorials to walk students through the fundamentals
+of programming.&lt;/p&gt;
+
+&lt;p&gt;I was able to help out at a &lt;a href=&quot;http://hcs.hickmanschools.org&quot;&gt;Hickman Charter School&lt;/a&gt; by adding a short presentation on what code is all about. I'm extremely appreciative of
+code.org's efforts to educate young people on such an important topic. Here's some photos from the event:&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.github.com/tybenz/awes0.me/gh-pages/hoc1.jpg&quot; alt=&quot;&quot; /&gt;
+&lt;img src=&quot;https://raw.github.com/tybenz/awes0.me/gh-pages/hoc2.jpg&quot; alt=&quot;&quot; /&gt;
+&lt;img src=&quot;https://raw.github.com/tybenz/awes0.me/gh-pages/hoc3.jpg&quot; alt=&quot;&quot; /&gt;
+&lt;img src=&quot;https://raw.github.com/tybenz/awes0.me/gh-pages/hoc4.jpg&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+</description>
+          <pubDate>Mon, 16 Dec 2013 00:00:00 -0800</pubDate>
+          <link>http://tybenz.com//post/my-hour-of-code</link>
+          <guid isPermaLink="true">http://tybenz.com//post/my-hour-of-code</guid>
+        </item>
+      
+    
+      
+        <item>
+          <title>VIM as a presentation tool</title>
+          <description>&lt;p&gt;I made a thing. It's called &lt;a href=&quot;https://raw.github.com/tybenz/vimdeck/master/img/demo3.png&quot;&gt;Vimdeck&lt;/a&gt;
+and it lets you write a presentation
+in a single markdown file and then converts that file into multiple &quot;slides&quot;
+to be opened and shared in VIM.&lt;/p&gt;
+
+&lt;p&gt;Buffers as slides. Genius, no? Plus, I added some ascii art conversion stuff too.&lt;/p&gt;
+
+&lt;p&gt;Head over to the &lt;a href=&quot;http://github.com/tybenz/vimdeck&quot;&gt;GitHub page&lt;/a&gt; to check it out.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;https://raw.github.com/tybenz/vimdeck/master/img/demo3.png&quot; alt=&quot;&quot; /&gt;&lt;/p&gt;
+</description>
+          <pubDate>Thu, 19 Sep 2013 00:00:00 -0700</pubDate>
+          <link>http://tybenz.com//post/vimdeck-vim-as-a-presentation-tool</link>
+          <guid isPermaLink="true">http://tybenz.com//post/vimdeck-vim-as-a-presentation-tool</guid>
+        </item>
+      
+    
+      
+        <item>
+          <title>Presentation: Widget-ize</title>
+          <description>&lt;p&gt;I'm headed to &lt;a href=&quot;http://frontporch.com&quot;&gt;Frontporch&lt;/a&gt; in Sonora, CA to the &lt;a href=&quot;http://www.meetup.com/The-Sonora-Software-Developers-Group/&quot;&gt;Sonora Software
+Developers Group Meetup&lt;/a&gt; to give a presentation
+based on my &lt;a href=&quot;http://tybenz.com/post/widgetize-all-the-things&quot;&gt;widget-ize&lt;/a&gt; blog post.&lt;/p&gt;
+
+&lt;p&gt;The slides can be found here: &lt;a href=&quot;http://tybenz.com/presentation-widgetize&quot;&gt;http://tybenz.com/presentation-widgetize&lt;/a&gt;&lt;/p&gt;
+</description>
+          <pubDate>Tue, 27 Aug 2013 00:00:00 -0700</pubDate>
+          <link>http://tybenz.com//post/presentation-widget-ize</link>
+          <guid isPermaLink="true">http://tybenz.com//post/presentation-widget-ize</guid>
+        </item>
+      
+    
+      
+        <item>
+          <title>Widget-ize All The Things!</title>
+          <description>&lt;p&gt;&lt;strong&gt;Reduce, reuse, refactor.&lt;/strong&gt; That&amp;#8217;s what we do as developers &lt;em&gt;all day&lt;/em&gt;.
+The &lt;strong&gt;reduce&lt;/strong&gt; and &lt;strong&gt;refactor&lt;/strong&gt; are obvious necessities, and admittedly some of the most fun and/or
+most painful parts of the job. In my experience, the &lt;strong&gt;reuse&lt;/strong&gt; goal is often the easiest to
+acheive. Yet, somehow, it is often the one most ignored, in the name of
+&quot;iterative development&quot;. Trust me, nothing helps you iterate more
+quickly than
+writing things in a generic and reusable way the &lt;em&gt;first&lt;/em&gt; time.&lt;/p&gt;
+
+&lt;p&gt;In my experience writing code to be purposefully reusable is fun,
+challenging, and incredibly useful. I want to outline what writing
+solid, reusable front-end web components should look like.&lt;/p&gt;
+
+&lt;p&gt;There are 3 different approaches when it comes to solving a UI problem or implementing a common UI pattern.&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Blackbox&lt;/li&gt;
+&lt;li&gt;Framework-based&lt;/li&gt;
+&lt;li&gt;The sweet spot&lt;/li&gt;
+&lt;/ol&gt;
+
+
+&lt;h4&gt;Blackbox&lt;/h4&gt;
+
+&lt;p&gt;The blackbox approach is one that &lt;em&gt;every&lt;/em&gt; web developer is familiar with.
+What I&amp;#8217;m referring to is a UI-based plugin that solves a problem, but
+might require specific markup structure,
+or an entire 300 lines of code to accomplish something you could have done in 20. It&amp;#8217;s a plugin you grab and throw
+in your app/site and it&amp;#8217;s supposed to just &quot;work&quot;. And it does for the most part. The convenience is tempting.&lt;/p&gt;
+
+&lt;p&gt;The problem comes when you want to customize/extend the thing to do a
+little something extra. Most plugins don&amp;#8217;t leave room for
+interaction with the plugin itself. Sure, you got a slideshow widget by
+downloading a couple of files, but what good is it if it&amp;#8217;s not
+fully customizable?&lt;/p&gt;
+
+&lt;h4&gt;Enter the example&lt;/h4&gt;
+
+&lt;p&gt;The example I&amp;#8217;ll be using throughout this post is what I call a &quot;secret&quot;
+widget. The pattern we're going for is simple: mousedown -&gt; add a class,
+mouseup -&gt; remove a class. That class can do whatever it wants in CSS.
+We&amp;#8217;re going to have it hide/show a child element (thus the name
+&quot;secret&quot;).
+Let&amp;#8217;s take a look at the blackbox approach to this widget:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;javascript&quot;&gt;&lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;fn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;secret&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;each&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;$this&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;$this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;on&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;mousedown&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;$this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;addClass&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;show&amp;#39;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;$this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;on&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;mouseup&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;$this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;removeClass&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;show&amp;#39;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+
+&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Live demo &lt;a href=&quot;/demos/widgetize/secret.html&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;This is an example of a typical jQuery plugin*. It has no options,
+and very simple widget logic. What if I wanted to use different events
+other than mousedown/mouseup? What if I want some other piece of an
+application to perform an action when the class is applied? There's
+nothing external for integration and not enough options for it to do
+what I want.&lt;/p&gt;
+
+&lt;h4&gt;Framework-based&lt;/h4&gt;
+
+&lt;p&gt;Next up is the framework-based approach to writing components. I&amp;#8217;m
+personally a big fan of MVC in app development. But, when it comes to
+writing UI components, there&amp;#8217;s one thing I get annoyed with
+often &amp;mdash; if you do it the &quot;framework&quot; way, it&amp;#8217;s less reusable by
+definition.&lt;/p&gt;
+
+&lt;p&gt;Here&amp;#8217;s an example:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;javascript&quot;&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Secret&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Backbone&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;View&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;extend&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;events&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;s1&quot;&gt;&amp;#39;mousedown&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;apply&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+        &lt;span class=&quot;s1&quot;&gt;&amp;#39;mouseup&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;remove&amp;#39;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+
+    &lt;span class=&quot;nx&quot;&gt;apply&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;$el&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;addClass&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;show&amp;#39;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+
+    &lt;span class=&quot;nx&quot;&gt;remove&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;$el&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;removeClass&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;show&amp;#39;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Notice that there are no options at all in this view. This is because
+it&amp;#8217;s custom-made for this application and we (ideally) know what our requirements are
+while growing the codebase.&lt;/p&gt;
+
+&lt;p&gt;There&amp;#8217;s an even bigger problem here, we&amp;#8217;ve just rewritten a common UI
+widget in a very specific &quot;Backbone-y&quot; way. All reusability is gone
+(outside of another Backbone project that is). Converting
+this code into a more flexible widget will take time and effort.&lt;/p&gt;
+
+&lt;h4&gt;The Sweet Spot&lt;/h4&gt;
+
+&lt;p&gt;That&amp;#8217;s where option #3 comes in. The compromise between isolated,
+they-just-work plugins and event-driven MVC-friendly components. A solid
+reusable widget should have the following criteria:&lt;/p&gt;
+
+&lt;ol&gt;
+&lt;li&gt;Options (and defaults)&lt;/li&gt;
+&lt;li&gt;Browser/User events&lt;/li&gt;
+&lt;li&gt;Widget Logic&lt;/li&gt;
+&lt;li&gt;External events&lt;/li&gt;
+&lt;/ol&gt;
+
+
+&lt;p&gt;Let&amp;#8217;s take a look at some code within the constructor of our
+widget:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;javascript&quot;&gt;&lt;span class=&quot;nx&quot;&gt;widget&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;options&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;extend&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{},&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;widget&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;defaultOptions&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;options&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;widget&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;$el&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;on&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;widget&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;options&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;applyEvent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// apply/remove are just calling addClass/removeClass respectively&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;widget&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;apply&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;widget&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;trigger&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;secret-apply&amp;#39;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;widget&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;$el&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;on&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;widget&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;options&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;removeEvent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;widget&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;remove&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;widget&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;trigger&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;secret-remove&amp;#39;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Here we have a component that is customizable with options, that does its
+job as it&amp;#8217;s supposed to and that provides ways for other pieces of an
+application to hook into and modify its behavior.&lt;/p&gt;
+
+&lt;h4&gt;Time to extend&lt;/h4&gt;
+
+&lt;p&gt;Let&amp;#8217;s try to extend this widget's behavior. What if I had two divs
+on the page each with their own secret? And, let&amp;#8217;s say I want to
+show both secrets when I mousedown the first div.
+With our new event-based widget, it&amp;#8217;s simple:&lt;/p&gt;
+
+&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;javascript&quot;&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;secret1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Secret&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;#secret1&amp;#39;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;secret2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Secret&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;#secret2&amp;#39;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;secret1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;on&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;secret-apply&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;secret2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;apply&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+
+&lt;span class=&quot;nx&quot;&gt;secret1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;on&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;secret-remove&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;secret2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;remove&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Live demo &lt;a href=&quot;/demos/widgetize/secret4.html&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Notice that the secret widget does it&amp;#8217;s normal thing. It&amp;#8217;s really good
+at applying/removing classes, but it also fires events when those things
+happens. This let&amp;#8217;s us write a bit of code to create the master/slave
+relationship. If we want, we could even package this new behavior as a
+widget.&lt;/p&gt;
+
+&lt;p&gt;Slick huh? Now you&amp;#8217;ve got a widget that can handle a simple UI pattern,
+and it&amp;#8217;s customizable/extensible enough to do something &lt;em&gt;really&lt;/em&gt; useful.&lt;/p&gt;
+
+&lt;p&gt;Also, if you haven&amp;#8217;t noticed, our example widget is extremely
+simple. But I wanted to show how small components can be used to do cool
+things (especially when they leverage CSS).
+&lt;a href=&quot;/demos/widgetize/secret5.html&quot; target=&quot;_blank&quot;&gt;Here&amp;#8217;s&lt;/a&gt; an example I made to show
+that. The example consists of a whole bunch of secret widgets lined up side-by-side.
+Each widget contains an image and the widget&amp;#8217;s applyClass toggle's
+the visibility of the image. I'm also using some CSS trickery here to
+shift the child image a certain amount so that they all have the same
+top and left coordinates. We use the events mouseover and mouseout for this one,
+giving the effect that hovering over the image from left/right scrubs a
+rotating animation.&lt;/p&gt;
+
+&lt;h4&gt;Wrap up&lt;/h4&gt;
+
+&lt;p&gt;In my experience amassing an arsenal of these small pattern-based
+reusable bits of code can really make working on any application so much
+easier. Give it a try and you&amp;#8217;ll find that building out a library of
+these types of components is extremely rewarding and in general, it will
+make you a better developer. And if you don&amp;#8217;t have the time to
+roll your own, I hope you&amp;#8217;ll at least
+research some widget-based frameworks and begin to &quot;think reusable&quot; when
+faced with a UI problem.&lt;/p&gt;
+
+&lt;p&gt;I&amp;#8217;ve tried to lay out what I think is a template for simple, but
+powerful components so that you can go forth and widgetize all of your UI.
+As always feel free to submit any comments/questions on
+&lt;a href=&quot;http://twitter.com/tybenz&quot;&gt;Twitter&lt;/a&gt;. Also, I&amp;#8217;ll be giving a talk
+on this very topic at a meetup with the &lt;a href=&quot;http://www.meetup.com/The-Sonora-Software-Developers-Group/&quot;&gt;Sonora Software Developers
+Group&lt;/a&gt; next Month.
+If you happen to be near the Central Valley/Foothills, swing by.&lt;/p&gt;
+
+&lt;p&gt;* To clarify, I have nothing against jQuery plugins. In my experience
+most jQuery plugins are written to solve a specific problem. They do
+their job well but they don&amp;#8217;t necessarily provide
+the options and events to modify/extend behavior.&lt;/p&gt;
+</description>
+          <pubDate>Mon, 08 Jul 2013 00:00:00 -0700</pubDate>
+          <link>http://tybenz.com//post/widgetize-all-the-things</link>
+          <guid isPermaLink="true">http://tybenz.com//post/widgetize-all-the-things</guid>
+        </item>
+      
+    
+      
+        <item>
+          <title>Gitwar: Gaming with Git</title>
+          <description>&lt;p&gt;I recently came across a &lt;a href=&quot;https://github.com/blog/1499-the-revolution-will-be-forked&quot;&gt;blog
+post&lt;/a&gt; that talked about non-developers using Git and GitHub to
+do some pretty cool things. It got me thinking about other cool and unusual
+things possible with GitHub.&lt;/p&gt;
+
+&lt;p&gt;Then I started thinking about games and wondered what it would look like
+to have a game with Git at the center. Not something as lame as &quot;who can
+create the most branches with the most inappropriate names in the
+shortest amount of time?&quot; More like a family of two-player,
+head-to-head, text-based, turn-based games with Git as the transfer
+protocol.&lt;/p&gt;
+
+&lt;p&gt;So I made one, and I did it all in &lt;strong&gt;BASH&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;The games are built using a &quot;platform&quot; called
+&lt;a href=&quot;http://github.com/gitwar/gitwar&quot;&gt;Gitwar&lt;/a&gt;. It's a shared
+utility that takes care of adding, committing, pushing, and pulling
+to/from the shared repo.&lt;/p&gt;
+
+&lt;p&gt;The first game is called
+&lt;a href=&quot;http://github.com/gitwar/gitwar/tree/master/gitfight&quot;&gt;Gitfight&lt;/a&gt; and it's an incredibly simple/corny game where
+you tell the game what kind of punch you'd like to throw at your
+opponent and basically roll a virtual die to see how much damage you
+deal. After you submit your punch, Gitwar takes over and commits that
+action to your repo and your opponent can have a chance to punch back.&lt;/p&gt;
+
+&lt;p&gt;The second game was an obvious choice. It's called
+&lt;a href=&quot;http://github.com/gitwar/gitwar/tree/master/gitchess&quot;&gt;Gitchess&lt;/a&gt;. This is
+where I had the most fun. Creating a more complex game in BASH proved to
+be a difficult but satisfying challenge.&lt;/p&gt;
+
+&lt;p&gt;It was really fun to make, and I'm eager to find out what other types of
+command-line games can be built on top of a pattern like this. Be sure to check out the
+Gitwar repo &lt;a href=&quot;http://github.com/gitwar/gitwar&quot;&gt;here&lt;/a&gt;. And give me a shoutout on
+&lt;a href=&quot;https://twitter.com/share?text=%40tybenz&amp;amp;url=http://tybenz.com/post/gitwar&quot;&gt;Twitter&lt;/a&gt; if you have comments.&lt;/p&gt;
+</description>
+          <pubDate>Fri, 10 May 2013 00:00:00 -0700</pubDate>
+          <link>http://tybenz.com//post/gitwar</link>
+          <guid isPermaLink="true">http://tybenz.com//post/gitwar</guid>
+        </item>
+      
+    
+  </channel>
+</rss>
