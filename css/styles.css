@@ -175,6 +175,10 @@ video {
   background-image:url(/img/code.png);
 }
 
+.icon.link {
+  background-image:url(/img/link.png);
+}
+
 .icon.twitter {
   background-image:url(/img/twitter.png);
 }
