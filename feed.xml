@@ -17,7 +17,9 @@ Europe&lt;/a&gt;, &lt;a href=&quot;http://events.jquery.org/2014/san-diego/&quot
 Diego&lt;/a&gt; and
 &lt;a href=&quot;http://www.meetup.com/The-Sonora-Software-Developers-Group/&quot;&gt;SSDG&lt;/a&gt;.&lt;/p&gt;
 
-&lt;p&gt;Slides are posted here: http://tybenz.com/presentation-js-legos&lt;/p&gt;
+&lt;p&gt;Slides are posted here:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://tybenz.com/presentation-js-legos&quot;&gt;http://tybenz.com/presentation-js-legos&lt;/a&gt;&lt;/p&gt;
 
 &lt;p&gt;Also, I'm releasing this small open-source UI component library as part of the talk, called &lt;strong&gt;lego.js&lt;/strong&gt;.
 It's really just meant to be a repository of more in-depth code samples of the kind of components
