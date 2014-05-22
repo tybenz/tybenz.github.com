@@ -8,6 +8,38 @@
     
       
         <item>
+          <title>Presentation: JS Legos</title>
+          <description>&lt;p&gt;I'm presenting at the &lt;a href=&quot;http://html5devconf.com&quot;&gt;HTML5 Developer Conference&lt;/a&gt;
+today. The talk is an adaptation from a &lt;a href=&quot;http://tybenz.com/post/widgetize-all-the-things&quot;&gt;previous blog
+post&lt;/a&gt; about reusable UI
+components in JavaScript. I've also given versions of the talk at &lt;a href=&quot;http://gentics.com/jquery-europe&quot;&gt;jQuery
+Europe&lt;/a&gt;, &lt;a href=&quot;http://events.jquery.org/2014/san-diego/&quot;&gt;jQuery San
+Diego&lt;/a&gt; and
+&lt;a href=&quot;http://www.meetup.com/The-Sonora-Software-Developers-Group/&quot;&gt;SSDG&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Slides are posted here: http://tybenz.com/presentation-js-legos&lt;/p&gt;
+
+&lt;p&gt;Also, I'm releasing this small open-source UI component library as part of the talk, called &lt;strong&gt;lego.js&lt;/strong&gt;.
+It's really just meant to be a repository of more in-depth code samples of the kind of components
+presented in the talk. Feel free to check it out:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://tybenz.com/legojs&quot;&gt;http://tybenz.com/legojs&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Here's a recording of the talk from &lt;a href=&quot;http://www.gentics.com/jquery-eu-2014/page/2014/eu.html&quot;&gt;jQuery Europe&lt;/a&gt;:&lt;/p&gt;
+
+&lt;div class=&quot;video-container skinny&quot;&gt;
+  &lt;iframe src=&quot;//www.youtube.com/embed/S0xH8RxFaBg?start=233&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;
+
+</description>
+          <pubDate>Thu, 22 May 2014 00:00:00 -0700</pubDate>
+          <link>http://tybenz.com//post/presentation-js-legos</link>
+          <guid isPermaLink="true">http://tybenz.com//post/presentation-js-legos</guid>
+        </item>
+      
+    
+      
+        <item>
           <title>Double Down</title>
           <description>&lt;h4&gt;&lt;em&gt;* * This text was also posted to the &lt;a href=&quot;https://the-pastry-box-project.net/tyler-benziger/2014-may-20&quot;&gt;Pastry Box Project&lt;/a&gt; * *&lt;/em&gt;&lt;/h4&gt;
 
@@ -60,37 +92,6 @@ to be one of the ones driving the dang thing forward.&lt;/p&gt;
           <pubDate>Tue, 20 May 2014 00:00:00 -0700</pubDate>
           <link>http://tybenz.com//post/double-down</link>
           <guid isPermaLink="true">http://tybenz.com//post/double-down</guid>
-        </item>
-      
-    
-      
-        <item>
-          <title>Presentation: JS Legos</title>
-          <description>&lt;p&gt;I'm presenting at &lt;a href=&quot;http://gentics.com/jquery-europe&quot;&gt;jQuery Europe&lt;/a&gt; today. The
-talk is an adaptation from a &lt;a href=&quot;http://tybenz.com/post/widgetize-all-the-things&quot;&gt;previous blog
-post&lt;/a&gt; about reusable UI
-components in JavaScript. I've also given versions of the talk at &lt;a href=&quot;http://events.jquery.org/2014/san-diego/&quot;&gt;jQuery San
-Diego&lt;/a&gt; and
-&lt;a href=&quot;http://www.meetup.com/The-Sonora-Software-Developers-Group/&quot;&gt;SSDG&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Slides are posted here: http://tybenz.com/presentation-js-legos&lt;/p&gt;
-
-&lt;p&gt;Also, I'm releasing this small open-source UI component library as part of the talk, called &lt;strong&gt;lego.js&lt;/strong&gt;.
-It's really just meant to be a repository of more in-depth code samples of the kind of components
-presented in the talk. Feel free to check it out:&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://tybenz.com/legojs&quot;&gt;http://tybenz.com/legojs&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Here's a recording of the talk from &lt;a href=&quot;http://www.gentics.com/jquery-eu-2014/page/2014/eu.html&quot;&gt;jQuery Europe&lt;/a&gt;:&lt;/p&gt;
-
-&lt;div class=&quot;video-container skinny&quot;&gt;
-  &lt;iframe src=&quot;//www.youtube.com/embed/S0xH8RxFaBg?start=233&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
-&lt;/div&gt;
-
-</description>
-          <pubDate>Fri, 28 Feb 2014 00:00:00 -0800</pubDate>
-          <link>http://tybenz.com//post/presentation-js-legos</link>
-          <guid isPermaLink="true">http://tybenz.com//post/presentation-js-legos</guid>
         </item>
       
     
