@@ -40,46 +40,54 @@
     
 
     <div class="post-body">
-      <p>For my first post, I'd like to talk a little about patterns.</p>
+      <p>For my first post, I&#39;d like to talk a little about patterns.</p>
 
 <p>Most programmers are puzzle solvers. We sit and tinker all day trying to solve interesting
-problems, or most often, solving problems we've created ourselves. The most rewarding part of this puzzle solving,
+problems, or most often, solving problems we&#39;ve created ourselves. The most rewarding part of this puzzle solving,
 is when a pattern is identified, and an association is made. Simplifying these patterns into reusable pieces of code
-is what makes programming fun. I know I'm most proud of code that I've written that is highly reusable.</p>
+is what makes programming fun. I know I&#39;m most proud of code that I&#39;ve written that is highly reusable. </p>
 
 <p>What typically happens is that programmers will put off writing truly reusable code until absolutely necessary. I do,
-and so does everyone else. I've outlined a little bit of what typical puzzle solving looks like (at least for me):</p>
+and so does everyone else. I&#39;ve outlined a little bit of what typical puzzle solving looks like (at least for me):</p>
 
 <ol>
-<li>Button Mashing</li>
+<li>Button Mashing
+
+<ul>
 <li>I start prototyping a solution to a problem</li>
 <li>I throw good coding practices out the window and just try to get results on the screen</li>
-<li>Refactoring</li>
+</ul></li>
+<li>Refactoring
+
+<ul>
 <li>I spend hours and hours tweaking code to be more readable/efficient/reusable</li>
-<li>Epiphany</li>
-<li>I realize some subset of my new code is similar to something I've written before</li>
+</ul></li>
+<li>Epiphany
+
+<ul>
+<li>I realize some subset of my new code is similar to something I&#39;ve written before</li>
 <li>I create some small utility/API that is tailor-made for a certain coding pattern</li>
+</ul></li>
 </ol>
 
-
-<p>Quickly, I'll say that the big time-suck in Step 2 can be reduced if better code is written from the start.
+<p>Quickly, I&#39;ll say that the big time-suck in Step 2 can be reduced if better code is written from the start.
 Understandably, outside factors can make this impractical (e.g. time constraints, rapid prototyping, etc).
-I'd still recommend finding the balance between an accurate, fast prototype, and a clean implementation as much as possible.</p>
+I&#39;d still recommend finding the balance between an accurate, fast prototype, and a clean implementation as much as possible.</p>
 
-<p>Now, where does the pattern come in? What I'd really like to focus on is Step 3. This Epiphany is usually what spawns excellent
-libaries/widgets/gems/APIs.</p>
+<p>Now, where does the pattern come in? What I&#39;d really like to focus on is Step 3. This Epiphany is usually what spawns excellent
+libaries/widgets/gems/APIs. </p>
 
-<p>Let's walk through a more concrete example.</p>
+<p>Let&#39;s walk through a more concrete example.</p>
 
 <p>Recently, I was messing around with Ruby on Rails and I had started added some client-side/server-side communication
-via AJAX. I'll take you through a smaller, similar app and see if you can spot the pattern.</p>
+via AJAX. I&#39;ll take you through a smaller, similar app and see if you can spot the pattern.</p>
 
-<p>Let's design a Grocery List application. The user can create Lists which contain multiple Items.
-We'll have a unalterable, finite set of possible items the user might want on a list.
+<p>Let&#39;s design a Grocery List application. The user can create Lists which contain multiple Items.
+We&#39;ll have a unalterable, finite set of possible items the user might want on a list.
 If we wanted to create a page where the list can be built out on the client-side and then pushed to the server to save the list,
-we'd need a way of querying for items, as well as some button to submit the completed list.</p>
+we&#39;d need a way of querying for items, as well as some button to submit the completed list.</p>
 
-<p>Here's some code:</p>
+<p>Here&#39;s some code:</p>
 
 <div class="highlight"><pre><code class="html"><span class="c">&lt;!-- Submit this form with the name of the item to get back data from server --&gt;</span>
 <span class="nt">&lt;form</span> <span class="na">id=</span><span class="s">&quot;get-items&quot;</span> <span class="na">action=</span><span class="s">&quot;/items&quot;</span> <span class="na">method=</span><span class="s">&quot;get&quot;</span> <span class="na">data-remote=</span><span class="s">&quot;true&quot;</span><span class="nt">&gt;</span>
@@ -98,7 +106,6 @@ we'd need a way of querying for items, as well as some button to submit the comp
 <span class="nt">&lt;/table&gt;</span>
 </code></pre></div>
 
-
 <p>And some more:</p>
 
 <div class="highlight"><pre><code class="javascript"><span class="c1">// JS to grab data passed back from server and append row to the table</span>
@@ -110,7 +117,6 @@ we'd need a way of querying for items, as well as some button to submit the comp
         <span class="s2">&quot;.&lt;/td&gt;&lt;td&gt;&quot;</span> <span class="o">+</span> <span class="nx">data</span><span class="p">.</span><span class="nx">name</span> <span class="o">+</span> <span class="s2">&quot;&lt;/td&gt;&lt;/tr&gt;&quot;</span> <span class="p">);</span>
 <span class="p">});</span>
 </code></pre></div>
-
 
 <p>And some more:</p>
 
@@ -132,31 +138,30 @@ we'd need a way of querying for items, as well as some button to submit the comp
 <span class="p">});</span>
 </code></pre></div>
 
-
-<p>Notice the pattern? It's actually something that is quite common in web apps. When submitting data/requests via AJAX,
+<p>Notice the pattern? It&#39;s actually something that is quite common in web apps. When submitting data/requests via AJAX,
 there is always some sort of follow-up action performed on the client side, typically appending some new set of markup
 somewhere to display response data.</p>
 
 <p>So I decided to create a generic way to respond to these AJAX calls. By leveraging a templating tool like
-<a href="http://mustache.github.com/">mustache.js</a>, or
+<a href="http://mustache.github.com/">mustache.js</a>, or 
 <a href="http://underscorejs.org/#template">underscore</a>, it was easy to write a utility to listen
 for AJAX responses, and append a template, populated with the response data.
-I found this tool incredibly useful, and I'm still working on making it
-more universal to the task. It's called AjaxAppend and you can read more
+I found this tool incredibly useful, and I&#39;m still working on making it
+more universal to the task. It&#39;s called AjaxAppend and you can read more
 about it <a href="/projects/ajaxappend">here</a>.</p>
 
 <p>You see that with a simple example like one above, pointing out these patterns in your mind can save you, and potentially others,
 a lot of time in the long run (provided you take the time to do something about it).
-Now when I need this type of AJAX/JSON/Markup workflow in an app, I write a few lines of JS, and I'm done.</p>
+Now when I need this type of AJAX/JSON/Markup workflow in an app, I write a few lines of JS, and I&#39;m done.</p>
 
 <p>So there it is.</p>
 
-<p>Bad Code -> Pattern -> Simplify Problem -> Widget/Plugin/Function/API/etc</p>
+<p>Bad Code -&gt; Pattern -&gt; Simplify Problem -&gt; Widget/Plugin/Function/API/etc</p>
 
-<p>What I've outlined here, is a workflow for putting together reusable utilities. While it may seem slow and imperfect,
-the truth is there aren't a lot of other options. Most programmers don't have the gift of foresight, so for now, this retroactive
+<p>What I&#39;ve outlined here, is a workflow for putting together reusable utilities. While it may seem slow and imperfect,
+the truth is there aren&#39;t a lot of other options. Most programmers don&#39;t have the gift of foresight, so for now, this retroactive
 simplification of repetitive code will have to do. Make sure you keep your eyes peeled for patterns that can be taken advantage of,
-and tweet/message me some patterns you've identified and what you did about it.</p>
+and tweet/message me some patterns you&#39;ve identified and what you did about it.</p>
 
     </div>
   </div>
