@@ -279,7 +279,7 @@ links that I visit on a daily basis with the world.&lt;/p&gt;
 with the above-mentioned resources as I am. But the fun part was building it.&lt;/p&gt;
 
 &lt;p&gt;I use &lt;a href=&quot;http://pages.github.com&quot;&gt;GitHub Pages&lt;/a&gt; to host the site and a node.js
-(ew) app to update twitter and the blog simultaneously. Oh, and I wrote a
+app to update twitter and the blog simultaneously. Oh, and I wrote a
 bookmarklet so that I can just click a button from within a site and send it to
 the spammer.&lt;/p&gt;
 
