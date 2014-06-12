@@ -8,6 +8,43 @@
     
       
         <item>
+          <title>List of awesome band names</title>
+          <description>&lt;p&gt;I&amp;#39;ve started putting together a list of awesome band names.&lt;/p&gt;
+
+&lt;p&gt;Click here to see them: &lt;a href=&quot;https://github.com/tybenz/band-names&quot;&gt;https://github.com/tybenz/band-names&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1&gt;want to contribute?&lt;/h1&gt;
+
+&lt;p&gt;Fork and pull request to contribute to the list. Don&amp;#39;t know what those terms
+mean? Never used GitHub before? Keep reading.&lt;/p&gt;
+
+&lt;h1&gt;how to contribute on github&lt;/h1&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/join&quot;&gt;Sign up&lt;/a&gt; for GitHub if you&amp;#39;re not already.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://awes0.me/mr-join.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;Go &lt;a href=&quot;https://github.com/tybenz/band-names/fork&quot;&gt;here&lt;/a&gt; to fork the repo.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://awes0.me/mr-fork.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;Go &lt;a href=&quot;https://github.com/tybenz/band-names/edit/master/README.md&quot;&gt;here&lt;/a&gt; to edit.
+Click on &amp;quot;Propose file change&amp;quot;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://awes0.me/mr-edit.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+
+&lt;p&gt;Then click on &amp;quot;Create pull request&amp;quot;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://awes0.me/mr-pull-request.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
+</description>
+          <pubDate>Thu, 12 Jun 2014 00:00:00 -0700</pubDate>
+          <link>http://tybenz.com//post/list-of-awesome-band-names</link>
+          <guid isPermaLink="true">http://tybenz.com//post/list-of-awesome-band-names</guid>
+        </item>
+      
+    
+      
+        <item>
           <title>Organize Your Node Apps</title>
           <description>&lt;p&gt;I wrote a node module called &lt;a href=&quot;http://tybenz.com/paper-router&quot;&gt;paper-router&lt;/a&gt;.
 It&amp;#39;s sole purpose is to help me organize my node apps.&lt;/p&gt;
@@ -462,207 +499,6 @@ based on my &lt;a href=&quot;http://tybenz.com/post/widgetize-all-the-things&quo
           <pubDate>Tue, 27 Aug 2013 00:00:00 -0700</pubDate>
           <link>http://tybenz.com//post/presentation-widget-ize</link>
           <guid isPermaLink="true">http://tybenz.com//post/presentation-widget-ize</guid>
-        </item>
-      
-    
-      
-        <item>
-          <title>Widget-ize All The Things!</title>
-          <description>&lt;p&gt;&lt;strong&gt;Reduce, reuse, refactor.&lt;/strong&gt; That&amp;#8217;s what we do as developers &lt;em&gt;all day&lt;/em&gt;.
-The &lt;strong&gt;reduce&lt;/strong&gt; and &lt;strong&gt;refactor&lt;/strong&gt; are obvious necessities, and admittedly some of the most fun and/or
-most painful parts of the job. In my experience, the &lt;strong&gt;reuse&lt;/strong&gt; goal is often the easiest to 
-acheive. Yet, somehow, it is often the one most ignored, in the name of
-&amp;quot;iterative development&amp;quot;. Trust me, nothing helps you iterate more
-quickly than
-writing things in a generic and reusable way the &lt;em&gt;first&lt;/em&gt; time.&lt;/p&gt;
-
-&lt;p&gt;In my experience writing code to be purposefully reusable is fun,
-challenging, and incredibly useful. I want to outline what writing
-solid, reusable front-end web components should look like.&lt;/p&gt;
-
-&lt;p&gt;There are 3 different approaches when it comes to solving a UI problem or implementing a common UI pattern.&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Blackbox&lt;/li&gt;
-&lt;li&gt;Framework-based&lt;/li&gt;
-&lt;li&gt;The sweet spot&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;h4&gt;Blackbox&lt;/h4&gt;
-
-&lt;p&gt;The blackbox approach is one that &lt;em&gt;every&lt;/em&gt; web developer is familiar with.
-What I&amp;#8217;m referring to is a UI-based plugin that solves a problem, but
-might require specific markup structure,
-or an entire 300 lines of code to accomplish something you could have done in 20. It&amp;#8217;s a plugin you grab and throw
-in your app/site and it&amp;#8217;s supposed to just &amp;quot;work&amp;quot;. And it does for the most part. The convenience is tempting.&lt;/p&gt;
-
-&lt;p&gt;The problem comes when you want to customize/extend the thing to do a
-little something extra. Most plugins don&amp;#8217;t leave room for
-interaction with the plugin itself. Sure, you got a slideshow widget by
-downloading a couple of files, but what good is it if it&amp;#8217;s not
-fully customizable?&lt;/p&gt;
-
-&lt;h4&gt;Enter the example&lt;/h4&gt;
-
-&lt;p&gt;The example I&amp;#8217;ll be using throughout this post is what I call a &amp;quot;secret&amp;quot;
-widget. The pattern we&amp;#39;re going for is simple: mousedown -&amp;gt; add a class,
-mouseup -&amp;gt; remove a class. That class can do whatever it wants in CSS.
-We&amp;#8217;re going to have it hide/show a child element (thus the name
-&amp;quot;secret&amp;quot;).
-Let&amp;#8217;s take a look at the blackbox approach to this widget:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;javascript&quot;&gt;&lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;fn&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;secret&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-
-    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;each&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;$this&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-        &lt;span class=&quot;nx&quot;&gt;$this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;on&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;mousedown&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;$this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;addClass&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;show&amp;#39;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-        &lt;span class=&quot;nx&quot;&gt;$this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;on&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;mouseup&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;$this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;removeClass&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;show&amp;#39;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
-
-&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Live demo &lt;a href=&quot;/demos/widgetize/secret.html&quot;&gt;here&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;This is an example of a typical jQuery plugin*. It has no options,
-and very simple widget logic. What if I wanted to use different events
-other than mousedown/mouseup? What if I want some other piece of an
-application to perform an action when the class is applied? There&amp;#39;s
-nothing external for integration and not enough options for it to do
-what I want.&lt;/p&gt;
-
-&lt;h4&gt;Framework-based&lt;/h4&gt;
-
-&lt;p&gt;Next up is the framework-based approach to writing components. I&amp;#8217;m
-personally a big fan of MVC in app development. But, when it comes to
-writing UI components, there&amp;#8217;s one thing I get annoyed with
-often &amp;mdash; if you do it the &amp;quot;framework&amp;quot; way, it&amp;#8217;s less reusable by
-definition.&lt;/p&gt;
-
-&lt;p&gt;Here&amp;#8217;s an example:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;javascript&quot;&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Secret&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Backbone&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;View&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;extend&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;({&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;events&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-        &lt;span class=&quot;s1&quot;&gt;&amp;#39;mousedown&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;apply&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
-        &lt;span class=&quot;s1&quot;&gt;&amp;#39;mouseup&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;remove&amp;#39;&lt;/span&gt;
-    &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
-
-    &lt;span class=&quot;nx&quot;&gt;apply&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;$el&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;addClass&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;show&amp;#39;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
-
-    &lt;span class=&quot;nx&quot;&gt;remove&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;$el&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;removeClass&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;show&amp;#39;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;},&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Notice that there are no options at all in this view. This is because
-it&amp;#8217;s custom-made for this application and we (ideally) know what our requirements are
-while growing the codebase.&lt;/p&gt;
-
-&lt;p&gt;There&amp;#8217;s an even bigger problem here, we&amp;#8217;ve just rewritten a common UI
-widget in a very specific &amp;quot;Backbone-y&amp;quot; way. All reusability is gone
-(outside of another Backbone project that is). Converting
-this code into a more flexible widget will take time and effort.&lt;/p&gt;
-
-&lt;h4&gt;The Sweet Spot&lt;/h4&gt;
-
-&lt;p&gt;That&amp;#8217;s where option #3 comes in. The compromise between isolated,
-they-just-work plugins and event-driven MVC-friendly components. A solid
-reusable widget should have the following criteria:&lt;/p&gt;
-
-&lt;ol&gt;
-&lt;li&gt;Options (and defaults)&lt;/li&gt;
-&lt;li&gt;Browser/User events&lt;/li&gt;
-&lt;li&gt;Widget Logic&lt;/li&gt;
-&lt;li&gt;External events&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Let&amp;#8217;s take a look at some code within the constructor of our
-widget:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;javascript&quot;&gt;&lt;span class=&quot;nx&quot;&gt;widget&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;options&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;extend&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{},&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;widget&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;defaultOptions&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;options&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;widget&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;$el&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;on&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;widget&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;options&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;applyEvent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;c1&quot;&gt;// apply/remove are just calling addClass/removeClass respectively&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;widget&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;apply&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;widget&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;trigger&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;secret-apply&amp;#39;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;widget&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;$el&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;on&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;widget&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;options&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;removeEvent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;widget&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;remove&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;widget&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;trigger&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;secret-remove&amp;#39;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Here we have a component that is customizable with options, that does its
-job as it&amp;#8217;s supposed to and that provides ways for other pieces of an
-application to hook into and modify its behavior.&lt;/p&gt;
-
-&lt;h4&gt;Time to extend&lt;/h4&gt;
-
-&lt;p&gt;Let&amp;#8217;s try to extend this widget&amp;#39;s behavior. What if I had two divs
-on the page each with their own secret? And, let&amp;#8217;s say I want to
-show both secrets when I mousedown the first div.
-With our new event-based widget, it&amp;#8217;s simple:&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;javascript&quot;&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;secret1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Secret&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;#secret1&amp;#39;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;),&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;secret2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Secret&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;#secret2&amp;#39;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-
-&lt;span class=&quot;nx&quot;&gt;secret1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;on&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;secret-apply&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;secret2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;apply&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
-
-&lt;span class=&quot;nx&quot;&gt;secret1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;on&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;secret-remove&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;secret2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;remove&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;});&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;Live demo &lt;a href=&quot;/demos/widgetize/secret4.html&quot;&gt;here&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Notice that the secret widget does it&amp;#8217;s normal thing. It&amp;#8217;s really good
-at applying/removing classes, but it also fires events when those things
-happens. This let&amp;#8217;s us write a bit of code to create the master/slave
-relationship. If we want, we could even package this new behavior as a
-widget.&lt;/p&gt;
-
-&lt;p&gt;Slick huh? Now you&amp;#8217;ve got a widget that can handle a simple UI pattern,
-and it&amp;#8217;s customizable/extensible enough to do something &lt;em&gt;really&lt;/em&gt; useful.&lt;/p&gt;
-
-&lt;p&gt;Also, if you haven&amp;#8217;t noticed, our example widget is extremely
-simple. But I wanted to show how small components can be used to do cool
-things (especially when they leverage CSS).
-&lt;a href=&quot;/demos/widgetize/secret5.html&quot; target=&quot;_blank&quot;&gt;Here&amp;#8217;s&lt;/a&gt; an example I made to show
-that. The example consists of a whole bunch of secret widgets lined up side-by-side.
-Each widget contains an image and the widget&amp;#8217;s applyClass toggle&amp;#39;s
-the visibility of the image. I&amp;#39;m also using some CSS trickery here to
-shift the child image a certain amount so that they all have the same
-top and left coordinates. We use the events mouseover and mouseout for this one,
-giving the effect that hovering over the image from left/right scrubs a
-rotating animation.&lt;/p&gt;
-
-&lt;h4&gt;Wrap up&lt;/h4&gt;
-
-&lt;p&gt;In my experience amassing an arsenal of these small pattern-based
-reusable bits of code can really make working on any application so much
-easier. Give it a try and you&amp;#8217;ll find that building out a library of
-these types of components is extremely rewarding and in general, it will
-make you a better developer. And if you don&amp;#8217;t have the time to
-roll your own, I hope you&amp;#8217;ll at least
-research some widget-based frameworks and begin to &amp;quot;think reusable&amp;quot; when
-faced with a UI problem.&lt;/p&gt;
-
-&lt;p&gt;I&amp;#8217;ve tried to lay out what I think is a template for simple, but
-powerful components so that you can go forth and widgetize all of your UI.
-As always feel free to submit any comments/questions on
-&lt;a href=&quot;http://twitter.com/tybenz&quot;&gt;Twitter&lt;/a&gt;. Also, I&amp;#8217;ll be giving a talk
-on this very topic at a meetup with the &lt;a href=&quot;http://www.meetup.com/The-Sonora-Software-Developers-Group/&quot;&gt;Sonora Software Developers
-Group&lt;/a&gt; next Month.
-If you happen to be near the Central Valley/Foothills, swing by.&lt;/p&gt;
-
-&lt;p&gt;* To clarify, I have nothing against jQuery plugins. In my experience
-most jQuery plugins are written to solve a specific problem. They do
-their job well but they don&amp;#8217;t necessarily provide
-the options and events to modify/extend behavior.&lt;/p&gt;
-</description>
-          <pubDate>Mon, 08 Jul 2013 00:00:00 -0700</pubDate>
-          <link>http://tybenz.com//post/widgetize-all-the-things</link>
-          <guid isPermaLink="true">http://tybenz.com//post/widgetize-all-the-things</guid>
         </item>
       
     
