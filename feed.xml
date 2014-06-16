@@ -8,6 +8,42 @@
     
       
         <item>
+          <title>Presentation: JS Legos</title>
+          <description>&lt;p&gt;I&amp;#39;ve been doing this talk on Reusable UI Components in JavaScript for a while
+now. I gave the last on at the &lt;a href=&quot;http://html5devconf.com&quot;&gt;HTML5 Developer Conference&lt;/a&gt; in
+May (hopefully will have a video soon). The talk is an adaptation from a
+&lt;a href=&quot;http://tybenz.com/post/widgetize-all-the-things&quot;&gt;previous blog post&lt;/a&gt; about reusable UI components in JavaScript.
+I&amp;#39;ve also given versions of the talk at &lt;a href=&quot;http://www.gentics.com/jquery-eu-2014/page/2014/eu.html&quot;&gt;jQuery Europe&lt;/a&gt;, &lt;a href=&quot;http://events.jquery.org/2014/san-diego&quot;&gt;jQuery San
+Diego&lt;/a&gt; and &lt;a href=&quot;http://www.meetup.com/The-Sonora-Software-Developers-Group/&quot;&gt;SSDG&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Slides are posted here:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://tybenz.com/presentation-js-legos&quot;&gt;http://tybenz.com/presentation-js-legos&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Also, I&amp;#39;m releasing this small open-source UI component library as part of the talk, called &lt;strong&gt;lego.js&lt;/strong&gt;.
+It&amp;#39;s really just meant to be a repository of more in-depth code samples of the kind of components
+presented in the talk. Feel free to check it out:&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;http://tybenz.com/legojs&quot;&gt;http://tybenz.com/legojs&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;Here&amp;#39;s a recording of the talk from &lt;a href=&quot;http://www.gentics.com/jquery-eu-2014/page/2014/eu.html&quot;&gt;jQuery Europe&lt;/a&gt;:
+&lt;div class=&quot;video-container skinny&quot;&gt;
+  &lt;iframe src=&quot;//www.youtube.com/embed/S0xH8RxFaBg?start=233&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;&lt;/p&gt;
+
+&lt;p&gt;Here&amp;#39;s a recording of the talk from &lt;a href=&quot;http://events.jquery.org/2014/san-diego&quot;&gt;jQuery San Diego&lt;/a&gt;:
+&lt;div class=&quot;video-container&quot;&gt;
+  &lt;iframe src=&quot;//www.youtube.com/embed/78a3cjw8bT8&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
+&lt;/div&gt;&lt;/p&gt;
+</description>
+          <pubDate>Mon, 16 Jun 2014 00:00:00 -0700</pubDate>
+          <link>http://tybenz.com//post/presentation-js-legos</link>
+          <guid isPermaLink="true">http://tybenz.com//post/presentation-js-legos</guid>
+        </item>
+      
+    
+      
+        <item>
           <title>List of awesome band names</title>
           <description>&lt;p&gt;I&amp;#39;ve started putting together a list of awesome band names.&lt;/p&gt;
 
@@ -205,38 +241,6 @@ It&amp;#39;s sole purpose is to help me organize my node apps.&lt;/p&gt;
           <pubDate>Thu, 29 May 2014 00:00:00 -0700</pubDate>
           <link>http://tybenz.com//post/organize-your-node-apps</link>
           <guid isPermaLink="true">http://tybenz.com//post/organize-your-node-apps</guid>
-        </item>
-      
-    
-      
-        <item>
-          <title>Presentation: JS Legos</title>
-          <description>&lt;p&gt;I&amp;#39;m presenting at the &lt;a href=&quot;http://html5devconf.com&quot;&gt;HTML5 Developer Conference&lt;/a&gt;
-today. The talk is an adaptation from a &lt;a href=&quot;http://tybenz.com/post/widgetize-all-the-things&quot;&gt;previous blog
-post&lt;/a&gt; about reusable UI
-components in JavaScript. I&amp;#39;ve also given versions of the talk at &lt;a href=&quot;http://gentics.com/jquery-europe&quot;&gt;jQuery
-Europe&lt;/a&gt;, &lt;a href=&quot;http://events.jquery.org/2014/san-diego/&quot;&gt;jQuery San
-Diego&lt;/a&gt; and
-&lt;a href=&quot;http://www.meetup.com/The-Sonora-Software-Developers-Group/&quot;&gt;SSDG&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;Slides are posted here:&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://tybenz.com/presentation-js-legos&quot;&gt;http://tybenz.com/presentation-js-legos&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Also, I&amp;#39;m releasing this small open-source UI component library as part of the talk, called &lt;strong&gt;lego.js&lt;/strong&gt;.
-It&amp;#39;s really just meant to be a repository of more in-depth code samples of the kind of components
-presented in the talk. Feel free to check it out:&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;http://tybenz.com/legojs&quot;&gt;http://tybenz.com/legojs&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;Here&amp;#39;s a recording of the talk from &lt;a href=&quot;http://www.gentics.com/jquery-eu-2014/page/2014/eu.html&quot;&gt;jQuery Europe&lt;/a&gt;:
-&lt;div class=&quot;video-container skinny&quot;&gt;
-  &lt;iframe src=&quot;//www.youtube.com/embed/S0xH8RxFaBg?start=233&quot; frameborder=&quot;0&quot; allowfullscreen&gt;&lt;/iframe&gt;
-&lt;/div&gt;&lt;/p&gt;
-</description>
-          <pubDate>Thu, 22 May 2014 00:00:00 -0700</pubDate>
-          <link>http://tybenz.com//post/presentation-js-legos</link>
-          <guid isPermaLink="true">http://tybenz.com//post/presentation-js-legos</guid>
         </item>
       
     
