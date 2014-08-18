@@ -1,7 +1,8 @@
 ---
 layout: default
 project: true
-title: Paper Router
+nav: projects
+title: paper-router
 link: http://tybenz.com/paper-router
-summary: Organize your server-side Node apps
+summary: Organize your Node apps
 ---

@@ -1,73 +1,36 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Tyler rants about things</title>
+---
+layout: default
+title: Home
+---
 
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="apple-touch-img/logo-precomposed" href="/img/logo.png">
-    <link rel="apple-touch-img/logo" href="/img/logo.png">
-    <link rel="apple-touch-img/logo" sizes="72x72" href="/img/logo.png">
-    <link rel="apple-touch-img/logo" sizes="114x114" href="/img/logo.png">
+<div class="posts">
+  {% for post in paginator.posts %}
+    <div class="post post-preview">
+      <h1 class="post-title">
+        <a href="{{ post.url }}">
+          {{ post.title }}
+        </a>
+      </h1>
+      <span class="post-date">{{ post.date | date: "%b %e %Y" }}</span>
+    </div>
 
-    <link href="/css/styles.css" rel="stylesheet" type="text/css">
-    <link href="/img/logo.png" rel="shortcut icon">
-</head>
-<body>
-  <div class="sidebar">
-    <a href="/" class="logo">
-      <img src="/img/logo.png">
-    </a>
-
-    <ul class="nav">
-      <div class="nav-inner">
-        <li><a href="/"><span class="icon doc"></span>blog</a></li>
-        <li><a href="/about"><span class="icon info"></span>about</a></li>
-        <li><a href="/projects"><span class="icon code"></span>projects</a></li>
-        <li><a href="http://spamthe.net"><span class="icon link"></span>links</a></li>
-        <li><a href="http://github.com/tybenz"><span class="icon github"></span>github</a></li>
-        <li><a href="http://twitter.com/tybenz"><span class="icon twitter"></span>twitter</a></li>
-      </div>
-    </ul>
-  </div>
-  <div class="wrapper">
-    <h1>tyler benziger's blog</h1>
-
-    <div class="posts">
-  <a href="/post/presentation-js-legos" class="post-link"><strong>Presentation: JS Legos</strong> [Jun 16 2014]</a>
-      <a href="/post/list-of-awesome-band-names" class="post-link"><strong>List of awesome band names</strong> [Jun 12 2014]</a>
-      <a href="/post/organize-your-node-apps" class="post-link"><strong>Organize Your Node Apps</strong> [May 29 2014]</a>
-      <a href="/post/double-down" class="post-link"><strong>Double Down</strong> [May 20 2014]</a>
-      <a href="/post/making-spam-cool-again" class="post-link"><strong>Making Spam Cool Again</strong> [Feb 25 2014]</a>
-      <a href="/post/presentation-css-layout" class="post-link"><strong>Presentation: CSS Layout</strong> [Feb 22 2014]</a>
-      <a href="/post/taking-advantage-of-sessions-in-vim" class="post-link"><strong>Taking advantage of sessions in Vim</strong> [Feb 6 2014]</a>
-      <a href="/post/my-hour-of-code" class="post-link"><strong>My Hour Of Code</strong> [Dec 16 2013]</a>
-      <a href="/post/vimdeck-vim-as-a-presentation-tool" class="post-link"><strong>VIM as a presentation tool</strong> [Sep 19 2013]</a>
-      <a href="/post/presentation-widget-ize" class="post-link"><strong>Presentation: Widget-ize</strong> [Aug 27 2013]</a>
-      <a href="/post/widgetize-all-the-things" class="post-link"><strong>Widget-ize All The Things!</strong> [Jul 8 2013]</a>
-      <a href="/post/gitwar" class="post-link"><strong>Gitwar: Gaming with Git</strong> [May 10 2013]</a>
-      <a href="/post/lainlee3design" class="post-link"><strong>Lain Lee 3 Design</strong> [Mar 27 2013]</a>
-      <a href="/post/walkie-pt-2" class="post-link"><strong>Walkie Pt. 2</strong> [Mar 8 2013]</a>
-      <a href="/post/walkie" class="post-link"><strong>Walkie Pt. 1</strong> [Feb 28 2013]</a>
-      <a href="/post/bash-url-shortener" class="post-link"><strong>Bash URL Shortener</strong> [Feb 7 2013]</a>
-      <a href="/post/static-waves" class="post-link"><strong>Static Waves</strong> [Feb 6 2013]</a>
-      <a href="/post/codearmory" class="post-link"><strong>Code Armory</strong> [Sep 18 2012]</a>
-      <a href="/post/themebot" class="post-link"><strong>ThemeBot</strong> [Jul 24 2012]</a>
-      <a href="/post/patterns" class="post-link"><strong>Patterns</strong> [Jul 17 2012]</a>
-      
+  {% endfor %}
 </div>
 
-  </div>
-  <script type="text/javascript">
-    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+<div class="pagination">
+  {% if paginator.next_page %}
+    <a class="pagination-item older" href="{{ site.baseurl }}page{{paginator.next_page}}">Older</a>
+  {% else %}
+    <span class="pagination-item older">Older</span>
+  {% endif %}
+  {% if paginator.previous_page %}
+    {% if paginator.page == 2 %}
+      <a class="pagination-item newer" href="{{ site.baseurl }}">Newer</a>
+    {% else %}
+      <a class="pagination-item newer" href="{{ site.baseurl }}page{{paginator.previous_page}}">Newer</a>
+    {% endif %}
+  {% else %}
+    <span class="pagination-item newer">Newer</span>
+  {% endif %}
+</div>
 
-    ga('create', 'UA-33073396-1', 'tybenz.com');
-    ga('send', 'pageview');
-
-  </script>
-</body>
-</html>

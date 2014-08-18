@@ -1,0 +1,10 @@
+---
+layout: default
+---
+
+<div class="page">
+  {% if page.skip_title != true %}
+    <h1 class="page-title">{{ page.title }}</h1>
+  {% endif %}
+  {{ content }}
+</div>
