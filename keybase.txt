@@ -1,0 +1,65 @@
+==================================================================
+https://keybase.io/tybenz
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://tybenz.com
+  * I am tybenz (https://keybase.io/tybenz) on keybase.
+  * I have a public key with fingerprint 42BF 9F22 838F 09CF E7C7  8933 EAE0 94DA 0A5E C1FA
+
+To claim this, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "fingerprint": "42bf9f22838f09cfe7c78933eae094da0a5ec1fa",
+            "host": "keybase.io",
+            "key_id": "eae094da0a5ec1fa",
+            "uid": "ca40b773bf4051d535effb6d0514e400",
+            "username": "tybenz"
+        },
+        "service": {
+            "hostname": "tybenz.com",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1410992138,
+    "expire_in": 157680000,
+    "prev": "a7b712f7a5b93856c13d3b43e8ae5f52fdf9676fa2f81c97855a6dcadb1cb01e",
+    "seqno": 4,
+    "tag": "signature"
+}
+
+with the aforementioned key, yielding the PGP signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: Keybase OpenPGP v1.0.3
+Comment: https://keybase.io/crypto
+
+yMHiAnicbVFrSBRRFF6zXFuNhE3BoAe3X6lt89yZ2aKgJAxLpIKizOXOzB0d1Jlx
+djR12cwHmVhEmj2sTAzsQUkplCiSlahURkQRCtkPS0l7YMUSFdkdqR9B58/hfOf7
+vnMOp39RpMMVkU2Ud3ib2vsjHvV9KHLsWhrtCgJRl0uBLwjy0FxSVC0HmYapahbw
+AYYSFUGhKJ7mFUKQFMRJHC/QNIKIEBgZEpBFEqlAkAJy9YCtwDYiDCCPqmMMF35V
+xuh/+EVzDQkyhMhxtKgwBEvKLM0iRRG9Mi4YxBCETQwgU4MFCLOtUhFpZSCUAjBW
+rErI3tge/E/fI+kFWGeYuqVLej7Gcy3L8Nkyq9SweQeQ6P/j4BdVTcY3Y0ExMgOq
+rgEfiZmSpdqWJEMSgkCRNJ8CUImhmsiv2gyW8/IEDnsMKsaWkBM5klI4yIoCzbNe
+iaRlWmRoxEPEKiylyIrg5bwKpBSelASOZ1nolSUoi6QkEiQC9k2Fmg58DF4T5mDL
+gJqjQavIRCB0vy9rviPC5YhaMM/+msO1MO7vLyMrnbNZ5sT7NU/fJdSsuGnByZ8v
+4uBiq1ZMoKffXjTSHb9mpmLZjpizILmzWSrp2lj50nlUGhg91jLRWdXY8ylppTt8
++k53eHLs2562jOV90asY37LBxNtfd1duXzd7Ir+i/nl7Ur3z472kJb2XnsUmS5M/
+BrtaHx/fe636CXIXpvnTM3s+dxOHowYcJ0lXwlDXqTxPaPyc8bp3X+pwVe1WN3n5
+/JfR+Bp95kpr+dozjXUbDm0LN6Oh7BvTb8b7hgqDvqvVge/ucObqmOrEW2PZzgub
+Wrc4QwNHRna42x6A8am0pofNr3oqjNT1wTJPxt34kbLNDdN1O1uGG9L1/Qebgtep
+35CjFvA=
+=T3bm
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/tybenz
+
+==================================================================
