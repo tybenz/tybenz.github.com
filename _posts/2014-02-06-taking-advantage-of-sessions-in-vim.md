@@ -4,26 +4,26 @@ title: "Taking advantage of sessions in Vim"
 nav: blog
 ---
 
-A few months ago, on my daily hunt for new, useful VIM plugins, I discovered
+A few months ago, on my daily hunt for new, useful Vim plugins, I discovered
 [vim-startify](http://github.com/mhinz/vim-startify). Startify is a beautiful
-and organized startup screen for VIM. It provides shortcuts into files from
+and organized startup screen for Vim. It provides shortcuts into files from
 your working directory, a list of bookmarks to files you edit all the time, and
 your most-recently edited files. As I was going over its docs, I also
 discovered that it can list out vim sessions. I'd never read about sessions
 before. So I began googling.
 
 Vim provides some commands that let you store sessions based on the current
-state of VIM. You can load in previously created sessions with `source` (just
+state of Vim. You can load in previously created sessions with `source` (just
 like any other vim script). The `mksession` command, out-of-the-box, stores every
 little detail about your current session &mdash; plugins, scripts, which buffers are
 loaded, what your tabs and windows are doing.  Because of this, a `mksession`
 file can be really large and really ugly. I actually found that most of the
 things `mksession` was saving to be a bit redundant. For the most part, the
-scripts I want executed when I launch VIM are all present in my `.vimrc`. So I
+scripts I want executed when I launch Vim are all present in my `.vimrc`. So I
 took the bits that I needed and starting creating my own session files by hand.
 
 The only commands I really need in a project-specific session have to do with
-changing VIM's working directory, opening files into buffers, and choosing
+changing Vim's working directory, opening files into buffers, and choosing
 which of those buffers to edit (I usually start with two files in vertical
 split panes).
 
@@ -53,16 +53,16 @@ where they're located with:
 let g:startify_session_dir = "~/.vim/sessions"
 {% endhighlight %}
 
-Now everytime I start VIM, I'm greeted with this:
+Now everytime I start Vim, I'm greeted with this:
 
 ![](http://awes0.me/startify.png)
 
 Note that the first section consists of a list of numbered sessions. Startify
 assigns shortcut keys to them so if I want to jump into my vimdeck session, all
-I have to do is open VIM and hit `h` and it will drop me into the right
+I have to do is open Vim and hit `h` and it will drop me into the right
 directory with all of the files I want to be able to edit for that project.
 
-Startify also provides directory-level session file detection. So it will check VIM's
+Startify also provides directory-level session file detection. So it will check Vim's
 working directory for a `Session.vim` file and write out a shortcut for that
 session as well. Useful if you'd like to include your session file in your
 projects git repository.
