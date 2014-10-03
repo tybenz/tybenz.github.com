@@ -58,7 +58,7 @@ Now everytime I start Vim, I'm greeted with this:
 ![](http://awes0.me/startify.png)
 
 Note that the first section consists of a list of numbered sessions. Startify
-assigns shortcut keys to them so if I want to jump into my 'vimdeck' session, all
+assigns shortcut keys to them so if I want to jump into my Vimdeck session, all
 I have to do is open Vim and hit `h` and it will drop me into the right
 directory with all of the files I want to be able to edit for that project.
 
