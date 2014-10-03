@@ -9,12 +9,12 @@ A few months ago, on my daily hunt for new, useful Vim plugins, I discovered
 and organized startup screen for Vim. It provides shortcuts into files from
 your working directory, a list of bookmarks to files you edit all the time, and
 your most-recently edited files. As I was going over its docs, I also
-discovered that it can list out vim sessions. I'd never read about sessions
+discovered that it can list out Vim sessions. I'd never read about sessions
 before. So I began googling.
 
 Vim provides some commands that let you store sessions based on the current
 state of Vim. You can load in previously created sessions with `source` (just
-like any other vim script). The `mksession` command, out-of-the-box, stores every
+like any other Vim script). The `mksession` command, out-of-the-box, stores every
 little detail about your current session &mdash; plugins, scripts, which buffers are
 loaded, what your tabs and windows are doing.  Because of this, a `mksession`
 file can be really large and really ugly. I actually found that most of the
@@ -27,7 +27,7 @@ changing Vim's working directory, opening files into buffers, and choosing
 which of those buffers to edit (I usually start with two files in vertical
 split panes).
 
-Here's one of my session files (vimdeck.vim):
+Here's one of my session files (`vimdeck.vim`):
 
 <div class="highlight">
 <pre><code><span class="k">cd</span> ~/src/vimdeck
@@ -58,7 +58,7 @@ Now everytime I start Vim, I'm greeted with this:
 ![](http://awes0.me/startify.png)
 
 Note that the first section consists of a list of numbered sessions. Startify
-assigns shortcut keys to them so if I want to jump into my vimdeck session, all
+assigns shortcut keys to them so if I want to jump into my 'vimdeck' session, all
 I have to do is open Vim and hit `h` and it will drop me into the right
 directory with all of the files I want to be able to edit for that project.
 
