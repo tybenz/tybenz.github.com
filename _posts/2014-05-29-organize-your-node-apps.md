@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Organize Your Node Apps"
+title: "Paper Router"
 ---
 
 I wrote a node module called [paper-router](http://tybenz.com/paper-router).
