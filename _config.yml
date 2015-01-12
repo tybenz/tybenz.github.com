@@ -10,7 +10,7 @@ title:            "Tyler Benziger"
 description:      "Tyler Benziger writes about things"
 url:              http://tybenz.com
 baseurl:          "/"
-paginate:         10
+paginate:         5
 
 author:
   name:           "Tyler Benziger"

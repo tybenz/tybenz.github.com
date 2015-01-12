@@ -303,7 +303,7 @@ a.sidebar-nav-item:focus {
 }
 
 .post.post-preview {
-  margin-bottom: 1em;
+  margin-bottom: 4em;
 }
 
 .post.post-preview h1 a {
@@ -450,9 +450,11 @@ a.pagination-item:hover {
 .theme-base-08 .related-posts li a:hover {
   color: #ac4142;
 }
+/*
 .theme-base-08 .post.post-preview .post-date {
   color: #ac4142;
 }
+*/
 
 /* Orange */
 .theme-base-09 .sidebar,
@@ -465,9 +467,11 @@ a.pagination-item:hover {
 .theme-base-09 .related-posts li a:hover {
   color: #d28445;
 }
+/*
 .theme-base-09 .post.post-preview .post-date {
   color: #d28445;
 }
+*/
 
 /* Yellow */
 .theme-base-0a .sidebar,
@@ -480,9 +484,11 @@ a.pagination-item:hover {
 .theme-base-0a .related-posts li a:hover {
   color: #f4bf75;
 }
+/*
 .theme-base-0a .post.post-preview .post-date {
   color: #f4bf75;
 }
+*/
 
 /* Green */
 .theme-base-0b .sidebar,
@@ -495,9 +501,11 @@ a.pagination-item:hover {
 .theme-base-0b .related-posts li a:hover {
   color: #90a959;
 }
+/*
 .theme-base-0b .post.post-preview .post-date {
   color: #90a959;
 }
+*/
 
 /* Cyan */
 .theme-base-0c .sidebar,
@@ -510,9 +518,11 @@ a.pagination-item:hover {
 .theme-base-0c .related-posts li a:hover {
   color: #75b5aa;
 }
+/*
 .theme-base-0c .post.post-preview .post-date {
   color: #75b7aa;
 }
+*/
 
 /* Blue */
 .theme-base-0d .sidebar,
@@ -525,9 +535,11 @@ a.pagination-item:hover {
 .theme-base-0d .related-posts li a:hover {
   color: #6a9fb5;
 }
+/*
 .theme-base-0d .post.post-preview .post-date {
   color: #6a9fb5;
 }
+*/
 
 /* Magenta */
 .theme-base-0e .sidebar,
@@ -540,9 +552,11 @@ a.pagination-item:hover {
 .theme-base-0e .related-posts li a:hover {
   color: #aa759f;
 }
+/*
 .theme-base-0e .post.post-preview .post-date {
   color: #aa759f;
 }
+*/
 
 /* Brown */
 .theme-base-0f .sidebar,
@@ -555,9 +569,11 @@ a.pagination-item:hover {
 .theme-base-0f .related-posts li a:hover {
   color: #8f5536;
 }
+/*
 .theme-base-0f .post.post-preview .post-date {
   color: #8f5536;
 }
+*/
 
 
 /*
