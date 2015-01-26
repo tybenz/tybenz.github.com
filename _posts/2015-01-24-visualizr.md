@@ -1,7 +1,7 @@
 ---
 layout: post
 hidden: true
-title: "Visualizr: Made with Web Audio and Canvas"
+title: "Visualizr: Fun with Web Audio and Canvas"
 ---
 
 I made a thing with Web Audio and Canvas. It's a music visualizr. You can play
