@@ -14,14 +14,16 @@ demo of it:
 
 <p>&nbsp;</p>
 
+## Crash-course
+
 The Web Audio API is well-supported across modern browsers, except for IE (big
 surprise). It allows you to not only play sounds but also manipulate them at a
 very low level. It's incredibly powerful, if you know what you're doing.
 
-For my first Web Audio project, I wanted to just mess around with getting a
-song to play and having some animation to match it.
+The rest of this blog post will be a sort of crash-course in how to get a basic
+visualization set up with Web Audio and Canvas.
 
-Here's how you can get a basic song to play with Web Audio:
+First, an example of just getting a song to play with Web Audio:
 
 ```javascript
 var context = new AudioContext();
@@ -41,7 +43,17 @@ request.onload = function() {
 request.send();
 ```
 
-Here's how you can get analyser data on the context's destination:
+Web Audio also contains a set of interfaces that allow you to analyze and
+manipulate frequency data. `AnalyserNode` is meant for reading frequency data
+only and it's perfect for the purposes of visualization.
+
+You can create an `AnalyserNode` with `context.createAnalyser()`, and "hook it"
+into the audio source with `source.connect( analyser )`.
+
+Once you have the analyser set up, you can read in frequency data synchronously
+by using `anaylser.getByteFrequencyData()`. To demonstrate, here's an example that
+uses `setInterval` to periodically log the average volume:
+
 
 ```javascript
 /*
@@ -77,9 +89,21 @@ source.buffer = buffer;
 source.start( 0 );
 ```
 
-From there, it really just became about having fun with canvas. I had the raw
-data, just needed to do something with it. Here's a quick example of how to
-draw a rectangle whose height matches the average volume:
+Now, it's time to have fun with canvas. We've got some volume data. Let's do something with it.
+
+First, a couple quick notes about canvas:
+
+1. We can call `createContext( '2d' )` on the canvas DOM element to get the rendering
+   context. This is the object that gives you access to all the drawing methods
+2. Use `requestAnimationFrame`, not `setInterval` for constant re-rendering.
+   `requestAnimationFrame` is the browsers way of binding a callback to the next
+   tick of the browser's internal render loop. It's much more performant, and
+   simple to use.
+3. On each tick of the clock, wipe the canvas clean. Each frame will be drawn from scratch.
+   We'll do this with `clearReact( 0, 0, canvasWidth, canvasHeight )`.
+
+Here's a quick example using `requestAnimationFrame`, `clearRect` and
+`fillRect` to draw a rectangle whose height matches the average volume:
 
 ```javascript
 var context = new AudioContext();
@@ -126,12 +150,16 @@ var draw = function() {
 };
 ```
 
-After that, it was all about improving the animation. I created a collection of
+And that's it. The visualizr I created wasn't much different from this example.
+After setting this up, I just worked on improving the animation. I created a collection of
 bars whose heights decrease as you go away from the center. I then added a
-delay to when the change to the smaller bars' heights gets applied. If you
-visit the full visualizr here: <http://tybenz.com/visualizr>, you can play with
-various parameters and see how it effects the animation.
+delay to when the change to the smaller bars' heights gets applied.
 
-If you'd like to see more details, the source is up on [GitHub](
+If you visit the full visualizr here: <http://tybenz.com/visualizr>, you can
+play with various parameters and see how it effects the animation. If you'd
+like to see more details, the source is up on [GitHub](
 http://github.com/tybenz/visualizr) and
 [CodePen](http://codepen.io/tybenz/pen/dPRWJa).
+
+As always, if you have questions/comments, you can find me on
+[Twitter](http://twitter.com/tybenz).
