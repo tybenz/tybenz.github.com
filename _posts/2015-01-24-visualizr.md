@@ -1,6 +1,5 @@
 ---
 layout: post
-hidden: true
 title: "Visualizr: Fun with Web Audio and Canvas"
 ---
 
@@ -16,12 +15,12 @@ demo of it:
 
 ## Crash-course
 
-The Web Audio API is well-supported across modern browsers, except for IE (big
-surprise). It allows you to not only play sounds but also manipulate them at a
-very low level. It's incredibly powerful, if you know what you're doing.
-
 The rest of this blog post will be a sort of crash-course in how to get a basic
 visualization set up with Web Audio and Canvas.
+
+The Web Audio API is well-supported across modern browsers, except for IE (big
+surprise). It allows you to not only play sounds but also manipulate them at a
+very low level.
 
 First, an example of just getting a song to play with Web Audio:
 
