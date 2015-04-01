@@ -618,6 +618,10 @@ video {
   padding-bottom: 43.076923%;
 }
 
+.video-container.slate {
+  padding-bottom: 52%;
+}
+
 .video-container iframe,
 .video-container object,
 .video-container embed {
