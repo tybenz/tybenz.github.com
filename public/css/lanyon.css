@@ -620,6 +620,7 @@ video {
 
 .video-container.slate {
   padding-bottom: 52%;
+  margin-bottom: 1em;
 }
 
 .video-container iframe,
