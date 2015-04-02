@@ -5,15 +5,15 @@ title: About
 
 My name is Tyler Benziger. I am a web developer, father, and musician.
 
-I work remotely for Adobe on a small team that focuses on validating and
-prototyping new ideas. The flexibility of my team has given me some amazing
-opportunities including working on projects like [jQuery
-Mobile](http://jquerymobile.com),
+I work remotely for Adobe on [Adobe Slate](http://standout.adobe.com/slate).
+Previously, we were focused on validating and prototyping new ideas. The
+flexibility of my team has given me some amazing opportunities including
+working on projects like [jQuery Mobile](http://jquerymobile.com),
 [ThemeRoller](http://jquerymobile.com/themeroller), and
 [Muse](http://adobe.com/muse).
 
 I have an amazing family, including my beautiful wife Amy, my
-two-and-a-half year-old son, Brody, and my one year-old daughter, Grace.
+three year-old son, Brody, and my eighteen-month-old daughter, Grace.
 
 I've been playing music for about 12 years. I dabble in a lot of different
 instruments but my true love is the electric guitar. I've played with
