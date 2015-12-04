@@ -13,9 +13,9 @@ working on projects like [jQuery Mobile](http://jquerymobile.com),
 [Muse](http://adobe.com/muse).
 
 I have an amazing family, including my beautiful wife Amy, my
-three year-old son, Brody, and my eighteen-month-old daughter, Grace.
+three-year-old son, Brody, and my two-year-old daughter, Grace.
 
-I've been playing music for about 12 years. I dabble in a lot of different
+I've been playing music for about 13 years. I dabble in a lot of different
 instruments but my true love is the electric guitar. I've played with
 some fellow musicians on a few different projects (mostly for fun), but
 my heart is in worship. I am apart of music ministry at a church called
