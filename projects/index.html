@@ -1,22 +1,30 @@
 ---
-layout: page
+layout: default
 skip_title: true
 nav: projects
 title: Projects
 ---
 
+<header>
+  <p class="username"><a href="./" target="_self">Projects</a></p>
+</header>
+<main>
 {% for page in site.pages %}
   {% if page.project == true %}
     {% if page.hidden != true %}
-      <div class="post post-preview">
+      <article>
+        <header class="heading">
       {% if page.link %}
-        <h1><a class="post-link" href="{{ page.link }}">
+        <h1 class="page-title"><a href="{{ page.link }}">
       {% else %}
-        <h1><a class="post-link" href="{{ page.url | replace: '/index.html', '' }}">
+        <h1 class="page-title"><a href="{{ page.url | replace: '/index.html', '' }}">
       {% endif %}
       {{ page.title }}</a></h1>
-        <span class="post-date">{{ page.summary }}</span>
-      </div>
+          <p class="timestamp">{{ page.summary }}</p>
+        </header>
+      </article>
     {% endif %}
   {% endif %}
 {% endfor %}
+</main>
+<footer><a href="/" style="border:0">tybenz.com</a> &nbsp;<a href="https://twitter.com/tybenz">twitter</a> &nbsp;<a href="https://github.com/tybenz">github</a></footer>

@@ -49,7 +49,7 @@ app.listen( 8080, function() {
 
 Profiling might look like:
 
-```
+```javascript
 [
   {
     "name": "getInfo",

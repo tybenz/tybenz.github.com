@@ -11,8 +11,6 @@ demo of it (music by [mrsjxn](http://mrsjxn.com)):
   <iframe frameborder="0" src="http://tybenz.com/visualizr/#width=15&height=1&gap=12&delay=40&hue=0&animate=out&auto_delay=5000&song=let_go&hide_controls=1&small=1"></iframe>
 </div>
 
-<p>&nbsp;</p>
-
 ## Crash-course
 
 The rest of this blog post will be a sort of crash-course in how to get a basic
