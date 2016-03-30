@@ -1,9 +1,150 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>{{ page.title }} - {{ site.title }}</title>
+  <link href="/avatar.png" rel="shortcut icon" type="image/x-icon" />
+  <link href='https://fonts.googleapis.com/css?family=Roboto+Mono:400,700' rel='stylesheet' type='text/css'>
+  <style>
+  body {
+    font: 16px/1.5em 'Roboto Mono', 'Consolas', 'Andale Mono', 'Monaco', 'Courier New', Courier, monospace;
+    padding: 1ch;
+    margin: 0;
+  }
+  body .username:after {
+    content: ' ✐';
+  }
+  body.index .username:after {
+    content: ' ⌂';
+  }
+  main, footer, body > header {
+    max-width: 64ch;
+    margin: auto;
+  }
+  main {
+    box-sizing: border-box;
+    padding: 1ch 0 2ch;
+    min-height: calc(100vh - 12ch);
+  }
+  h1 {
+    font-size: 1em;
+    font-weight: 700;
+  }
+  h1, .timestamp {
+    margin: 0;
+  }
+  a {
+    color: blue;
+    background-image: linear-gradient(to bottom,blue 75%,blue 75%);
+    text-shadow: -1px -1px 0 white,1px -1px 0 white,-1px 1px 0 white,1px 1px 0 white;
+    background-repeat: repeat-x;
+    background-size: 1px 1px;
+    background-position: 0 96%;
+    text-decoration: none;
+  }
+  .heading a {
+    color: black;
+    background-image: linear-gradient(to bottom,black 75%,black 75%);
+  }
+  .heading {
+    margin: 0 0 2ch;
+    padding: 0;
+  }
+  article.txt p {
+    white-space: pre-wrap;
+  }
+  .username a {
+    text-shadow: none;
+    background-image: none;
+    background-color: #333;
+    color: #EEE;
+    padding: 1ch;
+    border: 0;
+  }
+  hr {
+    border: 1px solid #ECECEC;
+  }
+  p {
+    margin: 1.5em 0;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-size: 1em;
+  }
+  pre {
+    padding: 1ch;
+    background-color: #f4f4f4;
+    overflow-x: auto;
+  }
+  ul, ol {
+    padding-left: 0;
+  }
+  li > ul, li > ol {
+    padding-left: 2ch;
+  }
+  blockquote {
+    font-style: italic;
+    margin: 1.5em 2ch;
+  }
+  img {
+    max-width:100%;
+  }
+  footer a {
+    color: lightgrey;
+    background-image: linear-gradient(to bottom,lightgrey 75%,lightgrey 75%);
+  }
+  @media screen and (min-width:1367px) {
+    body {
+      font: 20px/1.75em 'Roboto Mono';
+    }
+    hr {
+      border: 4px solid #ECECEC;
+    }
+  }
 
-<div class="post">
-  <h1 class="post-title">{{ page.title }}</h1>
-  <span class="post-date">{{ page.date | date: "%b %e %Y" }}</span>
+  video {
+    width: 100%;
+  }
+
+  .video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px; height: 0; overflow: hidden;
+  }
+
+  .video-container.skinny {
+    padding-bottom: 43.076923%;
+  }
+
+  .video-container.slate {
+    padding-bottom: 50%;
+    margin-bottom: 1em;
+  }
+
+  .video-container iframe,
+  .video-container object,
+  .video-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+  </style>
+</head>
+<body>
+  <header>
+    <p class="username"><a href="../" target="_self">Tyler Benziger</a></p>
+  </header>
+  <main>
+    <article class="md">
+      <header class="heading">
+        <h1>{{ page.title }}</h1>
+        <p class="timestamp">{{ post.date | date: "%b %e %Y" }}</p>
+        <hr>
+      </header>
   {{ content }}
-</div>
+    </article>
+  </main>
+  <footer><a href="/" style="border:0">tybenz.com</a></footer>
+</body>
+</html>
