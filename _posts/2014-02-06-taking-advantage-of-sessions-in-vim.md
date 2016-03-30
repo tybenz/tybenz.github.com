@@ -40,18 +40,18 @@ I change the working directory to the project folder, open files into buffers,
 then I choose which two files I want to start with (in the above case slides.md
 and lib/vimdeck.rb). And I can execute all of this by typing:
 
-{% highlight text %}
+```text
 :source ~/.vim/sessions/vimdeck.vim
-{% endhighlight %}
+```
 
 Now sessions get even cooler when you pair sessions with Startify. Startify
 will list all session files from a directory and provide keyboard shortcuts to
 execute them. I put my session files into `~/.vim/sessions` and tell startify
 where they're located with:
 
-{% highlight vim %}
+```vim
 let g:startify_session_dir = "~/.vim/sessions"
-{% endhighlight %}
+```
 
 Now everytime I start Vim, I'm greeted with this:
 

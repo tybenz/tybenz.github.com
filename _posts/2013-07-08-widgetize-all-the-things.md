@@ -45,7 +45,7 @@ We&#8217;re going to have it hide/show a child element (thus the name
 "secret").
 Let&#8217;s take a look at the blackbox approach to this widget:
 
-{% highlight javascript %}
+```javascript
 $.fn.secret = function() {
 
     return this.each(function() {
@@ -55,7 +55,7 @@ $.fn.secret = function() {
     });
 
 };
-{% endhighlight %}
+```
 
 Live demo [here](/demos/widgetize/secret.html)
 
@@ -76,7 +76,7 @@ definition.
 
 Here&#8217;s an example:
 
-{% highlight javascript %}
+```javascript
 var Secret = Backbone.View.extend({
     events: {
         'mousedown': 'apply',
@@ -87,7 +87,7 @@ var Secret = Backbone.View.extend({
 
     remove: function() { this.$el.removeClass( 'show' ) },
 });
-{% endhighlight %}
+```
 
 Notice that there are no options at all in this view. This is because
 it&#8217;s custom-made for this application and we (ideally) know what our requirements are
@@ -112,7 +112,7 @@ reusable widget should have the following criteria:
 Let&#8217;s take a look at some code within the constructor of our
 widget:
 
-{% highlight javascript %}
+```javascript
 widget.options = $.extend( {}, widget.defaultOptions, options );
 widget.$el.on( widget.options.applyEvent, function() {
     // apply/remove are just calling addClass/removeClass respectively
@@ -123,7 +123,7 @@ widget.$el.on( widget.options.removeEvent, function() {
     widget.remove();
     widget.trigger( 'secret-remove' );
 });
-{% endhighlight %}
+```
 
 Here we have a component that is customizable with options, that does its
 job as it&#8217;s supposed to and that provides ways for other pieces of an
@@ -136,7 +136,7 @@ on the page each with their own secret? And, let&#8217;s say I want to
 show both secrets when I mousedown the first div.
 With our new event-based widget, it&#8217;s simple:
 
-{% highlight javascript %}
+```javascript
 var secret1 = new Secret( $( '#secret1' ) ),
     secret2 = new Secret( $( '#secret2' ) );
 
@@ -147,7 +147,7 @@ secret1.on( 'secret-apply', function() {
 secret1.on( 'secret-remove', function() {
     secret2.remove();
 });
-{% endhighlight %}
+```
 
 Live demo [here](/demos/widgetize/secret4.html).
 
