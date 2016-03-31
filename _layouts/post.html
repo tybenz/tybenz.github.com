@@ -190,6 +190,18 @@
   .highlight .vg { color: #008080 } /* Name.Variable.Global */
   .highlight .vi { color: #008080 } /* Name.Variable.Instance */
   .highlight .il { color: #009999 } /* Literal.Number.Integer.Long */
+
+  .about-avatar {
+    float: left;
+    width: 3.2em;
+    margin: 0 1em 1em 0;
+  }
+
+  @media screen and (max-width:480px) {
+    .about-avatar {
+      width: 4.1em;
+    }
+  }
   </style>
 </head>
 <body>
@@ -206,6 +218,6 @@
   {{ content }}
     </article>
   </main>
-  <footer><a href="/" style="border:0">tybenz.com</a> &nbsp;<a href="https://twitter.com/tybenz">twitter</a> &nbsp;<a href="https://github.com/tybenz">github</a></footer>
+  <footer><a href="/" style="border:0">tybenz.com</a> &nbsp;<a href="/about">about</a> &nbsp;<a href="https://twitter.com/tybenz">twitter</a> &nbsp;<a href="https://github.com/tybenz">github</a></footer>
 </body>
 </html>
