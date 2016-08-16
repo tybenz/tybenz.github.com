@@ -8,7 +8,7 @@ permalink:        /post/:title
 # Setup
 title:            "Tyler Benziger"
 description:      "Tyler Benziger writes about things"
-url:              http://tybenz.com
+url:              http://tybenz.github.io
 baseurl:          "/"
 
 author:

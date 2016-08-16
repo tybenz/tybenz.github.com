@@ -3,7 +3,7 @@ layout: post
 title: "Paper Router"
 ---
 
-I wrote a node module called [paper-router](http://tybenz.com/paper-router).
+I wrote a node module called [paper-router](http://tybenz.github.io/paper-router).
 It's sole purpose is to help me organize my node apps.
 
 ## It turns this

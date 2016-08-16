@@ -4,7 +4,7 @@ https://keybase.io/tybenz
 
 I hereby claim:
 
-  * I am an admin of http://tybenz.com
+  * I am an admin of http://tybenz.github.io
   * I am tybenz (https://keybase.io/tybenz) on keybase.
   * I have a public key with fingerprint 42BF 9F22 838F 09CF E7C7  8933 EAE0 94DA 0A5E C1FA
 
@@ -20,7 +20,7 @@ To claim this, I am signing this object:
             "username": "tybenz"
         },
         "service": {
-            "hostname": "tybenz.com",
+            "hostname": "tybenz.github.io",
             "protocol": "http:"
         },
         "type": "web_service_binding",

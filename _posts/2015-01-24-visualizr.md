@@ -4,11 +4,11 @@ title: "Visualizr: Fun with Web Audio and Canvas"
 ---
 
 I made a thing with Web Audio and Canvas. It's a music visualizr. You can play
-with the full thing [here](http://tybenz.com/visualizr), but here's a quick
+with the full thing [here](http://tybenz.github.io/visualizr), but here's a quick
 demo of it (music by [mrsjxn](http://mrsjxn.com)):
 
 <div class="video-container skinny">
-  <iframe frameborder="0" src="http://tybenz.com/visualizr/#width=15&height=1&gap=12&delay=40&hue=0&animate=out&auto_delay=5000&song=let_go&hide_controls=1&small=1"></iframe>
+  <iframe frameborder="0" src="http://tybenz.github.io/visualizr/#width=15&height=1&gap=12&delay=40&hue=0&animate=out&auto_delay=5000&song=let_go&hide_controls=1&small=1"></iframe>
 </div>
 
 ## Crash-course
@@ -152,7 +152,7 @@ After setting this up, I just worked on improving the animation. I created a col
 bars whose heights decrease as you go away from the center. I then added a
 delay to when the change to the smaller bars' heights gets applied.
 
-If you visit the full visualizr here: <http://tybenz.com/visualizr>, you can
+If you visit the full visualizr here: <http://tybenz.github.io/visualizr>, you can
 play with various parameters and see how it effects the animation. If you'd
 like to see more details, the source is up on [GitHub](
 http://github.com/tybenz/visualizr) and
