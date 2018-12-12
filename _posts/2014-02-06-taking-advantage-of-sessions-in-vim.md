@@ -55,7 +55,7 @@ let g:startify_session_dir = "~/.vim/sessions"
 
 Now everytime I start Vim, I'm greeted with this:
 
-![](http://awes0.me/startify.png)
+![](http://tybenz.github.io/awes0.me/startify.png)
 
 Note that the first section consists of a list of numbered sessions. Startify
 assigns shortcut keys to them so if I want to jump into my Vimdeck session, all

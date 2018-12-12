@@ -48,4 +48,4 @@ Or maybe just one of those, if you feel doing all of them would be redundant.
 \* I know the site has spam in the title. So here's a screenshot for all you out
 there who are too scared to actually click on the link:
 
-[![](http://awes0.me/spamsite.png)](http://spamthe.net)
+[![](http://tybenz.github.io/awes0.me/spamsite.png)](http://spamthe.net)

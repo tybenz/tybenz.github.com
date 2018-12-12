@@ -16,17 +16,17 @@ mean? Never used GitHub before? Keep reading.
 
 [Sign up](https://github.com/join) for GitHub if you're not already.
 
-![](http://awes0.me/mr-join.png)
+![](http://tybenz.github.io/awes0.me/mr-join.png)
 
 Go [here](https://github.com/tybenz/band-names/fork) to fork the repo.
 
-![](http://awes0.me/mr-fork.png)
+![](http://tybenz.github.io/awes0.me/mr-fork.png)
 
 Go [here](https://github.com/tybenz/band-names/edit/master/README.md) to edit.
 Click on "Propose file change"
 
-![](http://awes0.me/mr-edit.png)
+![](http://tybenz.github.io/awes0.me/mr-edit.png)
 
 Then click on "Create pull request"
 
-![](http://awes0.me/mr-pull-request.png)
+![](http://tybenz.github.io/awes0.me/mr-pull-request.png)
